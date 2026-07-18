@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "gameVersion": "1.0",
+    "generatedAt": "2026-07-18",
+    "totalSkillsInGame": 82,
+    "note": "PoC 代表サンプル（全タグ次元とエッジケースを網羅する部分集合）。全 82 種の網羅と数値の最終確定は op.gg 等を人間が参照して拡充する前提。verified:false はパル対応・数値が未確定の項目。"
+  },
+  "skills": [
+    {
+      "id": "best-boy",
+      "skillName": { "ja": "ベストボーイ", "en": "Best Boy" },
+      "pal": { "ja": "パピライ", "en": "Pupperai" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-party", "eff-offense", "detail-melee"],
+      "description": { "ja": "手持ちにいる間、プレイヤーの近接武器ダメージを増加させる。", "en": "While in party, increases the player's melee weapon damage." },
+      "effects": [
+        { "text": { "ja": "近接武器ダメージ", "en": "Melee weapon damage" }, "tags": ["detail-melee"], "scaling": { "kind": "range", "unit": "%", "perLevel": [10, 16, 23, 29, 35], "estimated": true } }
+      ],
+      "stackable": false,
+      "stackNote": { "ja": "同一スキルは重複しない" },
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:610065"]
+    },
+    {
+      "id": "cat-helper",
+      "skillName": { "ja": "ネコの手", "en": "Cat Helper" },
+      "pal": { "ja": "キャティ", "en": "Cattiva" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-party", "eff-support", "detail-carry"],
+      "description": { "ja": "手持ちにいる間、荷物運びを手伝い、プレイヤーの最大携行重量を増加させる。", "en": "While in party, helps carry supplies, increasing the player's max carrying capacity." },
+      "effects": [
+        { "text": { "ja": "最大携行重量", "en": "Max carrying capacity" }, "tags": ["detail-carry"], "scaling": { "kind": "flat", "unit": "+", "perLevel": [100, 100, 100, 100, 100], "estimated": false } }
+      ],
+      "stackable": false,
+      "stackNote": { "ja": "重複しない" },
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "brave-sailor",
+      "skillName": { "ja": "勇敢な船乗り", "en": "Brave Sailor" },
+      "pal": { "ja": "ペンキング", "en": "Penking" },
+      "element": ["elem-water", "elem-ice"],
+      "tags": ["cond-party", "eff-gathering", "detail-gathering-drop", "detail-element-synergy", "elem-fire"],
+      "description": { "ja": "手持ちにいる間、火属性 Pal を倒したときのドロップが増加する。", "en": "While in party, Fire Pals drop more items when defeated." },
+      "effects": [
+        { "text": { "ja": "火 Pal 撃破時ドロップ", "en": "Fire Pal drop rate" }, "tags": ["detail-gathering-drop", "detail-element-synergy"], "targetElement": "elem-fire", "scaling": { "kind": "flat", "unit": "%", "perLevel": [40, 40, 40, 40, 40], "estimated": true } }
+      ],
+      "stackable": false,
+      "stackNote": { "ja": "重複しない" },
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "princess-gaze",
+      "skillName": { "ja": "プリンセスの眼差し", "en": "Princess Gaze" },
+      "pal": { "ja": "ブリスラ", "en": "Bristla" },
+      "element": ["elem-grass"],
+      "tags": ["cond-party", "eff-support", "detail-element-synergy", "elem-grass"],
+      "description": { "ja": "手持ちにいる間、草属性 Pal の攻撃を上昇させる。", "en": "While in party, increases Attack of Grass Pals." },
+      "effects": [
+        { "text": { "ja": "草 Pal の攻撃", "en": "Grass Pal attack" }, "tags": ["detail-element-synergy"], "targetElement": "elem-grass", "scaling": { "kind": "flat", "unit": "%", "perLevel": [15, 15, 15, 15, 15], "estimated": true } }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "happy-clover",
+      "skillName": { "ja": "しあわせのクローバー", "en": "Happy Clover" },
+      "pal": { "ja": "クロヴィ", "en": "Clovee" },
+      "element": ["elem-grass"],
+      "tags": ["cond-base", "eff-production", "detail-work-suitability"],
+      "description": { "ja": "拠点にいる間、他の全ての拠点 Pal の「収集」作業適性レベルを +1 する。", "en": "While at base, increases the Gathering Work Suitability level of all other base Pals by +1." },
+      "effects": [
+        { "text": { "ja": "他の拠点 Pal の収集作業適性", "en": "Other base Pals' Gathering suitability" }, "tags": ["detail-work-suitability"], "scaling": { "kind": "flat", "unit": "Lv+", "perLevel": [1, 1, 1, 1, 1], "estimated": false } }
+      ],
+      "stackable": false,
+      "stackNote": { "ja": "クロヴィ固有。同一効果は重ならない" },
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:610054"]
+    },
+    {
+      "id": "huggy-fire",
+      "skillName": { "ja": "ぎゅっとファイア", "en": "Huggy Fire" },
+      "pal": { "ja": "フォックスパークス", "en": "Foxparks" },
+      "element": ["elem-fire"],
+      "tags": ["cond-active", "eff-offense", "detail-ranged", "detail-element-attack", "elem-fire"],
+      "description": { "ja": "発動するとプレイヤーに装備され、火炎放射器に変化して火属性攻撃を放つ。", "en": "When activated, equips to the player and transforms into a flamethrower." },
+      "effects": [
+        { "text": { "ja": "火炎放射（火属性の遠距離攻撃）", "en": "Flamethrower (fire ranged attack)" }, "tags": ["detail-ranged", "detail-element-attack"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "pengullet-cannon",
+      "skillName": { "ja": "ロケット砲", "en": "Rocket Launcher" },
+      "pal": { "ja": "ペングー", "en": "Pengullet" },
+      "element": ["elem-water"],
+      "tags": ["cond-active", "eff-offense", "detail-ranged"],
+      "description": { "ja": "発動するとロケットランチャーを装備し、ペングー自身を弾として発射する。着弾で爆発し、ペングーは戦闘不能になる。", "en": "When activated, fire Pengullet as rocket ammunition; it explodes on impact and is incapacitated." },
+      "effects": [
+        { "text": { "ja": "自身を発射・着弾で爆発（遠距離）", "en": "Self-launch, explodes on impact (ranged)" }, "tags": ["detail-ranged"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "lifmunk-recoil",
+      "skillName": { "ja": "リーフモンリコイル", "en": "Lifmunk Recoil" },
+      "pal": { "ja": "リーフモン", "en": "Lifmunk" },
+      "element": ["elem-grass"],
+      "tags": ["cond-active", "eff-offense", "detail-ranged"],
+      "description": { "ja": "発動するとプレイヤーの頭に飛び乗り、サブマシンガンでプレイヤーの攻撃に追撃を行う。", "en": "When activated, leaps onto the player's head and follows up attacks with a submachine gun." },
+      "effects": [
+        { "text": { "ja": "SMG による追撃（遠距離）", "en": "SMG follow-up (ranged)" }, "tags": ["detail-ranged"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "direhowl-rider",
+      "skillName": { "ja": "ダイアウルフライダー", "en": "Direhowl Rider" },
+      "pal": { "ja": "ダイアウルフ", "en": "Direhowl" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-mount", "eff-mobility", "detail-mount-ground"],
+      "description": { "ja": "騎乗して地上を移動できる。多くの騎乗よりやや速い。", "en": "Can be ridden for ground travel; slightly faster than most mounts." },
+      "effects": [
+        { "text": { "ja": "地上騎乗（移動速度上昇。Lv 上昇でさらに加速）", "en": "Ground mount (speed up; further speed at higher Lv)" }, "tags": ["detail-mount-ground"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["nexttier:best-mounts"]
+    },
+    {
+      "id": "nitewing-flight",
+      "skillName": { "ja": "ナイトウィング飛行", "en": "Nitewing Flight" },
+      "pal": { "ja": "ナイトウィング", "en": "Nitewing" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-mount", "eff-mobility", "detail-mount-flying"],
+      "description": { "ja": "騎乗して空を飛行できる（プレイヤーが最初に入手できる飛行騎乗）。", "en": "Can be ridden to fly; the first flying mount available to the player." },
+      "effects": [
+        { "text": { "ja": "飛行騎乗", "en": "Flying mount" }, "tags": ["detail-mount-flying"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["nexttier:best-mounts"]
+    },
+    {
+      "id": "swift-swimmer",
+      "skillName": { "ja": "スイフトスイマー", "en": "Swift Swimmer" },
+      "pal": { "ja": "サーペント", "en": "Surfent" },
+      "element": ["elem-dragon"],
+      "tags": ["cond-mount", "eff-mobility", "detail-mount-swim"],
+      "description": { "ja": "騎乗して水上を移動できる。", "en": "Can be ridden for water travel." },
+      "effects": [
+        { "text": { "ja": "水上騎乗", "en": "Water mount" }, "tags": ["detail-mount-swim"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["nexttier:best-mounts"]
+    },
+    {
+      "id": "milk-maker",
+      "skillName": { "ja": "ミルクメーカー", "en": "Milk Maker" },
+      "pal": { "ja": "モーモール", "en": "Mozzarina" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-base", "eff-production", "detail-ranch"],
+      "description": { "ja": "牧場に配置するとミルクを産出する。パートナースキル Lv が上がるほど産出量が増える。", "en": "Produces Milk at the Ranch; leveling the Partner Skill increases how much it drops." },
+      "effects": [
+        { "text": { "ja": "牧場でミルク産出（Lv 上昇で産出量増加）", "en": "Milk at Ranch (more at higher Lv)" }, "tags": ["detail-ranch"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:442672"]
+    },
+    {
+      "id": "egg-layer",
+      "skillName": { "ja": "たまご産み", "en": "Egg Layer" },
+      "pal": { "ja": "コッコ", "en": "Chikipi" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-base", "eff-production", "detail-ranch"],
+      "description": { "ja": "牧場に配置すると卵を産出する。Lv が上がるほど産出量が増える（種類は増えない）。", "en": "Produces Eggs at the Ranch; leveling raises how much it drops (not the variety)." },
+      "effects": [
+        { "text": { "ja": "牧場で卵産出（Lv 上昇で産出量増加）", "en": "Eggs at Ranch (more at higher Lv)" }, "tags": ["detail-ranch"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["palworld.wiki.gg:Partner_Skills"]
+    },
+    {
+      "id": "dig-here",
+      "skillName": { "ja": "ここ掘れ！", "en": "Dig Here!" },
+      "pal": { "ja": "キツネビ", "en": "Vixy" },
+      "element": ["elem-neutral"],
+      "tags": ["cond-base", "eff-production", "detail-ranch", "eff-gathering", "detail-gathering-drop"],
+      "description": { "ja": "牧場に配置すると、ときどき地面からアイテムを掘り出す。", "en": "Sometimes digs up items from the ground when assigned to the Ranch." },
+      "effects": [
+        { "text": { "ja": "牧場でアイテムを掘り出す", "en": "Digs up items at the Ranch" }, "tags": ["detail-ranch", "detail-gathering-drop"] }
+      ],
+      "stackable": true,
+      "stackNote": { "ja": "個体ごとに独立して掘るため実質重複可（別個体を並べると産出が増える）" },
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "electrify-strikes",
+      "skillName": { "ja": "エレクトリファイ付与", "en": "Electrify Strikes" },
+      "pal": { "ja": "スノック", "en": "Snock" },
+      "element": ["elem-electric"],
+      "tags": ["cond-party", "eff-offense", "detail-status", "detail-element-attack", "elem-electric"],
+      "description": { "ja": "手持ちにいる間、プレイヤーの攻撃が Electrify（感電）を付与するようになる。", "en": "While in party, your attacks inflict Electrify." },
+      "effects": [
+        { "text": { "ja": "攻撃に Electrify を付与", "en": "Attacks inflict Electrify" }, "tags": ["detail-status", "detail-element-attack"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "burn-imbue",
+      "skillName": { "ja": "バーン付与", "en": "Burn Imbue" },
+      "pal": { "ja": "レンジシ", "en": "Renjishi" },
+      "element": ["elem-fire"],
+      "tags": ["cond-active", "eff-offense", "detail-status", "detail-element-attack", "elem-fire"],
+      "description": { "ja": "プレイヤーの攻撃に Burn（火傷）を付与する。Flaracle と組み合わせると Burn を範囲ダメージに変換できる。", "en": "Imbues your attacks with Burn; combined with Flaracle it converts the status into area damage." },
+      "effects": [
+        { "text": { "ja": "攻撃に Burn を付与", "en": "Attacks inflict Burn" }, "tags": ["detail-status", "detail-element-attack"] }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": true,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "celesdir-noct-drain",
+      "skillName": { "ja": "生命の代償", "en": "Life Toll" },
+      "pal": { "ja": "セレスディル・ノクト", "en": "Celesdir Noct" },
+      "element": ["elem-dark"],
+      "tags": ["cond-active", "eff-offense", "eff-support", "elem-dark"],
+      "description": { "ja": "自身の HP を削る代わりに、フィールドにいる間プレイヤーの与ダメージを大きく上昇させる（ハイリスク）。", "en": "Drains its own Health to raise your damage while it is on the field (high-risk)." },
+      "effects": [
+        { "text": { "ja": "プレイヤーの与ダメージ", "en": "Player damage dealt" }, "scaling": { "kind": "flat", "unit": "%", "perLevel": [40, 40, 40, 40, 40], "estimated": true } }
+      ],
+      "stackable": false,
+      "stackNote": { "ja": "α個体としてのみ入手できる Pal（拠点/騎乗ではなく手持ち発動型）" },
+      "unique": true,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["keengamer:alpha-pals-1.0"]
+    },
+    {
+      "id": "cold-resistance",
+      "skillName": { "ja": "寒さ耐性", "en": "Cold Resistance" },
+      "pal": { "ja": "（要検証）", "en": "(TBD)" },
+      "element": ["elem-ice"],
+      "tags": ["cond-party", "eff-defense", "detail-resistance", "elem-ice"],
+      "description": { "ja": "手持ちにいる間、プレイヤーの寒さ耐性を上昇させる。", "en": "While in party, the player gains Cold Resistance." },
+      "effects": [
+        { "text": { "ja": "寒さ耐性", "en": "Cold Resistance" }, "tags": ["detail-resistance"], "scaling": { "kind": "flat", "unit": "+", "perLevel": [2, 2, 2, 2, 2], "estimated": false } }
+      ],
+      "stackable": false,
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "heat-resistance",
+      "skillName": { "ja": "暑さ耐性", "en": "Heat Resistance" },
+      "pal": { "ja": "（要検証）", "en": "(TBD)" },
+      "element": ["elem-fire"],
+      "tags": ["cond-party", "eff-defense", "detail-resistance", "elem-fire"],
+      "description": { "ja": "手持ちにいる間、プレイヤーの暑さ耐性を上昇させる。", "en": "While in party, the player gains Heat Resistance." },
+      "effects": [
+        { "text": { "ja": "暑さ耐性", "en": "Heat Resistance" }, "tags": ["detail-resistance"], "scaling": { "kind": "flat", "unit": "+", "perLevel": [2, 2, 2, 2, 2], "estimated": false } }
+      ],
+      "stackable": false,
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "electric-resistance",
+      "skillName": { "ja": "電気耐性", "en": "Electric Resistance" },
+      "pal": { "ja": "グリズボルト", "en": "Grizzbolt" },
+      "element": ["elem-electric"],
+      "tags": ["cond-party", "eff-defense", "detail-resistance", "elem-electric"],
+      "description": { "ja": "手持ちにいる間、プレイヤーと手持ち Pal が受ける電気ダメージを軽減し、Electrify（感電）を無効化する。", "en": "While in party, player and party Pals take less Electric damage and are immune to Electrify." },
+      "effects": [
+        { "text": { "ja": "電気ダメージ軽減", "en": "Electric damage taken reduced" }, "tags": ["detail-resistance"], "scaling": { "kind": "range", "unit": "%", "perLevel": [15, 19, 23, 26, 30], "estimated": true } },
+        { "text": { "ja": "Electrify 無効", "en": "Immune to Electrify" }, "tags": ["detail-resistance"] }
+      ],
+      "stackable": false,
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["sportskeeda:partner-skills-1.0"]
+    },
+    {
+      "id": "fishing-haul",
+      "skillName": { "ja": "大漁", "en": "Big Catch" },
+      "pal": { "ja": "（要検証）", "en": "(TBD)" },
+      "element": ["elem-water"],
+      "tags": ["cond-party", "eff-gathering", "detail-fishing", "detail-capture"],
+      "description": { "ja": "手持ちにいる間、釣りで入手するアイテムが増加する。また、釣りのミニゲーム中にゲージが減りにくくなり、才能ある Pal を釣り上げやすくなる。", "en": "While in party, increases items obtained from fishing; also makes the fishing minigame easier and talented Pals easier to catch." },
+      "effects": [
+        { "text": { "ja": "釣りの入手アイテム", "en": "Items obtained from fishing" }, "tags": ["detail-fishing"], "scaling": { "kind": "range", "unit": "%", "perLevel": [55, 65, 75, 85, 95], "estimated": true } },
+        { "text": { "ja": "釣りミニゲームのゲージ減少を緩和", "en": "Slower capture gauge decrease while fishing" }, "tags": ["detail-fishing", "detail-capture"], "scaling": { "kind": "range", "unit": "%", "perLevel": [12, 18, 24, 29, 35], "estimated": true } }
+      ],
+      "stackable": false,
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "salvage-haul",
+      "skillName": { "ja": "サルベージ達人", "en": "Salvage Master" },
+      "pal": { "ja": "（要検証）", "en": "(TBD)" },
+      "element": ["elem-water"],
+      "tags": ["cond-party", "eff-gathering", "detail-salvage"],
+      "description": { "ja": "手持ちにいる間、サルベージで入手するアイテムが増加する。", "en": "While in party, increases items obtained from salvaging." },
+      "effects": [
+        { "text": { "ja": "サルベージの入手アイテム", "en": "Items obtained from salvaging" }, "tags": ["detail-salvage"], "scaling": { "kind": "range", "unit": "%", "perLevel": [55, 65, 75, 85, 95], "estimated": true } }
+      ],
+      "stackable": false,
+      "unique": false,
+      "alpha": { "hasVariant": false },
+      "verified": false,
+      "sources": ["game8:439665"]
+    },
+    {
+      "id": "alpha-variant-demo",
+      "skillName": { "ja": "（α差分の例）", "en": "(Alpha Variant Example)" },
+      "pal": { "ja": "（要検証の Pal）", "en": "(TBD Pal)" },
+      "element": ["elem-dark"],
+      "tags": ["cond-party", "eff-offense", "detail-melee"],
+      "description": { "ja": "この Pal は α（アルファ）個体として捕獲した場合とそうでない場合で効果が変わる（バグの可能性）。スキーマ上、通常個体と α 個体の効果を併記できることを示すサンプル。", "en": "Illustrative entry: this Pal's effect differs depending on whether it was caught as an Alpha individual (possible bug). Shows that normal and alpha effects can be listed together." },
+      "effects": [
+        { "text": { "ja": "近接ダメージ（通常個体）", "en": "Melee damage (normal)" }, "tags": ["detail-melee"], "scaling": { "kind": "range", "unit": "%", "perLevel": [10, 15, 20, 25, 30], "estimated": true } }
+      ],
+      "stackable": false,
+      "unique": true,
+      "alpha": {
+        "hasVariant": true,
+        "note": { "ja": "α個体では効果が変化する（バグの可能性・要検証）。", "en": "Effect changes for Alpha individuals (possible bug, needs verification)." },
+        "description": { "ja": "α個体では近接ダメージの倍率が異なる。", "en": "Alpha individuals grant a different melee damage multiplier." },
+        "effects": [
+          { "text": { "ja": "近接ダメージ（α個体）", "en": "Melee damage (Alpha)" }, "tags": ["detail-melee"], "scaling": { "kind": "range", "unit": "%", "perLevel": [20, 30, 40, 50, 60], "estimated": true } }
+        ]
+      },
+      "verified": false,
+      "sources": []
+    }
+  ]
+}
