@@ -164,6 +164,7 @@ body {
 .badge { font-size: .66rem; font-weight: 700; padding: .1rem .45rem; border-radius: 5px; letter-spacing: .02em; }
 .badge-stack-ok { background: var(--accent-weak); color: var(--ok); }
 .badge-stack-no { background: var(--surface-2); color: var(--text-muted); }
+.badge-stack-mixed { background: var(--warn-weak); color: var(--warn); }
 .badge-variant { background: #e6eefb; color: #3a6ea5; }
 @media (prefers-color-scheme: dark) { .badge-variant { background: #1f2a3a; color: #8bb0e5; } }
 :root[data-theme="dark"] .badge-variant { background: #1f2a3a; color: #8bb0e5; }
@@ -173,6 +174,11 @@ body {
 .effect-value { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; min-width: 2.5em; }
 .effect-value.is-empty { color: var(--text-muted); font-weight: 600; }
 .effect-text { flex: 1; }
+.effect-stack { font-size: .62rem; font-weight: 700; padding: .05rem .35rem; border-radius: 4px; white-space: nowrap; }
+.effect-stack.no { background: #fde3e3; color: #b23b3b; }
+.effect-stack.ok { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+@media (prefers-color-scheme: dark) { .effect-stack.no { background: #3a2020; color: #e58b8b; } }
+:root[data-theme="dark"] .effect-stack.no { background: #3a2020; color: #e58b8b; }
 .card-desc { font-size: .8rem; color: var(--text-muted); }
 .card-palgear { font-size: .72rem; color: var(--text-muted); }
 

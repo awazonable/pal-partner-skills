@@ -21,15 +21,17 @@
     - `categories[]` … `cat-offense|defense|mobility|gathering|production|support`（導出）
     - `tags[]` … 上記の統合（フィルタ用。冗長だが検索を単純化）
   - `description{ja}`
-  - `effects[]`: `{ label{ja}, perStar:[5] }`
+  - `effects[]`: `{ label{ja}, perStar:[5], noStack, noStackReason }`
     - **`perStar` は ★0〜★4 の 5 値**。値は**ソース準拠の文字列**（`"+15%"`, `"250"`, `"特大"`, `"11分40秒"` 等）。
     - ソース側で ★0 が省略/欠落している箇所は `null`（UI では `—` 表示）。
-  - `stackable`（bool＝`!noStack`）, `noStack`（bool）, `rideExclusive`（bool）
-    - `noStack` = 説明文に「重複不可」 **または** 騎乗(`cond-mount`)スキル
-      （同時に複数ライドできないため）。ただし**同名パルの数でスタックする**効果
-      （例：メルパカ）は除外し `stackable` のまま。
-    - `rideExclusive` = 騎乗由来で重複不可になった（ソースには「重複不可」表記が無い）場合 true。
-      UI ではバッジを「重複不可(騎乗)」と表示。
+    - **`noStack`（bool）／`noStackReason`（`"source"|"ride"|null`）＝効果ごとの重複可否**。
+      判定は「直前のサブ効果テキストに『重複不可』があるか（source）」「騎乗/ライド効果か（ride）」。
+      サブ効果境界（①②③…）で文脈をリセットして混線を防ぐ。
+  - `stackable`, `noStack`, `mixedStack`, `rideExclusive`（すべて bool。効果単位の要約）
+    - `noStack` = いずれかの効果が重複不可、または騎乗スキル、または本文に「重複不可」。
+    - `mixedStack` = 重複可の効果と重複不可の効果が混在（例：メルパカ＝騎乗不可＋同名スタックのバフ）。
+      UI ではバッジ「一部重複不可」。効果ごとの可否は各効果行に表示する。
+    - `rideExclusive` = 重複不可の理由がすべて騎乗のみ（源に「重複不可」表記なし）。バッジ「重複不可(騎乗)」。
   - `palGear{ja}`|null（パルギア解放条件のメモ）
   - `verified`（bool）, `source`（string）
 

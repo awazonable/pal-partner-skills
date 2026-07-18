@@ -55,31 +55,41 @@ class P(HTMLParser):
         pal=name_parts[0] if name_parts else ''
         skill=' '.join(name_parts[1:]) if len(name_parts)>1 else ''
         body=texts[body_start:]
-        desc_lines=[]; val_lines=[]; palgear=None
+        # 本文と★値行を順序どおりに走査。各★効果へ直前のサブ効果テキスト(ctx)を紐づけ、
+        # 効果ごとに重複可否（源の「重複不可」／騎乗）を判定する。
+        # ctx はサブ効果境界（①②③…の丸数字）でリセットし、別サブ効果の語が混ざらないようにする。
+        effects=[]; desc_lines=[]; palgear=None; ctx=[]
         for b in body:
-            if '★' in b: val_lines.append(b)
-            elif b.startswith('(') and ('解放' in b or 'テクノロジー' in b): palgear=b.strip('()')
-            else: desc_lines.append(b)
-        effects=[]
-        for vl in val_lines:
-            # ソース誤記の修復：「ラベル：★30%」(★0：欠落) → 「ラベル：★0：30%」
-            vl=re.sub(r'([：:])★\s*(\d[\d.]*\s*%)', r'\1★0：\2', vl)
+            if b.startswith('(') and ('解放' in b or 'テクノロジー' in b):
+                palgear=b.strip('()'); continue
+            if '★' not in b:
+                if re.match(r'^[①-⑳]', b): ctx=[b]      # 新しいサブ効果の開始
+                else: ctx.append(b)
+                desc_lines.append(b); continue
+            # ★を含む値行
+            vl=re.sub(r'([：:])★\s*(\d[\d.]*\s*%)', r'\1★0：\2', b)  # 「：★30%」(★0：欠落)修復
             segs=re.split(r'★\s*(\d)\s*[:：]\s*',vl)
             label=segs[0].rstrip('：: 、').strip()
             per={}
             for i in range(1,len(segs)-1,2):
                 star=int(segs[i]); val=segs[i+1]
-                val=re.sub(r'、★.*$','',val)          # 誤記「、★0.4%」等の末尾ゴミ除去
+                val=re.sub(r'、★.*$','',val)                       # 「、★0.4%」等の末尾ゴミ除去
                 val=re.sub(r'[、：:\s]+$','',val).strip()
                 if star not in per: per[star]=val
             if not label and effects:
-                # ★4 が次行に分割されているケース → 直前の効果へマージ
+                # ★4 が次行に分割 → 直前の効果へマージ（ctx は据え置き）
                 prev=effects[-1]['perStar']
                 for k,v in per.items():
                     if prev[k] is None: prev[k]=v
                 continue
             perStar=[per.get(i) for i in range(5)]
-            effects.append({'label':{'ja':label},'perStar':perStar})
+            context=' '.join(ctx)
+            src_ns='重複不可' in context
+            ride_ns=bool(re.search(r'乗って|ライド',context))
+            effects.append({'label':{'ja':label},'perStar':perStar,
+                            'noStack':bool(src_ns or ride_ns),
+                            'noStackReason':('source' if src_ns else ('ride' if ride_ns else None))})
+            ctx=[]
         # ★0 のみ未記載（上昇量/増加量/軽減量/拡大 系）は「なし」に正規化
         for e in effects:
             p=e['perStar']; lb=e['label']['ja']
@@ -108,21 +118,26 @@ class P(HTMLParser):
         cat=list(dict.fromkeys(cat))
         no=self.cur['no']; num=re.sub(r'^No\.','',no)
         variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
-        # 重複可否の判定
-        source_nostack = '重複不可' in full
-        # 同名パルが多いほど強化される＝手持ち効果が本当にスタックする（例：メルパカ）
-        same_pal_stack = bool(re.search(re.escape(pal)+r'の数(が多いほど|だけ)', full))
-        # 騎乗効果は同時に複数ライドできないため本質的に重複不可（同名スタック型は除く）
-        ride_nostack = ('cond-mount' in cond) and not same_pal_stack
-        noStack = source_nostack or ride_nostack
-        ride_exclusive = ride_nostack and not source_nostack
+        # 重複可否は効果単位で判定済み。スキル単位は要約（フィルタ/バッジ用）。
+        # 騎乗効果に数値行が無い（"乗って移動できる"のみ）場合も騎乗＝重複不可を反映。
+        ride_present='cond-mount' in cond
+        # 同名パルが多いほど強化＝手持ち効果が本当にスタックする（例：メルパカ）。数値行を持たない場合の補正。
+        same_pal_stack=bool(re.search(re.escape(pal)+r'の数(が多いほど|だけ)', full))
+        eff_ns=[e['noStack'] for e in effects]
+        has_nostack=any(eff_ns) or ride_present or ('重複不可' in full)
+        has_stack=any(not x for x in eff_ns) or same_pal_stack
+        mixed=has_nostack and has_stack
+        # 全効果が「重複不可」で、その理由がすべて騎乗のみ（源に「重複不可」表記なし）か
+        ride_only = (not mixed) and has_nostack and ('重複不可' not in full) \
+                    and all(e['noStackReason']=='ride' for e in effects if e['noStack'])
         tags=els+wks+sts+cond+cat
         rec={'id':'no-'+num.lower(),'no':no,'variant':variant,
              'pal':{'ja':pal},'skillName':{'ja':skill},
              'element':els,'works':wks,'status':sts,'conditions':cond,'categories':cat,
              'tags':list(dict.fromkeys(tags)),
              'description':{'ja':full},'effects':effects,
-             'stackable': not noStack,'noStack':noStack,'rideExclusive':ride_exclusive,
+             'stackable': not has_nostack,'noStack':has_nostack,
+             'mixedStack':mixed,'rideExclusive':ride_only,
              'palGear':{'ja':palgear} if palgear else None,
              'verified':True,'source':'palworld-lab'}
         self.blocks.append(rec); self.cur=None

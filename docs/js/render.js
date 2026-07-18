@@ -36,6 +36,19 @@ function effectRow(effect, star) {
   label.className = 'effect-text';
   label.textContent = t(effect.label);
   row.append(v, label);
+  // 効果単位の重複可否
+  const s = document.createElement('span');
+  if (effect.noStack) {
+    s.className = 'effect-stack no';
+    s.textContent = effect.noStackReason === 'ride' ? '重複不可(騎乗)' : '重複不可';
+    s.title = effect.noStackReason === 'ride'
+      ? '同時に複数のパルにライドできないため重複不可'
+      : 'この効果はソースで重複不可と明記';
+  } else {
+    s.className = 'effect-stack ok';
+    s.textContent = '重複可';
+  }
+  row.append(s);
   return row;
 }
 
@@ -84,10 +97,14 @@ function renderCard(skill, tagIndex, star) {
   chips.appendChild(chipsFromTags(skill.status, tagIndex));
   card.appendChild(chips);
 
-  // バッジ: 重複可否
+  // バッジ: 重複可否（スキル全体の要約。効果ごとの詳細は各効果行に表示）
   const badges = document.createElement('div');
   badges.className = 'card-badges';
-  if (skill.noStack) {
+  if (skill.mixedStack) {
+    const b = badge('一部重複不可', 'stack-mixed');
+    b.title = '効果によって重複可否が異なる（各効果の表示を参照）';
+    badges.appendChild(b);
+  } else if (skill.noStack) {
     const b = badge(skill.rideExclusive ? '重複不可(騎乗)' : '重複不可', 'stack-no');
     if (skill.rideExclusive) b.title = '同時に複数のパルにライドできないため重複不可扱い';
     badges.appendChild(b);

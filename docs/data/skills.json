@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-18",
   "totalSkills": 288,
   "source": "パルワールド配合・攻略ラボ（ユーザー提供のHTMLを構造化）",
-  "note": "★0〜★4 は濃縮ランク=パートナースキルの5段階レベル。値はソース準拠（一部ソース側の表記ゆれ/★0省略あり→ — 表示）。αパル個体差分は本ソースに明示が無いため未収録。"
+  "note": "★0〜★4 は濃縮ランク=パートナースキルの5段階レベル。値はソース準拠（一部ソース側の表記ゆれ/★0省略あり→ — 表示）。騎乗(cond-mount)は同時に複数ライドできないため重複不可扱い（rideExclusive）。ただし同名パルの数でスタックする効果（例:メルパカ）は重複可のまま。αパル個体差分は本ソースに明示が無いため未収録。"
  },
  "skills": [
   {
@@ -42,6 +42,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -84,11 +85,14 @@
       "+140",
       "+160",
       "+200"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -123,6 +127,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -165,11 +170,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.11のテクノロジーで解放"
@@ -214,11 +222,14 @@
       "180",
       "210",
       "250"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -261,11 +272,14 @@
       "149.5",
       "184",
       "230"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -302,6 +316,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -348,11 +363,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -399,11 +417,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -455,11 +476,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -504,11 +528,14 @@
       "64%",
       "74%",
       "86%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -558,11 +585,14 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -605,7 +635,9 @@
       "42%",
       "48%",
       "60%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -617,11 +649,14 @@
       "620(10分20秒)",
       "580(9分40秒)",
       "520(8分40秒)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -664,11 +699,14 @@
       "28%",
       "32%",
       "40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -722,7 +760,9 @@
       "40%",
       "45%",
       "50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -734,11 +774,14 @@
       "50%",
       "55%",
       "60%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -781,11 +824,14 @@
       "20%",
       "25%",
       "35%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -823,6 +869,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -868,11 +915,14 @@
       "130",
       "160",
       "200"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -915,11 +965,14 @@
       "130",
       "160",
       "200"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -968,11 +1021,14 @@
       "400%",
       "600%",
       "900%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1015,7 +1071,9 @@
       "60%",
       "60%",
       "20%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -1027,11 +1085,14 @@
       "325",
       "400",
       "500"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "レベル17のテクノロジーで解放"
@@ -1076,7 +1137,9 @@
       "60%",
       "60%",
       "20%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -1088,11 +1151,14 @@
       "375",
       "450",
       "550"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "レベル18のテクノロジーで解放"
@@ -1140,11 +1206,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1190,11 +1259,14 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1240,11 +1312,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1287,8 +1362,9 @@
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、『アルパオー』『アオパオー』の防御力と移動速度が上がる。 手持ちにいるメルパカの数が多いほど増加量は上がり、アルパオーのランク(濃縮)が高いと増加量も増える。 (メルパカのランクは関係ない) ③家畜牧場にアサインすると、羊毛を落とすことがある。"
    },
    "effects": [],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.7のテクノロジーで解放"
@@ -1337,11 +1413,14 @@
       "9%",
       "11%",
       "14%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.23のテクノロジーで解放"
@@ -1390,11 +1469,14 @@
       "9%",
       "11%",
       "14%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.46のテクノロジーで解放"
@@ -1439,11 +1521,14 @@
       "36",
       "42",
       "50"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1486,11 +1571,14 @@
       "26",
       "32",
       "40"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.12のテクノロジーで解放"
@@ -1538,11 +1626,14 @@
       "36",
       "42",
       "50"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.13のテクノロジーで解放"
@@ -1587,7 +1678,9 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -1599,11 +1692,14 @@
       "45秒",
       "40秒",
       "30秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1650,11 +1746,14 @@
       "0.2%",
       "0.3%",
       "0.4%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1706,11 +1805,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1747,6 +1849,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1783,6 +1886,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -1831,11 +1935,14 @@
       "+1100%",
       "1500%",
       "+2000%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.6のテクノロジーで解放"
@@ -1880,11 +1987,14 @@
       "18",
       "21",
       "25"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.6のテクノロジーで解放"
@@ -1932,11 +2042,14 @@
       "18",
       "21",
       "25"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
@@ -1983,11 +2096,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -2032,11 +2148,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -2088,7 +2207,9 @@
       "+40%",
       "+48%",
       "+60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -2100,11 +2221,14 @@
       "88%",
       "92%",
       "100%(重量ゼロ)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2154,11 +2278,14 @@
       "320%",
       "400%",
       "500%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.12のテクノロジーで解放"
@@ -2202,6 +2329,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.22のテクノロジーで解放"
@@ -2246,11 +2374,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.9のテクノロジーで解放"
@@ -2301,11 +2432,14 @@
       "140",
       "160",
       "200"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2354,11 +2488,14 @@
       "140",
       "160",
       "200"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2395,6 +2532,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2443,12 +2581,15 @@
       "+15%",
       "+19%",
       "+24%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
    },
@@ -2494,11 +2635,14 @@
       "88%",
       "92%",
       "100%(重量ゼロ)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2548,7 +2692,9 @@
       "88%",
       "92%",
       "100%(重量ゼロ)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -2560,11 +2706,14 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2609,11 +2758,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -2658,11 +2810,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -2711,11 +2866,14 @@
       "-10%",
       "-14%",
       "-20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2764,11 +2922,14 @@
       "-10%",
       "-14%",
       "-20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2803,6 +2964,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -2850,7 +3012,9 @@
       "+14%",
       "18%",
       "+25%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -2862,11 +3026,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
@@ -2916,7 +3083,9 @@
       "+14%",
       "18%",
       "+25%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -2928,11 +3097,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.27のテクノロジーで解放"
@@ -2989,11 +3161,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3045,11 +3220,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3101,11 +3279,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3158,11 +3339,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3210,7 +3394,9 @@
       "+30%",
       "+34%",
       "+40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -3222,11 +3408,14 @@
       "+260%",
       "320%",
       "+400%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3278,7 +3467,9 @@
       "+75%",
       "+85%",
       "+95%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -3290,11 +3481,14 @@
       "+70%",
       "+90%",
       "+120%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3346,7 +3540,9 @@
       "+75%",
       "+85%",
       "+95%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -3358,11 +3554,14 @@
       "+70%",
       "+90%",
       "+120%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3400,6 +3599,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3442,11 +3642,14 @@
       "22%",
       "28%",
       "35%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3492,11 +3695,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3543,11 +3749,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -3590,11 +3799,14 @@
       "+3",
       "+4",
       "+5"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3637,11 +3849,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.15のテクノロジーで解放"
@@ -3686,11 +3901,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3733,11 +3951,14 @@
       "130",
       "160",
       "200"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.18のテクノロジーで解放"
@@ -3789,12 +4010,15 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.14のテクノロジーで解放"
    },
@@ -3843,11 +4067,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.64のテクノロジーで解放"
@@ -3894,7 +4121,9 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -3906,11 +4135,14 @@
       "+13%",
       "16%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -3955,7 +4187,9 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -3967,11 +4201,14 @@
       "+13%",
       "16%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4018,7 +4255,9 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -4030,11 +4269,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4081,7 +4323,9 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -4093,11 +4337,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4136,6 +4383,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4182,11 +4430,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.15のテクノロジーで解放"
@@ -4234,11 +4485,14 @@
       "+3",
       "+4",
       "+5"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4284,11 +4538,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4328,6 +4585,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4365,6 +4623,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4414,11 +4673,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
@@ -4473,11 +4735,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
@@ -4526,11 +4791,14 @@
       "+36%",
       "42%",
       "+50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.21のテクノロジーで解放"
@@ -4579,11 +4847,14 @@
       "+36%",
       "42%",
       "+50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.22のテクノロジーで解放"
@@ -4628,11 +4899,14 @@
       "+7%",
       "8%",
       "+9%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4682,11 +4956,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4727,6 +5004,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4769,11 +5047,14 @@
       "+15%",
       "+19%",
       "+24%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4816,11 +5097,14 @@
       "+7%",
       "8%",
       "+9%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -4867,12 +5151,15 @@
       "60%",
       "65%",
       "75%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.19のテクノロジーで解放"
    },
@@ -4916,7 +5203,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -4928,12 +5217,15 @@
       "2秒",
       "1秒",
       "0秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
    },
@@ -4977,12 +5269,15 @@
       "120%",
       "+140%",
       "+160%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.26のテクノロジーで解放"
    },
@@ -5026,12 +5321,15 @@
       "120%",
       "+140%",
       "+160%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.55のテクノロジーで解放"
    },
@@ -5075,7 +5373,9 @@
       "14秒",
       "16秒",
       "20秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -5087,11 +5387,14 @@
       "20秒",
       "15秒",
       "8秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5134,7 +5437,9 @@
       "14秒",
       "16秒",
       "20秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -5146,11 +5451,14 @@
       "20秒",
       "15秒",
       "8秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5193,11 +5501,14 @@
       "+165%",
       "+225%",
       "+300%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5240,11 +5551,14 @@
       "+70%",
       "+85%",
       "+100%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5293,11 +5607,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.16のテクノロジーで解放"
@@ -5349,7 +5666,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -5361,11 +5680,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.25のテクノロジーで解放"
@@ -5410,11 +5732,14 @@
       "+20%",
       "+25%",
       "+35%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5457,11 +5782,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5496,6 +5824,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5541,11 +5870,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5591,11 +5923,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5641,7 +5976,9 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -5653,11 +5990,14 @@
       "20%",
       "30%",
       "50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5695,6 +6035,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5742,11 +6083,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.25のテクノロジーで解放"
@@ -5796,11 +6140,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.47のテクノロジーで解放"
@@ -5848,11 +6195,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5892,6 +6242,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5934,11 +6285,14 @@
       "+399",
       "+480",
       "+600"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -5981,11 +6335,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.26のテクノロジーで解放"
@@ -6035,7 +6392,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -6047,11 +6406,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.57のテクノロジーで解放"
@@ -6103,11 +6465,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
@@ -6159,11 +6524,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
@@ -6208,11 +6576,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6257,7 +6628,9 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -6269,11 +6642,14 @@
       "42%",
       "51%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6323,7 +6699,9 @@
       "40%",
       "50%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -6335,11 +6713,14 @@
       "54%",
       "66%",
       "80%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6386,7 +6767,9 @@
       "320%",
       "400%",
       "500%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -6398,12 +6781,15 @@
       "1100%",
       "1500%",
       "2000%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.28のテクノロジーで解放"
    },
@@ -6451,7 +6837,9 @@
       "320%",
       "400%",
       "500%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -6463,12 +6851,15 @@
       "1100%",
       "1500%",
       "2000%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.41のテクノロジーで解放"
    },
@@ -6515,11 +6906,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6569,7 +6963,9 @@
       "80%",
       "90%",
       "100%(重量ゼロ)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -6581,11 +6977,14 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6635,11 +7034,14 @@
       "79%",
       "82%",
       "85%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6692,7 +7094,9 @@
       "84%",
       "86%",
       "90%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -6704,11 +7108,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6756,11 +7163,14 @@
       "4%",
       "5%",
       "6%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6803,11 +7213,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6850,11 +7263,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6900,11 +7316,14 @@
       "39",
       "48",
       "60"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -6950,11 +7369,14 @@
       "39",
       "48",
       "60"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7002,11 +7424,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.29のテクノロジーで解放"
@@ -7056,11 +7481,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
@@ -7107,11 +7535,14 @@
       "20",
       "25",
       "31"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
@@ -7158,11 +7589,14 @@
       "20",
       "25",
       "31"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
@@ -7216,11 +7650,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7270,7 +7707,9 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -7282,12 +7721,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.29のテクノロジーで解放"
    },
@@ -7338,7 +7780,9 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -7350,12 +7794,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.71のテクノロジーで解放"
    },
@@ -7406,12 +7853,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.31のテクノロジーで解放"
    },
@@ -7462,12 +7912,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
    },
@@ -7516,12 +7969,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.30のテクノロジーで解放"
    },
@@ -7572,11 +8028,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
@@ -7626,7 +8085,9 @@
       "7%",
       "8%",
       "10%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -7638,11 +8099,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7690,7 +8154,9 @@
       "7%",
       "8%",
       "10%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -7702,11 +8168,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7752,11 +8221,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7802,11 +8274,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -7853,11 +8328,14 @@
       "+12%",
       "15%",
       "20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.31のテクノロジーで解放"
@@ -7904,11 +8382,14 @@
       "145",
       "180",
       "225"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
@@ -7955,11 +8436,14 @@
       "145",
       "180",
       "225"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
@@ -8009,11 +8493,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.11のテクノロジーで解放"
@@ -8063,11 +8550,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
@@ -8117,11 +8607,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
@@ -8175,12 +8668,15 @@
       "6%",
       "7%",
       "8%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.36のテクノロジーで解放"
    },
@@ -8231,11 +8727,14 @@
       "30%",
       "34%",
       "40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.70のテクノロジーで解放"
@@ -8280,12 +8779,15 @@
       "195%",
       "+215%",
       "+240%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.35のテクノロジーで解放"
    },
@@ -8329,11 +8831,14 @@
       "1200%",
       "1500%",
       "2000%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -8380,12 +8885,15 @@
       "39%",
       "41%",
       "45%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
    },
@@ -8433,12 +8941,15 @@
       "49%",
       "51%",
       "55%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.44のテクノロジーで解放"
    },
@@ -8491,11 +9002,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -8542,11 +9056,14 @@
       "+130%",
       "160%",
       "+200%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -8593,11 +9110,14 @@
       "+32%",
       "38%",
       "+50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.36のテクノロジーで解放"
@@ -8652,7 +9172,9 @@
       "+12%",
       "15%",
       "20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -8664,11 +9186,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.57のテクノロジーで解放"
@@ -8723,7 +9248,9 @@
       "+12%",
       "15%",
       "20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -8735,11 +9262,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.59のテクノロジーで解放"
@@ -8791,11 +9321,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
@@ -8847,11 +9380,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.35のテクノロジーで解放"
@@ -8896,11 +9432,14 @@
       "7秒",
       "8秒",
       "9秒"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -8943,11 +9482,14 @@
       "7秒",
       "8秒",
       "9秒"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -8990,11 +9532,14 @@
       "32%",
       "38%",
       "50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9040,11 +9585,14 @@
       "21%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9091,11 +9639,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9145,11 +9696,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9194,12 +9748,15 @@
       "40%",
       "48%",
       "60%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.37のテクノロジーで解放"
    },
@@ -9239,6 +9796,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.39のテクノロジーで解放"
@@ -9285,12 +9843,15 @@
       "13%",
       "14%",
       "15%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.39のテクノロジーで解放"
    },
@@ -9337,11 +9898,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9384,11 +9948,14 @@
       "480秒",
       "390秒",
       "280秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9438,7 +10005,9 @@
       "+12%",
       "+15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -9450,11 +10019,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
@@ -9508,7 +10080,9 @@
       "+12%",
       "+15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -9520,11 +10094,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.59のテクノロジーで解放"
@@ -9574,12 +10151,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.43のテクノロジーで解放"
    },
@@ -9628,12 +10208,15 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.44のテクノロジーで解放"
    },
@@ -9677,12 +10260,15 @@
       "+74%",
       "+86%",
       "+100%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.28のテクノロジーで解放"
    },
@@ -9733,11 +10319,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.38のテクノロジーで解放"
@@ -9787,11 +10376,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
@@ -9840,11 +10432,14 @@
       "+60%",
       "+65%",
       "+70%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9890,11 +10485,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -9939,12 +10537,15 @@
       "21%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.41のテクノロジーで解放"
    },
@@ -9988,11 +10589,14 @@
       "3000",
       "3400",
       "3900"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10035,11 +10639,14 @@
       "3300",
       "3700",
       "4200"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10088,11 +10695,14 @@
       "40%",
       "50%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
@@ -10143,11 +10753,14 @@
       "45%",
       "55%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.43のテクノロジーで解放"
@@ -10192,11 +10805,14 @@
       "+74%",
       "+86%",
       "+100%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.57のテクノロジーで解放"
@@ -10246,11 +10862,14 @@
       "13%",
       "18%",
       "25%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.77のテクノロジーで解放"
@@ -10298,11 +10917,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10348,11 +10970,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10398,11 +11023,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10445,11 +11073,14 @@
       "40%",
       "48%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10492,11 +11123,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10538,6 +11172,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
@@ -10592,11 +11227,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.51のテクノロジーで解放"
@@ -10648,11 +11286,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10698,11 +11339,14 @@
       "60",
       "70",
       "80"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -10751,11 +11395,14 @@
       "+7%",
       "8%",
       "+10%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.46のテクノロジーで解放"
@@ -10807,11 +11454,14 @@
       "+30%",
       "+34%",
       "+40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.55のテクノロジーで解放"
@@ -10863,11 +11513,14 @@
       "100",
       "90",
       "80"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
@@ -10919,11 +11572,14 @@
       "100",
       "90",
       "80"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.69のテクノロジーで解放"
@@ -10971,11 +11627,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11020,7 +11679,9 @@
       "28%",
       "32%",
       "40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -11032,11 +11693,14 @@
       "42%",
       "48%",
       "60%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11082,11 +11746,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11132,11 +11799,14 @@
       "+40%",
       "+45%",
       "+50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11178,6 +11848,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
@@ -11224,11 +11895,14 @@
       "88%",
       "92%",
       "100%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.75のテクノロジーで解放"
@@ -11275,7 +11949,9 @@
       "65",
       "80",
       "100"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -11287,11 +11963,14 @@
       "20%",
       "25%",
       "35%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.52のテクノロジーで解放"
@@ -11336,11 +12015,14 @@
       "40秒",
       "20秒",
       "10秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11383,11 +12065,14 @@
       "120%",
       "135%",
       "160%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11434,11 +12119,14 @@
       "20%",
       "25%",
       "35%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.41のテクノロジーで解放"
@@ -11485,11 +12173,14 @@
       "26%",
       "30%",
       "35%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11532,11 +12223,14 @@
       "+130%(2.3倍)",
       "+160%(2.6倍)",
       "+200%(3倍)"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11582,11 +12276,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11631,7 +12328,9 @@
       "2.6秒",
       "2.4秒",
       "2秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -11643,11 +12342,14 @@
       "115個(2.3倍)",
       "130個(2.6倍)",
       "150個(3倍)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.58のテクノロジーで解放"
@@ -11687,6 +12389,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11729,11 +12432,14 @@
       "+52%",
       "+64%",
       "+80%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11780,7 +12486,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -11792,7 +12500,9 @@
       "+9%",
       "+11%",
       "+14%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -11804,12 +12514,15 @@
       "+9%",
       "+11%",
       "+14%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
    },
@@ -11857,7 +12570,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -11869,7 +12584,9 @@
       "+11%",
       "+13%",
       "+17%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -11881,12 +12598,15 @@
       "+11%",
       "+13%",
       "+17%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.71のテクノロジーで解放"
    },
@@ -11922,6 +12642,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -11964,11 +12685,14 @@
       "+130%",
       "+160%",
       "+200%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12016,11 +12740,14 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.54のテクノロジーで解放"
@@ -12065,11 +12792,14 @@
       "750(12分30秒)",
       "625(10分25秒)",
       "500(8分20秒)"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12122,11 +12852,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.53のテクノロジーで解放"
@@ -12180,7 +12913,9 @@
       "4%",
       "5%",
       "6%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -12192,12 +12927,15 @@
       "0.3%",
       "0.45%",
       "0.75%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.54のテクノロジーで解放"
    },
@@ -12247,12 +12985,15 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.78のテクノロジーで解放"
    },
@@ -12298,7 +13039,9 @@
       "2000%",
       "2600%",
       "3300%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -12310,11 +13053,14 @@
       "210%",
       "240%",
       "300%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.39のテクノロジーで解放"
@@ -12361,11 +13107,14 @@
       "+110%",
       "+150%",
       "+200%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12410,11 +13159,14 @@
       "+120%",
       "160%",
       "+210%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12461,7 +13213,9 @@
       "40%",
       "48%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -12473,11 +13227,14 @@
       "71%",
       "75%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
@@ -12522,7 +13279,9 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -12534,12 +13293,15 @@
       "3秒",
       "2.4秒",
       "1.2秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.58のテクノロジーで解放"
    },
@@ -12575,6 +13337,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12620,11 +13383,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12673,11 +13439,14 @@
       "20%",
       "24%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12723,11 +13492,14 @@
       "+3",
       "+4",
       "+5"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12770,11 +13542,14 @@
       "55%",
       "59%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12817,11 +13592,14 @@
       "70%",
       "80%",
       "100%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12867,11 +13645,14 @@
       "48%",
       "52%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12917,11 +13698,14 @@
       "-60%",
       "-70%",
       "-80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -12968,7 +13752,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -12980,11 +13766,14 @@
       "74",
       "76",
       "80"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.65のテクノロジーで解放"
@@ -13038,7 +13827,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -13050,7 +13841,9 @@
       "+10%",
       "+14%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -13062,11 +13855,14 @@
       "78",
       "80",
       "82"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.66のテクノロジーで解放"
@@ -13111,11 +13907,14 @@
       "-20%",
       "-30%",
       "-50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13167,12 +13966,15 @@
       "4%",
       "5%",
       "6%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.68のテクノロジーで解放"
    },
@@ -13225,12 +14027,15 @@
       "4%",
       "5%",
       "6%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.76のテクノロジーで解放"
    },
@@ -13276,11 +14081,14 @@
       "32%",
       "38%",
       "50%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.66のテクノロジーで解放"
@@ -13325,11 +14133,14 @@
       "+0.07秒(+23.3%)",
       "0.08秒(+26.7%)",
       "0.09秒(+30%)"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13375,11 +14186,14 @@
       "48%",
       "52%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13429,11 +14243,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.72のテクノロジーで解放"
@@ -13486,7 +14303,9 @@
       "130",
       "160",
       "200"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -13498,11 +14317,14 @@
       "40%",
       "45%",
       "50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13552,11 +14374,14 @@
       "56%",
       "60%",
       "65%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.72のテクノロジーで解放"
@@ -13604,11 +14429,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13646,6 +14474,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13688,11 +14517,14 @@
       "21%",
       "25%",
       "30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13738,11 +14570,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13785,11 +14620,14 @@
       "50%",
       "60%",
       "80%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13835,11 +14673,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -13888,11 +14729,14 @@
       "70%",
       "75%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.79のテクノロジーで解放"
@@ -13939,11 +14783,14 @@
       "7.5",
       "8",
       "9.5"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
@@ -13988,11 +14835,14 @@
       "84%",
       "86%",
       "90%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14035,11 +14885,14 @@
       "89%",
       "91%",
       "95%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14084,11 +14937,14 @@
       "3%",
       "4%",
       "5%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14138,11 +14994,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
@@ -14194,11 +15053,14 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
@@ -14246,11 +15108,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.47のテクノロジーで解放"
@@ -14300,11 +15165,14 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.53のテクノロジーで解放"
@@ -14354,11 +15222,14 @@
       "140",
       "160",
       "200"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.73のテクノロジーで解放"
@@ -14410,12 +15281,15 @@
       "6%",
       "7%",
       "8%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.77のテクノロジーで解放"
    },
@@ -14462,11 +15336,14 @@
       "48%",
       "52%",
       "60%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14516,11 +15393,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14563,11 +15443,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14610,11 +15493,14 @@
       "1.6倍",
       "2倍",
       "2.5倍"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": true,
    "noStack": false,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
@@ -14661,7 +15547,9 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -14673,12 +15561,15 @@
       "32%",
       "38%",
       "50%"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：孵化後にLv.66のテクノロジーで解放"
    },
@@ -14724,11 +15615,14 @@
       "90秒(1分30秒)",
       "60秒",
       "30秒"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：孵化後にLv.70のテクノロジーで解放"
@@ -14777,11 +15671,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -14828,11 +15725,14 @@
       "+12%",
       "15%",
       "+20%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": null,
    "verified": true,
@@ -14883,7 +15783,9 @@
       "+20%",
       "+28%",
       "+40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -14895,11 +15797,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.62のテクノロジーで解放"
@@ -14952,7 +15857,9 @@
       "+20%",
       "+28%",
       "+40%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -14964,11 +15871,14 @@
       "4",
       "5",
       "6"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.62のテクノロジーで解放"
@@ -15017,7 +15927,9 @@
       "+14%",
       "18%",
       "+25%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     },
     {
      "label": {
@@ -15029,12 +15941,15 @@
       "2.4秒",
       "1.8秒",
       "1秒"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.64のテクノロジーで解放"
    },
@@ -15080,11 +15995,14 @@
       "26",
       "32",
       "40"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": false,
    "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.79のテクノロジーで解放"
@@ -15133,12 +16051,15 @@
       "1.6",
       "2.0",
       "2.5"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     }
    ],
    "stackable": false,
    "noStack": true,
-   "rideExclusive": true,
+   "mixedStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -15195,7 +16116,9 @@
       "480",
       "600",
       "750"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -15207,7 +16130,9 @@
       "+20%",
       "+24%",
       "+30%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -15219,7 +16144,9 @@
       "60%",
       "70%",
       "80%"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "source"
     },
     {
      "label": {
@@ -15231,7 +16158,9 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -15243,7 +16172,9 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": false,
+     "noStackReason": null
     },
     {
      "label": {
@@ -15255,11 +16186,14 @@
       "中",
       "大",
       "特大"
-     ]
+     ],
+     "noStack": true,
+     "noStackReason": "ride"
     }
    ],
    "stackable": false,
    "noStack": true,
+   "mixedStack": true,
    "rideExclusive": false,
    "palGear": null,
    "verified": true,
