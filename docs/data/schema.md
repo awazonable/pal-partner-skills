@@ -24,7 +24,12 @@
   - `effects[]`: `{ label{ja}, perStar:[5] }`
     - **`perStar` は ★0〜★4 の 5 値**。値は**ソース準拠の文字列**（`"+15%"`, `"250"`, `"特大"`, `"11分40秒"` 等）。
     - ソース側で ★0 が省略/欠落している箇所は `null`（UI では `—` 表示）。
-  - `stackable`（bool＝`!noStack`）, `noStack`（bool。説明文に「重複不可」）
+  - `stackable`（bool＝`!noStack`）, `noStack`（bool）, `rideExclusive`（bool）
+    - `noStack` = 説明文に「重複不可」 **または** 騎乗(`cond-mount`)スキル
+      （同時に複数ライドできないため）。ただし**同名パルの数でスタックする**効果
+      （例：メルパカ）は除外し `stackable` のまま。
+    - `rideExclusive` = 騎乗由来で重複不可になった（ソースには「重複不可」表記が無い）場合 true。
+      UI ではバッジを「重複不可(騎乗)」と表示。
   - `palGear{ja}`|null（パルギア解放条件のメモ）
   - `verified`（bool）, `source`（string）
 

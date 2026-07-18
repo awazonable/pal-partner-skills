@@ -87,8 +87,13 @@ function renderCard(skill, tagIndex, star) {
   // バッジ: 重複可否
   const badges = document.createElement('div');
   badges.className = 'card-badges';
-  if (skill.noStack) badges.appendChild(badge('重複不可', 'stack-no'));
-  else badges.appendChild(badge('重複可', 'stack-ok'));
+  if (skill.noStack) {
+    const b = badge(skill.rideExclusive ? '重複不可(騎乗)' : '重複不可', 'stack-no');
+    if (skill.rideExclusive) b.title = '同時に複数のパルにライドできないため重複不可扱い';
+    badges.appendChild(b);
+  } else {
+    badges.appendChild(badge('重複可', 'stack-ok'));
+  }
   if (badges.children.length) card.appendChild(badges);
 
   // 効果（★選択で値が変わる）

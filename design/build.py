@@ -108,13 +108,21 @@ class P(HTMLParser):
         cat=list(dict.fromkeys(cat))
         no=self.cur['no']; num=re.sub(r'^No\.','',no)
         variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
+        # 重複可否の判定
+        source_nostack = '重複不可' in full
+        # 同名パルが多いほど強化される＝手持ち効果が本当にスタックする（例：メルパカ）
+        same_pal_stack = bool(re.search(re.escape(pal)+r'の数(が多いほど|だけ)', full))
+        # 騎乗効果は同時に複数ライドできないため本質的に重複不可（同名スタック型は除く）
+        ride_nostack = ('cond-mount' in cond) and not same_pal_stack
+        noStack = source_nostack or ride_nostack
+        ride_exclusive = ride_nostack and not source_nostack
         tags=els+wks+sts+cond+cat
         rec={'id':'no-'+num.lower(),'no':no,'variant':variant,
              'pal':{'ja':pal},'skillName':{'ja':skill},
              'element':els,'works':wks,'status':sts,'conditions':cond,'categories':cat,
              'tags':list(dict.fromkeys(tags)),
              'description':{'ja':full},'effects':effects,
-             'stackable': not ('重複不可' in full),'noStack':'重複不可' in full,
+             'stackable': not noStack,'noStack':noStack,'rideExclusive':ride_exclusive,
              'palGear':{'ja':palgear} if palgear else None,
              'verified':True,'source':'palworld-lab'}
         self.blocks.append(rec); self.cur=None
@@ -186,7 +194,7 @@ for ja,sid in STAT.items():
 tagsdoc={'groups':groups,'tags':tags}
 skillsdoc={'meta':{'gameVersion':'1.0','generatedAt':'2026-07-18','totalSkills':len(skills),
   'source':'パルワールド配合・攻略ラボ（ユーザー提供のHTMLを構造化）',
-  'note':'★0〜★4 は濃縮ランク=パートナースキルの5段階レベル。値はソース準拠（一部ソース側の表記ゆれ/★0省略あり→ — 表示）。αパル個体差分は本ソースに明示が無いため未収録。'},
+  'note':'★0〜★4 は濃縮ランク=パートナースキルの5段階レベル。値はソース準拠（一部ソース側の表記ゆれ/★0省略あり→ — 表示）。騎乗(cond-mount)は同時に複数ライドできないため重複不可扱い（rideExclusive）。ただし同名パルの数でスタックする効果（例:メルパカ）は重複可のまま。αパル個体差分は本ソースに明示が無いため未収録。'},
   'skills':skills}
 json.dump(tagsdoc,open(sys.argv[2],'w',encoding='utf-8'),ensure_ascii=False,indent=2)
 json.dump(skillsdoc,open(sys.argv[3],'w',encoding='utf-8'),ensure_ascii=False,indent=1)

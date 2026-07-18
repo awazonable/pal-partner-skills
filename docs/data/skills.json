@@ -42,6 +42,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -88,6 +89,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -121,6 +123,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -167,6 +170,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.11のテクノロジーで解放"
    },
@@ -215,6 +219,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -261,6 +266,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -296,6 +302,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -344,8 +351,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -394,8 +402,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -451,6 +460,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -499,6 +509,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -552,6 +563,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -610,6 +622,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -656,6 +669,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -725,6 +739,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -771,6 +786,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -807,6 +823,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -856,6 +873,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -902,6 +920,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -954,6 +973,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1012,6 +1032,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "レベル17のテクノロジーで解放"
    },
@@ -1072,6 +1093,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "レベル18のテクノロジーで解放"
    },
@@ -1123,6 +1145,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1172,6 +1195,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1221,6 +1245,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1264,6 +1289,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.7のテクノロジーで解放"
    },
@@ -1314,8 +1340,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.23のテクノロジーで解放"
    },
@@ -1366,8 +1393,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.46のテクノロジーで解放"
    },
@@ -1416,6 +1444,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1462,6 +1491,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.12のテクノロジーで解放"
    },
@@ -1513,6 +1543,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.13のテクノロジーで解放"
    },
@@ -1573,6 +1604,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1623,6 +1655,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1678,6 +1711,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1713,6 +1747,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1748,6 +1783,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1798,8 +1834,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.6のテクノロジーで解放"
    },
@@ -1848,6 +1885,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.6のテクノロジーで解放"
    },
@@ -1899,6 +1937,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
    },
@@ -1947,8 +1986,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -1995,8 +2035,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2064,6 +2105,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2115,8 +2157,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.12のテクノロジーで解放"
    },
@@ -2159,6 +2202,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.22のテクノロジーで解放"
    },
@@ -2205,8 +2249,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.9のテクノロジーで解放"
    },
@@ -2261,6 +2306,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2313,6 +2359,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2348,6 +2395,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2398,8 +2446,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
    },
@@ -2450,6 +2499,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2515,6 +2565,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2561,8 +2612,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2609,8 +2661,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2663,6 +2716,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2715,6 +2769,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2748,6 +2803,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2809,8 +2865,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
    },
@@ -2874,8 +2931,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.27のテクノロジーで解放"
    },
@@ -2936,6 +2994,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -2991,6 +3050,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3046,6 +3106,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3102,6 +3163,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3165,6 +3227,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3232,6 +3295,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3299,6 +3363,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3335,6 +3400,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3381,6 +3447,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3430,6 +3497,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3478,8 +3546,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3526,6 +3595,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3570,8 +3640,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.15のテクノロジーで解放"
    },
@@ -3620,6 +3691,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3666,6 +3738,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.18のテクノロジーで解放"
    },
@@ -3719,8 +3792,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.14のテクノロジーで解放"
    },
@@ -3772,8 +3846,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.64のテクノロジーで解放"
    },
@@ -3836,6 +3911,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3896,6 +3972,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -3958,6 +4035,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4020,6 +4098,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4057,6 +4136,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4107,6 +4187,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.15のテクノロジーで解放"
    },
@@ -4158,6 +4239,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4207,6 +4289,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4245,6 +4328,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4281,6 +4365,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4334,6 +4419,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
    },
@@ -4392,6 +4478,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
    },
@@ -4444,6 +4531,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.21のテクノロジーで解放"
    },
@@ -4496,6 +4584,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.22のテクノロジーで解放"
    },
@@ -4544,6 +4633,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4597,6 +4687,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4636,6 +4727,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4682,6 +4774,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4728,6 +4821,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -4776,8 +4870,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.19のテクノロジーで解放"
    },
@@ -4836,8 +4931,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.20のテクノロジーで解放"
    },
@@ -4884,8 +4980,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.26のテクノロジーで解放"
    },
@@ -4932,8 +5029,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.55のテクノロジーで解放"
    },
@@ -4994,6 +5092,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5052,6 +5151,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5098,6 +5198,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5144,6 +5245,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5194,8 +5296,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.16のテクノロジーで解放"
    },
@@ -5263,6 +5366,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.25のテクノロジーで解放"
    },
@@ -5311,6 +5415,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5357,6 +5462,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5390,6 +5496,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5439,6 +5546,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5488,6 +5596,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5549,6 +5658,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5585,6 +5695,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5634,8 +5745,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.25のテクノロジーで解放"
    },
@@ -5687,8 +5799,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.47のテクノロジーで解放"
    },
@@ -5740,6 +5853,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5778,6 +5892,7 @@
    "effects": [],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5824,6 +5939,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -5868,8 +5984,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.26のテクノロジーで解放"
    },
@@ -5935,6 +6052,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.57のテクノロジーで解放"
    },
@@ -5990,6 +6108,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.24のテクノロジーで解放"
    },
@@ -6045,6 +6164,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
    },
@@ -6093,6 +6213,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6153,6 +6274,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6218,6 +6340,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6278,8 +6401,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.28のテクノロジーで解放"
    },
@@ -6342,8 +6466,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.41のテクノロジーで解放"
    },
@@ -6395,6 +6520,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6460,6 +6586,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6513,6 +6640,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6581,6 +6709,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6632,6 +6761,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6678,6 +6808,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6724,6 +6855,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6773,6 +6905,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6822,6 +6955,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -6871,8 +7005,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.29のテクノロジーで解放"
    },
@@ -6924,8 +7059,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
    },
@@ -6974,8 +7110,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
    },
@@ -7024,8 +7161,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
    },
@@ -7083,6 +7221,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -7146,8 +7285,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.29のテクノロジーで解放"
    },
@@ -7213,8 +7353,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.71のテクノロジーで解放"
    },
@@ -7268,8 +7409,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.31のテクノロジーで解放"
    },
@@ -7323,8 +7465,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
    },
@@ -7376,8 +7519,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.30のテクノロジーで解放"
    },
@@ -7433,6 +7577,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
    },
@@ -7498,6 +7643,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -7561,6 +7707,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -7610,6 +7757,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -7659,6 +7807,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -7709,6 +7858,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.31のテクノロジーで解放"
    },
@@ -7757,8 +7907,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.32のテクノロジーで解放"
    },
@@ -7807,8 +7958,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.34のテクノロジーで解放"
    },
@@ -7860,8 +8012,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.11のテクノロジーで解放"
    },
@@ -7913,8 +8066,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
    },
@@ -7966,8 +8120,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
    },
@@ -8023,8 +8178,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.36のテクノロジーで解放"
    },
@@ -8080,6 +8236,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.70のテクノロジーで解放"
    },
@@ -8126,8 +8283,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.35のテクノロジーで解放"
    },
@@ -8176,6 +8334,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8224,8 +8383,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
    },
@@ -8276,8 +8436,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.44のテクノロジーで解放"
    },
@@ -8335,6 +8496,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8385,6 +8547,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8435,6 +8598,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.36のテクノロジーで解放"
    },
@@ -8505,6 +8669,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.57のテクノロジーで解放"
    },
@@ -8575,6 +8740,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.59のテクノロジーで解放"
    },
@@ -8630,6 +8796,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.33のテクノロジーで解放"
    },
@@ -8685,6 +8852,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.35のテクノロジーで解放"
    },
@@ -8733,6 +8901,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8779,6 +8948,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8825,6 +8995,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8874,6 +9045,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8924,6 +9096,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -8977,6 +9150,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9023,8 +9197,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.37のテクノロジーで解放"
    },
@@ -9062,8 +9237,9 @@
     "ja": "①背中に乗って移動できる。 家畜牧場にアサインすると、キノコか洞窟キノコを作ることがある。"
    },
    "effects": [],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.39のテクノロジーで解放"
    },
@@ -9112,8 +9288,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.39のテクノロジーで解放"
    },
@@ -9165,6 +9342,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9211,6 +9389,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9276,6 +9455,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
    },
@@ -9345,6 +9525,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.59のテクノロジーで解放"
    },
@@ -9396,8 +9577,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.43のテクノロジーで解放"
    },
@@ -9449,8 +9631,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.44のテクノロジーで解放"
    },
@@ -9497,8 +9680,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.28のテクノロジーで解放"
    },
@@ -9554,6 +9738,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.38のテクノロジーで解放"
    },
@@ -9605,8 +9790,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
    },
@@ -9659,6 +9845,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9708,6 +9895,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9754,8 +9942,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.41のテクノロジーで解放"
    },
@@ -9804,6 +9993,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9850,6 +10040,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -9902,6 +10093,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
    },
@@ -9956,6 +10148,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.43のテクノロジーで解放"
    },
@@ -10002,8 +10195,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲/孵化後にLv.57のテクノロジーで解放"
    },
@@ -10055,8 +10249,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.77のテクノロジーで解放"
    },
@@ -10108,6 +10303,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10157,6 +10353,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10206,6 +10403,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10252,6 +10450,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10298,6 +10497,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10338,6 +10538,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.45のテクノロジーで解放"
    },
@@ -10396,6 +10597,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.51のテクノロジーで解放"
    },
@@ -10451,6 +10653,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10500,6 +10703,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10552,6 +10756,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.46のテクノロジーで解放"
    },
@@ -10607,6 +10812,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.55のテクノロジーで解放"
    },
@@ -10660,8 +10866,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
    },
@@ -10715,8 +10922,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.69のテクノロジーで解放"
    },
@@ -10768,6 +10976,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10828,6 +11037,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10877,6 +11087,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10926,6 +11137,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -10966,6 +11178,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.48のテクノロジーで解放"
    },
@@ -11016,6 +11229,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.75のテクノロジーで解放"
    },
@@ -11078,6 +11292,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.52のテクノロジーで解放"
    },
@@ -11126,6 +11341,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11172,6 +11388,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11222,6 +11439,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.41のテクノロジーで解放"
    },
@@ -11272,6 +11490,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11318,6 +11537,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11367,6 +11587,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11427,6 +11648,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.58のテクノロジーで解放"
    },
@@ -11465,6 +11687,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11511,6 +11734,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11583,8 +11807,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.42のテクノロジーで解放"
    },
@@ -11659,8 +11884,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.71のテクノロジーで解放"
    },
@@ -11696,6 +11922,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11742,6 +11969,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11791,8 +12019,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.54のテクノロジーで解放"
    },
@@ -11841,6 +12070,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -11897,6 +12127,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.53のテクノロジーで解放"
    },
@@ -11964,8 +12195,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.54のテクノロジーで解放"
    },
@@ -12018,8 +12250,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.78のテクノロジーで解放"
    },
@@ -12080,8 +12313,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.39のテクノロジーで解放"
    },
@@ -12132,6 +12366,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12180,6 +12415,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12242,6 +12478,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
    },
@@ -12300,8 +12537,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.58のテクノロジーで解放"
    },
@@ -12337,6 +12575,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12386,6 +12625,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12438,6 +12678,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12487,6 +12728,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12533,6 +12775,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12579,6 +12822,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12628,6 +12872,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12677,6 +12922,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12739,6 +12985,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.65のテクノロジーで解放"
    },
@@ -12820,6 +13067,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.66のテクノロジーで解放"
    },
@@ -12868,6 +13116,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -12921,8 +13170,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.68のテクノロジーで解放"
    },
@@ -12978,8 +13228,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.76のテクノロジーで解放"
    },
@@ -13030,6 +13281,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.66のテクノロジーで解放"
    },
@@ -13078,6 +13330,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13127,6 +13380,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13180,6 +13434,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.72のテクノロジーで解放"
    },
@@ -13248,6 +13503,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13301,6 +13557,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.72のテクノロジーで解放"
    },
@@ -13352,6 +13609,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13388,6 +13646,7 @@
    "effects": [],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13434,6 +13693,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13483,6 +13743,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13529,6 +13790,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13578,6 +13840,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13630,6 +13893,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.79のテクノロジーで解放"
    },
@@ -13678,8 +13942,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.40のテクノロジーで解放"
    },
@@ -13728,6 +13993,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13774,6 +14040,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13822,6 +14089,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -13875,6 +14143,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
    },
@@ -13930,6 +14199,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.60のテクノロジーで解放"
    },
@@ -13979,8 +14249,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.47のテクノロジーで解放"
    },
@@ -14032,8 +14303,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.53のテクノロジーで解放"
    },
@@ -14085,8 +14357,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.73のテクノロジーで解放"
    },
@@ -14140,8 +14413,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.77のテクノロジーで解放"
    },
@@ -14193,6 +14467,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14246,6 +14521,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14292,6 +14568,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14338,6 +14615,7 @@
    ],
    "stackable": true,
    "noStack": false,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14398,8 +14676,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：孵化後にLv.66のテクノロジーで解放"
    },
@@ -14448,8 +14727,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：孵化後にLv.70のテクノロジーで解放"
    },
@@ -14500,8 +14780,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14550,8 +14831,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14616,8 +14898,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.62のテクノロジーで解放"
    },
@@ -14686,6 +14969,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.62のテクノロジーで解放"
    },
@@ -14748,8 +15032,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.64のテクノロジーで解放"
    },
@@ -14798,8 +15083,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": {
     "ja": "パルギア解放：捕獲・孵化後にLv.79のテクノロジーで解放"
    },
@@ -14850,8 +15136,9 @@
      ]
     }
    ],
-   "stackable": true,
-   "noStack": false,
+   "stackable": false,
+   "noStack": true,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
@@ -14973,6 +15260,7 @@
    ],
    "stackable": false,
    "noStack": true,
+   "rideExclusive": false,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
