@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (only if tooling is added later; the site itself is build-free)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Scratch / temp
+/tmp/
+*.log
