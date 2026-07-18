@@ -14,15 +14,15 @@
       <h1>Palworld パートナースキル DB <span class="badge-version">v1.0</span></h1>
       <div class="header-controls">
         <label class="level-control">
-          パートナースキル Lv
-          <span class="level-buttons" id="levelButtons" role="radiogroup" aria-label="パートナースキルレベル"></span>
+          強化ランク
+          <span class="level-buttons" id="levelButtons" role="radiogroup" aria-label="強化ランク（濃縮★0〜★4）"></span>
         </label>
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="テーマ切替">🌓</button>
       </div>
     </div>
     <p class="disclaimer">
-      対象は <strong>v1.0</strong>（β版から効果が変更）。これは <strong>PoC の代表サンプル</strong>で、
-      <span class="chip-unverified-inline">要検証</span> 印はパル対応・数値が未確定です。全 <span id="totalInGame">82</span> 種の網羅と数値確定は今後拡充します。
+      対象は <strong>v1.0</strong>（β版から効果が変更）。<strong>★0〜★4</strong> は濃縮ランク＝パートナースキルの5段階レベルで、右上の切替で全カードの効果値が変わります。
+      収録 <strong id="totalInGame">288</strong> 件。データ出典は「パルワールド配合・攻略ラボ」（ユーザー提供のHTMLを構造化）。一部はソース側の表記ゆれ・★0省略あり（<code>—</code> 表示）。
     </p>
   </header>
 
@@ -39,10 +39,9 @@
       <div class="filter-group">
         <h3 class="filter-group-title">その他</h3>
         <div class="filter-options">
-          <label class="filter-option"><input type="checkbox" id="flagStackable" /> <span>重複可のみ</span></label>
-          <label class="filter-option"><input type="checkbox" id="flagUnique" /> <span>ユニークのみ</span></label>
-          <label class="filter-option"><input type="checkbox" id="flagAlpha" /> <span>α差分ありのみ</span></label>
-          <label class="filter-option"><input type="checkbox" id="flagVerified" /> <span>検証済みのみ</span></label>
+          <label class="filter-option"><input type="checkbox" id="flagNoStack" /> <span>重複不可のみ</span></label>
+          <label class="filter-option"><input type="checkbox" id="flagVariant" /> <span>亜種のみ</span></label>
+          <label class="filter-option"><input type="checkbox" id="flagPalGear" /> <span>要パルギアのみ</span></label>
         </div>
       </div>
       <button id="clearFilters" class="clear-filters" type="button">フィルタをクリア</button>
@@ -54,8 +53,9 @@
         <label class="sort-control">
           並び替え
           <select id="sortSelect">
-            <option value="condition">発動場面 → Pal 名</option>
-            <option value="pal">Pal 名</option>
+            <option value="no">図鑑番号</option>
+            <option value="condition">発動場面</option>
+            <option value="pal">パル名</option>
             <option value="element">属性</option>
             <option value="name">スキル名</option>
           </select>
@@ -68,8 +68,8 @@
   </div>
 
   <footer class="site-footer">
-    <p>データ出典は各種コミュニティ DB を突き合わせて整理（<code>design/01-research.md</code> 参照）。
-       Palworld は Pocketpair, Inc. の作品です。本サイトは非公式のファンメイド資料です。</p>
+    <p>データ出典：「パルワールド配合・攻略ラボ」（ユーザー提供の一覧HTMLを構造化。<code>design/01-research.md</code> 参照）。
+       ★0〜★4 は濃縮ランク。Palworld は Pocketpair, Inc. の作品です。本サイトは非公式のファンメイド資料です。</p>
   </footer>
 
   <script type="module" src="./js/main.js"></script>

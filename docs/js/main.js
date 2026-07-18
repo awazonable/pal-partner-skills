@@ -22,20 +22,19 @@ const els = {
   clearFilters: document.getElementById('clearFilters'),
   filterToggle: document.getElementById('filterToggle'),
   themeToggle: document.getElementById('themeToggle'),
-  flagStackable: document.getElementById('flagStackable'),
-  flagUnique: document.getElementById('flagUnique'),
-  flagAlpha: document.getElementById('flagAlpha'),
-  flagVerified: document.getElementById('flagVerified'),
+  flagNoStack: document.getElementById('flagNoStack'),
+  flagVariant: document.getElementById('flagVariant'),
+  flagPalGear: document.getElementById('flagPalGear'),
 };
 
-const state = { tags: null, skills: [], tagIndex: null, level: 1 };
+// star: 0..4（=★0〜★4 濃縮ランク）
+const state = { tags: null, skills: [], tagIndex: null, star: 0 };
 
 function readFlags() {
   return {
-    stackable: els.flagStackable.checked,
-    unique: els.flagUnique.checked,
-    alpha: els.flagAlpha.checked,
-    verified: els.flagVerified.checked,
+    noStack: els.flagNoStack.checked,
+    variant: els.flagVariant.checked,
+    palGear: els.flagPalGear.checked,
   };
 }
 
@@ -46,10 +45,9 @@ function writeHash() {
   const params = new URLSearchParams();
   if (tagIds.length) params.set('t', tagIds.join(','));
   if (els.search.value.trim()) params.set('q', els.search.value.trim());
-  if (state.level !== 1) params.set('lv', state.level);
-  if (els.sortSelect.value !== 'condition') params.set('sort', els.sortSelect.value);
-  const flags = readFlags();
-  const active = Object.entries(flags).filter(([, v]) => v).map(([k]) => k);
+  if (state.star !== 0) params.set('star', state.star);
+  if (els.sortSelect.value !== 'no') params.set('sort', els.sortSelect.value);
+  const active = Object.entries(readFlags()).filter(([, v]) => v).map(([k]) => k);
   if (active.length) params.set('f', active.join(','));
   const hash = params.toString();
   history.replaceState(null, '', hash ? `#${hash}` : location.pathname + location.search);
@@ -62,36 +60,31 @@ function restoreFromHash() {
     cb.checked = tagIds.has(cb.value);
   });
   els.search.value = params.get('q') || '';
-  const lv = parseInt(params.get('lv'), 10);
-  state.level = lv >= 1 && lv <= 5 ? lv : 1;
-  els.sortSelect.value = params.get('sort') || 'condition';
+  const st = parseInt(params.get('star'), 10);
+  state.star = st >= 0 && st <= 4 ? st : 0;
+  els.sortSelect.value = params.get('sort') || 'no';
   const flags = new Set((params.get('f') || '').split(',').filter(Boolean));
-  els.flagStackable.checked = flags.has('stackable');
-  els.flagUnique.checked = flags.has('unique');
-  els.flagAlpha.checked = flags.has('alpha');
-  els.flagVerified.checked = flags.has('verified');
+  els.flagNoStack.checked = flags.has('noStack');
+  els.flagVariant.checked = flags.has('variant');
+  els.flagPalGear.checked = flags.has('palGear');
 }
 
-// ---- レベルセレクタ ----
+// ---- 強化ランク（★0〜★4）セレクタ ----
 function buildLevelButtons() {
   els.levelButtons.innerHTML = '';
-  for (let lv = 1; lv <= 5; lv++) {
+  for (let s = 0; s <= 4; s++) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'level-btn';
-    b.textContent = lv;
+    b.textContent = '★' + s;
     b.setAttribute('role', 'radio');
-    b.addEventListener('click', () => {
-      state.level = lv;
-      syncLevelButtons();
-      apply();
-    });
+    b.addEventListener('click', () => { state.star = s; syncLevelButtons(); apply(); });
     els.levelButtons.appendChild(b);
   }
 }
 function syncLevelButtons() {
   [...els.levelButtons.children].forEach((b, i) => {
-    const on = i + 1 === state.level;
+    const on = i === state.star;
     b.classList.toggle('is-active', on);
     b.setAttribute('aria-checked', on ? 'true' : 'false');
   });
@@ -106,7 +99,7 @@ function apply() {
   const filtered = state.skills.filter((s) => skillMatches(s, sel, text, flags));
   const sorted = sortSkills(filtered, els.sortSelect.value, state.tagIndex);
 
-  renderCards(els.cards, sorted, state.tagIndex, state.level);
+  renderCards(els.cards, sorted, state.tagIndex, state.star);
   els.resultCount.textContent = sorted.length;
   els.totalCount.textContent = state.skills.length;
   els.emptyState.hidden = sorted.length !== 0;
@@ -150,9 +143,8 @@ async function init() {
     state.tags = tags;
     state.skills = skillsDoc.skills || [];
     state.tagIndex = buildTagIndex(tags);
-    if (skillsDoc.meta?.totalSkillsInGame) {
-      els.totalInGame.textContent = skillsDoc.meta.totalSkillsInGame;
-    }
+    const total = skillsDoc.meta?.totalSkills ?? state.skills.length;
+    if (els.totalInGame) els.totalInGame.textContent = total;
   } catch (err) {
     els.cards.innerHTML = `<p class="load-error">データの読み込みに失敗しました：${err.message}<br>HTTP サーバ経由で開いているか確認してください（file:// 直開きは不可）。</p>`;
     return;
@@ -164,12 +156,12 @@ async function init() {
 
   els.search.addEventListener('input', apply);
   els.sortSelect.addEventListener('change', apply);
-  [els.flagStackable, els.flagUnique, els.flagAlpha, els.flagVerified]
+  [els.flagNoStack, els.flagVariant, els.flagPalGear]
     .forEach((cb) => cb.addEventListener('change', apply));
   els.clearFilters.addEventListener('click', () => {
     els.filterGroups.querySelectorAll('input[type=checkbox]').forEach((cb) => (cb.checked = false));
     els.search.value = '';
-    [els.flagStackable, els.flagUnique, els.flagAlpha, els.flagVerified].forEach((cb) => (cb.checked = false));
+    [els.flagNoStack, els.flagVariant, els.flagPalGear].forEach((cb) => (cb.checked = false));
     apply();
   });
   els.filterToggle.addEventListener('click', () => {

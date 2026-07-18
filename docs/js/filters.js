@@ -92,10 +92,9 @@ export function skillMatches(skill, sel, text, flags, excludeGroup = null) {
     ].join(' ').toLowerCase();
     if (!hay.includes(text.toLowerCase())) return false;
   }
-  if (flags.stackable && skill.stackable !== true) return false;
-  if (flags.unique && skill.unique !== true) return false;
-  if (flags.alpha && !(skill.alpha && skill.alpha.hasVariant)) return false;
-  if (flags.verified && skill.verified !== true) return false;
+  if (flags.noStack && skill.noStack !== true) return false;
+  if (flags.variant && !skill.variant) return false;
+  if (flags.palGear && !skill.palGear) return false;
 
   const st = skillTagSet(skill);
   for (const [groupId, ids] of Object.entries(sel)) {

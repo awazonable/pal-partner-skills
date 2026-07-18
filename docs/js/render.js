@@ -3,21 +3,6 @@ import { t } from './i18n.js';
 
 const CONDITION_ORDER = ['cond-base', 'cond-party', 'cond-mount', 'cond-active'];
 
-// scaling を現在レベルの表示文字列にする
-function formatValue(scaling, level) {
-  if (!scaling || !Array.isArray(scaling.perLevel)) return null;
-  const v = scaling.perLevel[level - 1];
-  if (v == null) return null;
-  const unit = scaling.unit || '';
-  let s;
-  if (unit === '%') s = `${v}%`;
-  else if (unit === '+') s = `+${v}`;
-  else if (unit === 'Lv+') s = `Lv +${v}`;
-  else if (unit === 'x') s = `×${v}`;
-  else s = `${v}${unit}`;
-  return { text: s, estimated: !!scaling.estimated, flat: scaling.kind === 'flat' };
-}
-
 function chip(label, groupId, color) {
   const el = document.createElement('span');
   el.className = 'chip';
@@ -37,59 +22,49 @@ function badge(label, kind) {
   return el;
 }
 
-function effectRow(effect, level, tagIndex) {
+// star は 0..4（=★0〜★4）
+function effectRow(effect, star) {
   const row = document.createElement('div');
   row.className = 'effect-row';
-
-  const val = formatValue(effect.scaling, level);
-  if (val) {
-    const v = document.createElement('span');
-    v.className = 'effect-value';
-    v.textContent = val.text;
-    if (val.estimated) v.title = '中間レベルを補間した推定値';
-    row.appendChild(v);
-  }
-
+  const per = effect.perStar || [];
+  const raw = per[star];
+  const v = document.createElement('span');
+  v.className = 'effect-value';
+  if (raw == null) { v.textContent = '—'; v.classList.add('is-empty'); v.title = 'この★ではソースに値の記載なし'; }
+  else v.textContent = raw;
   const label = document.createElement('span');
   label.className = 'effect-text';
-  label.textContent = t(effect.text);
-  row.appendChild(label);
-
-  if (effect.targetElement && tagIndex.has(effect.targetElement)) {
-    const et = tagIndex.get(effect.targetElement);
-    row.appendChild(chip(t(et.label), et.group, et.color));
-  }
-  if (val && val.estimated) {
-    const note = document.createElement('span');
-    note.className = 'effect-note';
-    note.textContent = '※推定';
-    row.appendChild(note);
-  }
-  if (val && val.flat) {
-    const note = document.createElement('span');
-    note.className = 'effect-note flat';
-    note.textContent = 'Lv非依存';
-    row.appendChild(note);
-  }
+  label.textContent = t(effect.label);
+  row.append(v, label);
   return row;
 }
 
-function renderCard(skill, tagIndex, level) {
+function chipsFromTags(ids, tagIndex, group) {
+  const frag = document.createDocumentFragment();
+  for (const id of ids || []) {
+    const tag = tagIndex.get(id);
+    if (tag) frag.appendChild(chip(t(tag.label), group || tag.group, tag.color));
+  }
+  return frag;
+}
+
+function renderCard(skill, tagIndex, star) {
   const card = document.createElement('article');
   card.className = 'card';
-  if (skill.verified === false) card.classList.add('is-unverified');
 
-  // ヘッダー: Pal 名 + 属性チップ
+  // ヘッダー: No. + 亜種 + Pal 名 + 属性
   const head = document.createElement('div');
   head.className = 'card-head';
+  const no = document.createElement('span');
+  no.className = 'card-no';
+  no.textContent = skill.no;
+  head.appendChild(no);
+  if (skill.variant) head.appendChild(badge(skill.variant === 'B' ? '亜種' : '亜種' + skill.variant, 'variant'));
   const palName = document.createElement('span');
   palName.className = 'card-pal';
   palName.textContent = t(skill.pal);
   head.appendChild(palName);
-  for (const eid of skill.element || []) {
-    const et = tagIndex.get(eid);
-    if (et) head.appendChild(chip(t(et.label), 'element', et.color));
-  }
+  head.appendChild(chipsFromTags(skill.element, tagIndex, 'element'));
   card.appendChild(head);
 
   const name = document.createElement('h2');
@@ -97,83 +72,55 @@ function renderCard(skill, tagIndex, level) {
   name.textContent = t(skill.skillName);
   card.appendChild(name);
 
-  // チップ行: condition/effect/detail タグ（属性は上で表示済み）+ バッジ
+  // チップ: 発動場面 → カテゴリ → 作業 → 状態
   const chips = document.createElement('div');
   chips.className = 'card-chips';
-  const nonElementTags = (skill.tags || []).filter((id) => {
-    const tag = tagIndex.get(id);
-    return tag && tag.group !== 'element';
-  });
-  // condition を先頭に、続けて effect/detail
-  nonElementTags.sort((a, b) => {
-    const ga = tagIndex.get(a).group, gb = tagIndex.get(b).group;
-    const rank = (g) => (g === 'condition' ? 0 : g === 'effect' ? 1 : 2);
-    return rank(ga) - rank(gb);
-  });
-  for (const id of nonElementTags) {
-    const tag = tagIndex.get(id);
-    chips.appendChild(chip(t(tag.label), tag.group));
-  }
+  const conds = [...(skill.conditions || [])].sort(
+    (a, b) => CONDITION_ORDER.indexOf(a) - CONDITION_ORDER.indexOf(b)
+  );
+  chips.appendChild(chipsFromTags(conds, tagIndex));
+  chips.appendChild(chipsFromTags(skill.categories, tagIndex));
+  chips.appendChild(chipsFromTags(skill.works, tagIndex));
+  chips.appendChild(chipsFromTags(skill.status, tagIndex));
   card.appendChild(chips);
 
+  // バッジ: 重複可否
   const badges = document.createElement('div');
   badges.className = 'card-badges';
-  badges.appendChild(
-    skill.stackable
-      ? badge('重複可', 'stack-ok')
-      : badge('重複不可', 'stack-no')
-  );
-  if (skill.unique) badges.appendChild(badge('ユニーク', 'unique'));
-  if (skill.alpha && skill.alpha.hasVariant) badges.appendChild(badge('α差分あり', 'alpha'));
-  if (skill.verified === false) badges.appendChild(badge('要検証', 'unverified'));
-  card.appendChild(badges);
+  if (skill.noStack) badges.appendChild(badge('重複不可', 'stack-no'));
+  else badges.appendChild(badge('重複可', 'stack-ok'));
+  if (badges.children.length) card.appendChild(badges);
 
-  // 効果
+  // 効果（★選択で値が変わる）
   if (skill.effects && skill.effects.length) {
     const effs = document.createElement('div');
     effs.className = 'card-effects';
-    for (const eff of skill.effects) effs.appendChild(effectRow(eff, level, tagIndex));
+    for (const eff of skill.effects) effs.appendChild(effectRow(eff, star));
     card.appendChild(effs);
   }
 
-  const desc = document.createElement('p');
-  desc.className = 'card-desc';
-  desc.textContent = t(skill.description);
-  card.appendChild(desc);
-
-  if (skill.stackNote) {
-    const sn = document.createElement('p');
-    sn.className = 'card-stacknote';
-    sn.textContent = '重複: ' + t(skill.stackNote);
-    card.appendChild(sn);
+  if (skill.description && t(skill.description)) {
+    const desc = document.createElement('p');
+    desc.className = 'card-desc';
+    desc.textContent = t(skill.description);
+    card.appendChild(desc);
   }
 
-  // αパル差分（併記）
-  if (skill.alpha && skill.alpha.hasVariant) {
-    const details = document.createElement('details');
-    details.className = 'alpha-block';
-    const summary = document.createElement('summary');
-    summary.textContent = 'α個体での効果を表示';
-    details.appendChild(summary);
-    if (skill.alpha.note) {
-      const n = document.createElement('p');
-      n.className = 'alpha-note';
-      n.textContent = t(skill.alpha.note);
-      details.appendChild(n);
-    }
-    if (skill.alpha.description) {
-      const d = document.createElement('p');
-      d.className = 'alpha-desc';
-      d.textContent = t(skill.alpha.description);
-      details.appendChild(d);
-    }
-    for (const eff of skill.alpha.effects || []) {
-      details.appendChild(effectRow(eff, level, tagIndex));
-    }
-    card.appendChild(details);
+  if (skill.palGear) {
+    const pg = document.createElement('p');
+    pg.className = 'card-palgear';
+    pg.textContent = '🛠️ ' + t(skill.palGear);
+    card.appendChild(pg);
   }
 
   return card;
+}
+
+function noKey(s) {
+  const m = /^No\.(\d+)([AB]?)$/.exec(s.no || '');
+  const num = m ? parseInt(m[1], 10) : 9999;
+  const suf = m ? { '': 0, A: 1, B: 2 }[m[2]] : 9;
+  return num * 10 + suf;
 }
 
 export function sortSkills(skills, mode, tagIndex) {
@@ -181,38 +128,34 @@ export function sortSkills(skills, mode, tagIndex) {
   const palKey = (s) => t(s.pal);
   const nameKey = (s) => t(s.skillName);
   const condRank = (s) => {
-    const c = (s.tags || []).find((id) => CONDITION_ORDER.includes(id));
-    const i = CONDITION_ORDER.indexOf(c);
-    return i < 0 ? 99 : i;
+    const i = Math.min(...(s.conditions || []).map((c) => CONDITION_ORDER.indexOf(c)).filter((x) => x >= 0), 99);
+    return i;
   };
   const elemKey = (s) => {
     const e = (s.element || [])[0];
-    return e ? t(tagIndex.get(e)?.label || e) : 'zzz';
+    return e ? t(tagIndex.get(e)?.label || e) : 'んzz';
   };
   const cmp = {
+    no: (a, b) => noKey(a) - noKey(b),
     pal: (a, b) => palKey(a).localeCompare(palKey(b), 'ja'),
     name: (a, b) => nameKey(a).localeCompare(nameKey(b), 'ja'),
-    element: (a, b) => elemKey(a).localeCompare(elemKey(b), 'ja') || palKey(a).localeCompare(palKey(b), 'ja'),
-    condition: (a, b) => condRank(a) - condRank(b) || palKey(a).localeCompare(palKey(b), 'ja'),
-  }[mode] || (() => 0);
+    element: (a, b) => elemKey(a).localeCompare(elemKey(b), 'ja') || noKey(a) - noKey(b),
+    condition: (a, b) => condRank(a) - condRank(b) || noKey(a) - noKey(b),
+  }[mode] || ((a, b) => noKey(a) - noKey(b));
   return arr.sort(cmp);
 }
 
-export function renderCards(container, skills, tagIndex, level) {
+export function renderCards(container, skills, tagIndex, star) {
   container.innerHTML = '';
   const frag = document.createDocumentFragment();
-  for (const s of skills) frag.appendChild(renderCard(s, tagIndex, level));
+  for (const s of skills) frag.appendChild(renderCard(s, tagIndex, star));
   container.appendChild(frag);
 }
 
-// 選択中フィルタをチップで表示（クリックで解除）
 export function renderActiveFilters(container, sel, tagIndex, onRemove) {
   container.innerHTML = '';
   const ids = Object.values(sel).flat();
-  if (!ids.length) {
-    container.hidden = true;
-    return;
-  }
+  if (!ids.length) { container.hidden = true; return; }
   container.hidden = false;
   for (const id of ids) {
     const tag = tagIndex.get(id);

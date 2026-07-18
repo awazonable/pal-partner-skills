@@ -1,49 +1,375 @@
 {
   "groups": [
-    { "id": "condition", "label": { "ja": "発動場面", "en": "Condition" }, "order": 1, "hint": { "ja": "いつ・どこで効果が出るか", "en": "When/where it works" } },
-    { "id": "effect", "label": { "ja": "効果カテゴリ", "en": "Effect" }, "order": 2, "hint": { "ja": "何が起きるか", "en": "What it does" } },
-    { "id": "detail", "label": { "ja": "詳細タグ", "en": "Detail" }, "order": 3, "hint": { "ja": "細かい特徴", "en": "Fine-grained traits" } },
-    { "id": "element", "label": { "ja": "属性", "en": "Element" }, "order": 4, "hint": { "ja": "Pal 自身、または効果対象の属性", "en": "Pal's or target element" } }
+    {
+      "id": "condition",
+      "label": {
+        "ja": "発動場面",
+        "en": "Condition"
+      },
+      "order": 1,
+      "hint": {
+        "ja": "いつ・どこで効果が出るか",
+        "en": ""
+      }
+    },
+    {
+      "id": "category",
+      "label": {
+        "ja": "効果カテゴリ",
+        "en": "Effect"
+      },
+      "order": 2
+    },
+    {
+      "id": "element",
+      "label": {
+        "ja": "属性",
+        "en": "Element"
+      },
+      "order": 3,
+      "hint": {
+        "ja": "Pal自身/効果対象の属性",
+        "en": ""
+      }
+    },
+    {
+      "id": "work",
+      "label": {
+        "ja": "作業適性",
+        "en": "Work"
+      },
+      "order": 4
+    },
+    {
+      "id": "status",
+      "label": {
+        "ja": "状態異常",
+        "en": "Status"
+      },
+      "order": 5
+    }
   ],
   "tags": [
-    { "id": "cond-base", "group": "condition", "label": { "ja": "拠点配置", "en": "Base" }, "desc": { "ja": "拠点に配置しているときに効果", "en": "Works when placed at base" } },
-    { "id": "cond-party", "group": "condition", "label": { "ja": "手持ち(パッシブ)", "en": "Party" }, "desc": { "ja": "手持ち(パーティ)にいるだけで常時効果", "en": "Passive while in party" } },
-    { "id": "cond-mount", "group": "condition", "label": { "ja": "騎乗", "en": "Mount" }, "desc": { "ja": "乗って移動する", "en": "Ride to move" } },
-    { "id": "cond-active", "group": "condition", "label": { "ja": "アクティブ発動", "en": "Active" }, "desc": { "ja": "プレイヤー操作で発動する攻撃・投擲・召喚", "en": "Player-triggered attack/throw/summon" } },
-
-    { "id": "eff-offense", "group": "effect", "label": { "ja": "攻撃", "en": "Offense" } },
-    { "id": "eff-defense", "group": "effect", "label": { "ja": "防御・耐性", "en": "Defense" } },
-    { "id": "eff-mobility", "group": "effect", "label": { "ja": "移動", "en": "Mobility" } },
-    { "id": "eff-gathering", "group": "effect", "label": { "ja": "収集", "en": "Gathering" } },
-    { "id": "eff-production", "group": "effect", "label": { "ja": "生産・拠点", "en": "Production" } },
-    { "id": "eff-support", "group": "effect", "label": { "ja": "支援", "en": "Support" } },
-
-    { "id": "detail-melee", "group": "detail", "label": { "ja": "近接", "en": "Melee" } },
-    { "id": "detail-ranged", "group": "detail", "label": { "ja": "遠距離", "en": "Ranged" } },
-    { "id": "detail-attack-speed", "group": "detail", "label": { "ja": "攻撃速度", "en": "Atk Speed" } },
-    { "id": "detail-element-attack", "group": "detail", "label": { "ja": "属性攻撃強化", "en": "Elem Atk" } },
-    { "id": "detail-status", "group": "detail", "label": { "ja": "状態異常付与", "en": "Status" } },
-    { "id": "detail-resistance", "group": "detail", "label": { "ja": "属性耐性", "en": "Resist" } },
-    { "id": "detail-fishing", "group": "detail", "label": { "ja": "釣り", "en": "Fishing" } },
-    { "id": "detail-salvage", "group": "detail", "label": { "ja": "サルベージ", "en": "Salvage" } },
-    { "id": "detail-gathering-drop", "group": "detail", "label": { "ja": "採取ドロップ増", "en": "Loot" } },
-    { "id": "detail-capture", "group": "detail", "label": { "ja": "捕獲補助", "en": "Capture" } },
-    { "id": "detail-work-suitability", "group": "detail", "label": { "ja": "作業適性", "en": "Work Suit." } },
-    { "id": "detail-ranch", "group": "detail", "label": { "ja": "牧場", "en": "Ranch" } },
-    { "id": "detail-carry", "group": "detail", "label": { "ja": "携行重量", "en": "Carry" } },
-    { "id": "detail-mount-ground", "group": "detail", "label": { "ja": "地上騎乗", "en": "Ground" } },
-    { "id": "detail-mount-flying", "group": "detail", "label": { "ja": "飛行騎乗", "en": "Flying" } },
-    { "id": "detail-mount-swim", "group": "detail", "label": { "ja": "水上騎乗", "en": "Swim" } },
-    { "id": "detail-element-synergy", "group": "detail", "label": { "ja": "特定属性パル強化", "en": "Elem Synergy" } },
-
-    { "id": "elem-fire", "group": "element", "label": { "ja": "火", "en": "Fire" }, "color": "#e8613c" },
-    { "id": "elem-water", "group": "element", "label": { "ja": "水", "en": "Water" }, "color": "#3aa6e8" },
-    { "id": "elem-grass", "group": "element", "label": { "ja": "草", "en": "Grass" }, "color": "#4caf50" },
-    { "id": "elem-electric", "group": "element", "label": { "ja": "電気", "en": "Electric" }, "color": "#e8c53a" },
-    { "id": "elem-ice", "group": "element", "label": { "ja": "氷", "en": "Ice" }, "color": "#6fd6d6" },
-    { "id": "elem-ground", "group": "element", "label": { "ja": "地面", "en": "Ground" }, "color": "#b08050" },
-    { "id": "elem-dark", "group": "element", "label": { "ja": "闇", "en": "Dark" }, "color": "#8659c4" },
-    { "id": "elem-dragon", "group": "element", "label": { "ja": "龍", "en": "Dragon" }, "color": "#7a63d6" },
-    { "id": "elem-neutral", "group": "element", "label": { "ja": "無", "en": "Neutral" }, "color": "#9aa0a6" }
+    {
+      "id": "cond-base",
+      "group": "condition",
+      "label": {
+        "ja": "拠点配置",
+        "en": "Base"
+      }
+    },
+    {
+      "id": "cond-party",
+      "group": "condition",
+      "label": {
+        "ja": "手持ち(パッシブ)",
+        "en": "Party"
+      }
+    },
+    {
+      "id": "cond-mount",
+      "group": "condition",
+      "label": {
+        "ja": "騎乗/ライド",
+        "en": "Mount"
+      }
+    },
+    {
+      "id": "cond-active",
+      "group": "condition",
+      "label": {
+        "ja": "アクティブ発動",
+        "en": "Active"
+      }
+    },
+    {
+      "id": "cat-offense",
+      "group": "category",
+      "label": {
+        "ja": "攻撃",
+        "en": "Offense"
+      }
+    },
+    {
+      "id": "cat-defense",
+      "group": "category",
+      "label": {
+        "ja": "防御・耐性",
+        "en": "Defense"
+      }
+    },
+    {
+      "id": "cat-mobility",
+      "group": "category",
+      "label": {
+        "ja": "移動",
+        "en": "Mobility"
+      }
+    },
+    {
+      "id": "cat-gathering",
+      "group": "category",
+      "label": {
+        "ja": "収集",
+        "en": "Gathering"
+      }
+    },
+    {
+      "id": "cat-production",
+      "group": "category",
+      "label": {
+        "ja": "生産・拠点",
+        "en": "Production"
+      }
+    },
+    {
+      "id": "cat-support",
+      "group": "category",
+      "label": {
+        "ja": "支援・回復",
+        "en": "Support"
+      }
+    },
+    {
+      "id": "elem-neutral",
+      "group": "element",
+      "label": {
+        "ja": "無属性",
+        "en": "neutral"
+      },
+      "color": "#9aa0a6"
+    },
+    {
+      "id": "elem-dark",
+      "group": "element",
+      "label": {
+        "ja": "闇属性",
+        "en": "dark"
+      },
+      "color": "#8659c4"
+    },
+    {
+      "id": "elem-electric",
+      "group": "element",
+      "label": {
+        "ja": "雷属性",
+        "en": "electric"
+      },
+      "color": "#e8c53a"
+    },
+    {
+      "id": "elem-fire",
+      "group": "element",
+      "label": {
+        "ja": "炎属性",
+        "en": "fire"
+      },
+      "color": "#e8613c"
+    },
+    {
+      "id": "elem-water",
+      "group": "element",
+      "label": {
+        "ja": "水属性",
+        "en": "water"
+      },
+      "color": "#3aa6e8"
+    },
+    {
+      "id": "elem-ground",
+      "group": "element",
+      "label": {
+        "ja": "地属性",
+        "en": "ground"
+      },
+      "color": "#b08050"
+    },
+    {
+      "id": "elem-ice",
+      "group": "element",
+      "label": {
+        "ja": "氷属性",
+        "en": "ice"
+      },
+      "color": "#6fd6d6"
+    },
+    {
+      "id": "elem-grass",
+      "group": "element",
+      "label": {
+        "ja": "草属性",
+        "en": "grass"
+      },
+      "color": "#4caf50"
+    },
+    {
+      "id": "elem-dragon",
+      "group": "element",
+      "label": {
+        "ja": "竜属性",
+        "en": "dragon"
+      },
+      "color": "#7a63d6"
+    },
+    {
+      "id": "work-logging",
+      "group": "work",
+      "label": {
+        "ja": "伐採",
+        "en": "logging"
+      }
+    },
+    {
+      "id": "work-gathering",
+      "group": "work",
+      "label": {
+        "ja": "採集",
+        "en": "gathering"
+      }
+    },
+    {
+      "id": "work-mining",
+      "group": "work",
+      "label": {
+        "ja": "採掘",
+        "en": "mining"
+      }
+    },
+    {
+      "id": "work-electricity",
+      "group": "work",
+      "label": {
+        "ja": "発電",
+        "en": "electricity"
+      }
+    },
+    {
+      "id": "work-handiwork",
+      "group": "work",
+      "label": {
+        "ja": "手作業",
+        "en": "handiwork"
+      }
+    },
+    {
+      "id": "work-watering",
+      "group": "work",
+      "label": {
+        "ja": "水やり",
+        "en": "watering"
+      }
+    },
+    {
+      "id": "work-ranch",
+      "group": "work",
+      "label": {
+        "ja": "牧場",
+        "en": "ranch"
+      }
+    },
+    {
+      "id": "work-kindling",
+      "group": "work",
+      "label": {
+        "ja": "火おこし",
+        "en": "kindling"
+      }
+    },
+    {
+      "id": "work-planting",
+      "group": "work",
+      "label": {
+        "ja": "種まき",
+        "en": "planting"
+      }
+    },
+    {
+      "id": "work-transport",
+      "group": "work",
+      "label": {
+        "ja": "運搬",
+        "en": "transport"
+      }
+    },
+    {
+      "id": "work-cooling",
+      "group": "work",
+      "label": {
+        "ja": "冷却",
+        "en": "cooling"
+      }
+    },
+    {
+      "id": "work-medicine",
+      "group": "work",
+      "label": {
+        "ja": "製薬",
+        "en": "medicine"
+      }
+    },
+    {
+      "id": "st-frozen",
+      "group": "status",
+      "label": {
+        "ja": "氷まみれ",
+        "en": "frozen"
+      }
+    },
+    {
+      "id": "st-burning",
+      "group": "status",
+      "label": {
+        "ja": "炎上",
+        "en": "burning"
+      }
+    },
+    {
+      "id": "st-muddy",
+      "group": "status",
+      "label": {
+        "ja": "泥まみれ",
+        "en": "muddy"
+      }
+    },
+    {
+      "id": "st-wet",
+      "group": "status",
+      "label": {
+        "ja": "ずぶ濡れ",
+        "en": "wet"
+      }
+    },
+    {
+      "id": "st-vined",
+      "group": "status",
+      "label": {
+        "ja": "ツタまみれ",
+        "en": "vined"
+      }
+    },
+    {
+      "id": "st-darkness",
+      "group": "status",
+      "label": {
+        "ja": "暗闇",
+        "en": "darkness"
+      }
+    },
+    {
+      "id": "st-poison",
+      "group": "status",
+      "label": {
+        "ja": "毒",
+        "en": "poison"
+      }
+    },
+    {
+      "id": "st-electrified",
+      "group": "status",
+      "label": {
+        "ja": "帯電",
+        "en": "electrified"
+      }
+    }
   ]
 }
