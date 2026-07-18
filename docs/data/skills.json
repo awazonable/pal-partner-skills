@@ -318,14 +318,12 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -370,14 +368,12 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -1539,9 +1535,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-utility"
    ],
    "description": {
     "ja": "発動すると、近くにあるパルの像を探知できる。クルリス像などのパルの像を拾うと、力の石像(『アヌビス』像)でプレイヤーを強化できる。"
@@ -1617,8 +1616,8 @@
       "0.1%",
       "0.15%",
       "0.2%",
-      "0.3%、★0.4%",
-      null
+      "0.3%",
+      "0.4%"
      ]
     }
    ],
@@ -1771,12 +1770,14 @@
     "cond-base"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
    "tags": [
     "cond-mount",
     "cond-base",
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -1821,9 +1822,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-offense"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、火炎放射器と化す。"
@@ -1860,14 +1864,24 @@
    "skillName": {
     "ja": "だっこフロスト"
    },
-   "element": [],
+   "element": [
+    "elem-ice"
+   ],
    "works": [],
    "status": [],
-   "conditions": [],
-   "categories": [],
-   "tags": [],
+   "conditions": [
+    "cond-active"
+   ],
+   "categories": [
+    "cat-offense"
+   ],
+   "tags": [
+    "elem-ice",
+    "cond-active",
+    "cat-offense"
+   ],
    "description": {
-    "ja": ""
+    "ja": "発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）"
    },
    "effects": [
     {
@@ -2073,12 +2087,14 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
    "tags": [
     "work-logging",
     "cond-mount",
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -2181,7 +2197,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -2618,13 +2634,15 @@
    "categories": [
     "cat-defense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "cat-support"
    ],
    "tags": [
     "cond-base",
     "cat-defense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "cat-support"
    ],
    "description": {
     "ja": "①家畜牧場にアサインすると、わたあめを落とすことがある。 ②拠点にいる間、拠点パルの満腹度の減少割合が軽減される。(重複不可)"
@@ -2668,13 +2686,15 @@
    "categories": [
     "cat-defense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "cat-support"
    ],
    "tags": [
     "cond-base",
     "cat-defense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "cat-support"
    ],
    "description": {
     "ja": "①家畜牧場にアサインすると、キャラメルわたあめを落とすことがある。 ②拠点にいる間、拠点パルの満腹度の減少割合が軽減される。(重複不可)"
@@ -2769,7 +2789,7 @@
       "ja": "水上速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+14%",
       "18%",
@@ -2834,7 +2854,7 @@
       "ja": "水上速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+14%",
       "18%",
@@ -3432,12 +3452,14 @@
     "cond-party"
    ],
    "categories": [
-    "cat-mobility"
+    "cat-mobility",
+    "cat-support"
    ],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-mobility"
+    "cat-mobility",
+    "cat-support"
    ],
    "description": {
     "ja": "①手持ちにいる間、装備中のグライダーの性能が変わる。 ②グライドが高速になり、右手で銃を撃つことができる。ランクアップ(濃縮)するごとに滑空スピードが速くなり、消費スタミナが減る。"
@@ -3478,9 +3500,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-gathering"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-gathering"
    ],
    "description": {
     "ja": "手持ちにいる間、背面ボーナス時の捕獲率が上昇する。(重複不可)"
@@ -3537,7 +3562,7 @@
       "ja": "ライド速度増加量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -3569,9 +3594,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-utility"
    ],
    "description": {
     "ja": "発動すると、超音波の力で近くあるダンジョンと宝箱とガタクタの位置を探知できる。 クールタイム"
@@ -3582,23 +3610,11 @@
       "ja": "探知範囲拡大"
      },
      "perStar": [
-      null,
+      "60秒",
       "小",
       "中",
       "大",
       "特大"
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      "60秒",
-      "50秒",
-      "45秒",
-      "40秒",
-      "30秒"
      ]
     }
    ],
@@ -4081,7 +4097,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -4115,10 +4131,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-gathering"
+   ],
    "tags": [
     "st-frozen",
-    "cond-party"
+    "cond-party",
+    "cat-gathering"
    ],
    "description": {
     "ja": "手持ちにいる間、 氷まみれ 状態のパルの捕獲率が上昇する。(重複不可)"
@@ -4343,7 +4362,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -4352,7 +4370,6 @@
     "st-burning",
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -4502,12 +4519,10 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-support"
    ],
    "tags": [
     "cond-party",
-    "cat-offense",
     "cat-support"
    ],
    "description": {
@@ -4688,12 +4703,10 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-support"
    ],
    "tags": [
     "cond-party",
-    "cat-offense",
     "cat-support"
    ],
    "description": {
@@ -4803,7 +4816,7 @@
       "ja": "ライド時の移動速度上昇"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -4943,9 +4956,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-utility"
    ],
    "description": {
     "ja": "発動すると一定時間、ダリザードとプレイヤーが透明になり、敵の視界に映らなくなる。"
@@ -4998,9 +5014,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-utility"
    ],
    "description": {
     "ja": "発動すると一定時間、チリザードとプレイヤーが透明になり、敵の視界に映らなくなる。"
@@ -5167,7 +5186,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -5203,12 +5222,14 @@
     "cond-party"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "st-muddy",
     "cond-mount",
     "cond-party",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -5220,7 +5241,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -5356,9 +5377,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-utility"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。"
@@ -5739,11 +5763,14 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
     "st-wet",
     "st-frozen",
-    "cond-party"
+    "cond-party",
+    "cat-offense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが ずぶ濡れ 状態の敵を攻撃すると、一発で 氷まみれ 状態になる。"
@@ -5833,7 +5860,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -5886,7 +5913,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -6212,11 +6239,13 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -6274,11 +6303,13 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -6508,7 +6539,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-support"
    ],
@@ -6517,7 +6547,6 @@
     "st-vined",
     "cond-active",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-support"
    ],
@@ -6920,10 +6949,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -6968,10 +6999,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -7339,18 +7372,6 @@
       "9%",
       "13%",
       "18%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "25%"
      ]
     }
@@ -7611,10 +7632,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
     "st-vined",
-    "cond-party"
+    "cond-party",
+    "cat-offense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に ツタまみれ の状態異常値が付与される。(重複不可) ツタまみれ"
@@ -7675,22 +7699,10 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "20%"
      ]
     }
@@ -7720,10 +7732,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -7768,10 +7782,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -8003,18 +8019,6 @@
       "5%",
       "6%",
       "7%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "8%"
      ]
     }
@@ -8459,7 +8463,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -8468,7 +8471,6 @@
     "st-frozen",
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -8481,22 +8483,10 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "20%"
      ]
     },
@@ -8509,18 +8499,6 @@
       "17%",
       "20%",
       "24%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "30%"
      ]
     }
@@ -8555,7 +8533,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -8564,7 +8541,6 @@
     "st-darkness",
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -8577,22 +8553,10 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "20%"
      ]
     },
@@ -8605,18 +8569,6 @@
       "17%",
       "20%",
       "24%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "30%"
      ]
     }
@@ -8755,9 +8707,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-defense"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-defense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの近接攻撃が一定時間に5発ヒットすると、プレイヤーの周辺にバリアを生成する。(重複不可)"
@@ -8798,9 +8753,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-defense"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-defense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの近接攻撃が一定時間に5発ヒットすると、プレイヤーの周辺にバリアを生成する。(重複不可)"
@@ -9227,9 +9185,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-support"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-support"
    ],
    "description": {
     "ja": "手持ちから出している間、ヨミーラが瀕死になったときに、ヨミーラの満腹度が0になる代わりに復活する。"
@@ -9293,7 +9254,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "+15%",
@@ -9362,7 +9323,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "+15%",
@@ -9669,11 +9630,15 @@
     "cond-base"
    ],
    "categories": [
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering",
+    "cat-production"
    ],
    "tags": [
     "cond-base",
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering",
+    "cat-production"
    ],
    "description": {
     "ja": "拠点にいる間、フワフラワが農園に元気を注ぎ込み作物の成長速度が上がる。"
@@ -9813,9 +9778,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-offense"
    ],
    "description": {
     "ja": "発動すると、オオタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -9856,9 +9824,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-offense"
    ],
    "description": {
     "ja": "発動すると、ヒノタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -9918,10 +9889,10 @@
    "effects": [
     {
      "label": {
-      "ja": "重量軽減量：★30% 、"
+      "ja": "重量軽減量"
      },
      "perStar": [
-      null,
+      "30%",
       "35%",
       "40%",
       "50%",
@@ -9972,10 +9943,10 @@
    "effects": [
     {
      "label": {
-      "ja": "重量軽減量：★35% 、"
+      "ja": "重量軽減量"
      },
      "perStar": [
-      null,
+      "35%",
       "40%",
       "45%",
       "55%",
@@ -10160,13 +10131,11 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense"
    ],
    "tags": [
     "elem-dragon",
     "cond-party",
-    "cat-offense",
     "cat-defense"
    ],
    "description": {
@@ -10182,18 +10151,6 @@
       "17%",
       "20%",
       "24%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "30%"
      ]
     }
@@ -10315,9 +10272,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-utility"
    ],
    "description": {
     "ja": "手持ちにいる間、敵に気づかれにくくなる。(重複不可)"
@@ -10406,7 +10366,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -10415,7 +10374,6 @@
     "st-muddy",
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -10464,7 +10422,6 @@
     "cond-base"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-production"
    ],
@@ -10472,7 +10429,6 @@
     "elem-neutral",
     "cond-party",
     "cond-base",
-    "cat-offense",
     "cat-defense",
     "cat-production"
    ],
@@ -11141,11 +11097,18 @@
    "element": [],
    "works": [],
    "status": [],
-   "conditions": [],
-   "categories": [],
-   "tags": [],
+   "conditions": [
+    "cond-party"
+   ],
+   "categories": [
+    "cat-utility"
+   ],
+   "tags": [
+    "cond-party",
+    "cat-utility"
+   ],
    "description": {
-    "ja": ""
+    "ja": "手持ちから出している間、ミミドッグの力で鍵を使わずに宝箱を開けられる。開けられる宝箱の種類は濃縮ランク（スキルレベル）で変化する。（クールタイム80秒）"
    },
    "effects": [
     {
@@ -11281,9 +11244,14 @@
    "conditions": [
     "cond-base"
    ],
-   "categories": [],
+   "categories": [
+    "cat-gathering",
+    "cat-production"
+   ],
    "tags": [
-    "cond-base"
+    "cond-base",
+    "cat-gathering",
+    "cat-production"
    ],
    "description": {
     "ja": "拠点にいる間、プラムルリムが捧げる祈りによって作物の収穫量が上がる。"
@@ -11420,10 +11388,13 @@
     "cond-active",
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
     "cond-active",
-    "cond-party"
+    "cond-party",
+    "cat-utility"
    ],
    "description": {
     "ja": "①発動すると、鋭い嗅覚で、近くにあるクロマイトの場所を探知できる。 ②手持ちから出している間、クロマイトが多く獲得できる。"
@@ -11443,7 +11414,7 @@
     },
     {
      "label": {
-      "ja": "クロマイト増加量：クロマルなし：50個、"
+      "ja": "クロマイト増加量：クロマルなし：50個"
      },
      "perStar": [
       "100個(2倍)",
@@ -11580,7 +11551,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -11656,7 +11627,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -11844,9 +11815,12 @@
    "conditions": [
     "cond-active"
    ],
-   "categories": [],
+   "categories": [
+    "cat-utility"
+   ],
    "tags": [
-    "cond-active"
+    "cond-active",
+    "cat-utility"
    ],
    "description": {
     "ja": "発動すると、最も近くの拠点へ移動することができる。ダンジョンの中などでは使用できない。 ※テクノロジーやサドルの解放不要"
@@ -11893,7 +11867,6 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -11902,7 +11875,6 @@
     "st-electrified",
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -12230,14 +12202,12 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility",
     "cat-support"
    ],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-mobility",
     "cat-support"
    ],
@@ -12310,7 +12280,7 @@
       "ja": "ダッシュ速度上昇"
      },
      "perStar": [
-      null,
+      "なし",
       "小",
       "中",
       "大",
@@ -12355,12 +12325,10 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-party",
-    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -12391,10 +12359,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
     "st-electrified",
-    "cond-party"
+    "cond-party",
+    "cat-offense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 帯電 の状態異常値が付与される。 帯電"
@@ -12440,14 +12411,12 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense"
    ],
    "tags": [
     "elem-water",
     "st-wet",
     "cond-party",
-    "cat-offense",
     "cat-defense"
    ],
    "description": {
@@ -12463,18 +12432,6 @@
       "17%",
       "20%",
       "24%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "30%"
      ]
     }
@@ -12503,10 +12460,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-gathering"
+   ],
    "tags": [
     "st-vined",
-    "cond-party"
+    "cond-party",
+    "cat-gathering"
    ],
    "description": {
     "ja": "手持ちにいる間、 ツタまみれ 状態のパルの捕獲率が上昇する。(重複不可)"
@@ -12548,12 +12508,10 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense"
    ],
    "tags": [
     "cond-party",
-    "cat-offense",
     "cat-defense"
    ],
    "description": {
@@ -12759,7 +12717,7 @@
       "ja": "水上速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -12828,7 +12786,7 @@
       "ja": "水上速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -12884,9 +12842,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-support"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-support"
    ],
    "description": {
     "ja": "手持ちにいる間、手持ちにいる他のパルが持つパートナースキルのクールタイムが減少する。(重複不可)"
@@ -13091,9 +13052,12 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-defense"
+   ],
    "tags": [
-    "cond-party"
+    "cond-party",
+    "cat-defense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーがローリングやステップをするときの無敵時間が長くなる。(重複不可)"
@@ -13187,12 +13151,14 @@
     "cond-party"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "st-wet",
     "cond-mount",
     "cond-party",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -13359,10 +13325,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
     "st-darkness",
-    "cond-party"
+    "cond-party",
+    "cat-offense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 暗闇 の状態異常値が付与される。(重複不可)"
@@ -13582,10 +13551,13 @@
    "conditions": [
     "cond-party"
    ],
-   "categories": [],
+   "categories": [
+    "cat-offense"
+   ],
    "tags": [
     "st-burning",
-    "cond-party"
+    "cond-party",
+    "cat-offense"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 炎上 の状態異常値が付与される。(重複不可) 炎上"
@@ -13681,10 +13653,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -14085,11 +14059,13 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "elem-ice",
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -14160,18 +14136,6 @@
       "5%",
       "6%",
       "7%",
-      null
-     ]
-    },
-    {
-     "label": {
-      "ja": ""
-     },
-     "perStar": [
-      null,
-      null,
-      null,
-      null,
       "8%"
      ]
     }
@@ -14253,12 +14217,14 @@
     "cond-party"
    ],
    "categories": [
+    "cat-offense",
     "cat-defense"
    ],
    "tags": [
     "st-poison",
     "cond-active",
     "cond-party",
+    "cat-offense",
     "cat-defense"
    ],
    "description": {
@@ -14412,7 +14378,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -14457,10 +14423,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-defense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-defense",
     "cat-mobility"
    ],
    "description": {
@@ -14506,12 +14474,14 @@
     "cond-active"
    ],
    "categories": [
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering"
    ],
    "tags": [
     "cond-mount",
     "cond-active",
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、3段ジャンプが可能になる。 ③ライド中、『一槍一閃』を発動すると、手持ちの『ベイントール』が1体出現して一緒に攻撃する。(パルギア解放：捕獲/孵化後にLv.61のテクノロジーで解放)"
@@ -14522,7 +14492,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -14554,12 +14524,14 @@
     "cond-active"
    ],
    "categories": [
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering"
    ],
    "tags": [
     "cond-mount",
     "cond-active",
-    "cat-mobility"
+    "cat-mobility",
+    "cat-gathering"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、2段ジャンプが可能になる。 ③ライド中、『双槍一閃』を発動すると、手持ちの『セイントール』が1体出現して一緒に攻撃する。(パルギア解放：捕獲/孵化後にLv.61のテクノロジーで解放)"
@@ -14570,7 +14542,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+12%",
       "15%",
@@ -14756,7 +14728,7 @@
       "ja": "移動速度上昇量"
      },
      "perStar": [
-      null,
+      "なし",
       "+10%",
       "+14%",
       "18%",
@@ -14801,10 +14773,12 @@
     "cond-mount"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -14850,11 +14824,13 @@
     "cond-base"
    ],
    "categories": [
+    "cat-offense",
     "cat-mobility"
    ],
    "tags": [
     "cond-mount",
     "cond-base",
+    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -14904,7 +14880,8 @@
     "cat-offense",
     "cat-mobility",
     "cat-gathering",
-    "cat-support"
+    "cat-support",
+    "cat-utility"
    ],
    "tags": [
     "elem-dark",
@@ -14914,7 +14891,8 @@
     "cat-offense",
     "cat-mobility",
     "cat-gathering",
-    "cat-support"
+    "cat-support",
+    "cat-utility"
    ],
    "description": {
     "ja": "このパルのパートナースキルは確認されていない。 ﾃﾗ01 クトゥルフのめだま クトゥルフのめだまの突進 個別ページへ → 発動すると、狙いを定めた敵に向かってクトゥルフのめだまが突進で攻撃する。(威力300) ﾃﾗ02 あくまのめだま 悪魔の視界 個別ページへ → 手持ちにいる間、 闇属性 のパルの攻撃力が増加する。(重複不可) ﾃﾗ03 グリーンスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ04 ブルースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ05 かがやくスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ06 パープルスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ07 レインボースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ08 レッドスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ09 まほうのつるぎ エンチャント 個別ページへ → 手持ちにいる間、 闇属性 のパルを倒した際のドロップアイテム獲得量が増える。(重複不可) ﾃﾗ10 どうくつコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ﾃﾗ11 かがやくコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ボス01 ゾーイ＆エレパンダ 黄色い重戦車 個別ページへ → 背中に乗って移動できる。ライド中、ミニガンを連射できる。 スポンサーリンク (adsbygoogle = window.adsbygoogle || []).push({}); 前へ ┗🐎ライドパル比較・ランキング 次へ 💥アクティブスキル(技)一覧 当サイトは『パルワールド（Palworld）』の非公式ファンサイトです。\n    ゲーム内の名称・画像等の権利は © Pocketpair, Inc. および各権利者に帰属します。 Special Thanks | プライバシーポリシー | お問い合わせ | パルラボ公式X © 2026 パルワールド配合・攻略ラボ (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a1d3229e1f082546',t:'MTc4NDM5NDk5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();"

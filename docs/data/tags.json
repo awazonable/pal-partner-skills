@@ -23,12 +23,12 @@
     {
       "id": "element",
       "label": {
-        "ja": "属性",
+        "ja": "関連属性",
         "en": "Element"
       },
       "order": 3,
       "hint": {
-        "ja": "Pal自身/効果対象の属性",
+        "ja": "効果に関わる属性（対象属性など）。パル自身の属性ではない",
         "en": ""
       }
     },
@@ -128,6 +128,14 @@
       "label": {
         "ja": "支援・回復",
         "en": "Support"
+      }
+    },
+    {
+      "id": "cat-utility",
+      "group": "category",
+      "label": {
+        "ja": "探索・便利",
+        "en": "Utility"
       }
     },
     {
