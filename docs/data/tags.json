@@ -157,6 +157,22 @@
       }
     },
     {
+      "id": "cat-mining",
+      "group": "category",
+      "label": {
+        "ja": "採掘・伐採",
+        "en": "Mining"
+      }
+    },
+    {
+      "id": "cat-ranch",
+      "group": "category",
+      "label": {
+        "ja": "牧場",
+        "en": "Ranch"
+      }
+    },
+    {
       "id": "cat-production",
       "group": "category",
       "label": {

@@ -22,10 +22,16 @@ STAT={'氷まみれ':'st-frozen','炎上':'st-burning','泥まみれ':'st-muddy'
       'ツタまみれ':'st-vined','暗闇':'st-darkness','毒':'st-poison','帯電':'st-electrified'}
 
 # ---- 攻撃カテゴリの補正・細分 ----
-def _terrain_only(d):
-    # 岩/木/鉱石/建築 を壊す(採掘・移動)だけで戦闘要素が無い＝攻撃ではない
-    return bool((re.search(r'(岩|木|鉱石|金属鉱石|建築物?|石建築)',d) and re.search(r'(壊す|破壊|効率|に(対して)?与えるダメージ)',d))
-                and not re.search(r'敵|エネミー|プレイヤーの攻撃力|武器の?ダメージ|弱点|状態異常|追撃|属性に変化|付与',d))
+def is_mining(d, wks=()):
+    # 採掘・伐採（岩/木/鉱石を壊す・採掘/伐採ダメージ・鉱石/木材の重量軽減）。
+    # 「溶岩」の"岩"誤マッチを除去し、作業適性バフ(拠点)は対象外。
+    d2 = d.replace('溶岩', '')
+    if '作業適性' in d:
+        return False
+    action = ('work-mining' in wks or 'work-logging' in wks)      # 採掘/伐採リンク（前後に空白が入る）
+    target = action or re.search(r'(岩|鉱石|金属鉱石|木材|木造|石建築|石|木)を?', d2)
+    ctx = re.search(r'(壊す|砕く|破壊|効率|与えるダメージ|重量)', d2)
+    return bool(target and ctx)
 def _expl_def(d):  # 爆発する攻撃を受けた際の軽減＝防御
     return bool(re.search(r'爆発する攻撃を受けた',d))
 def _enemy_debuff(d):  # 敵の攻撃力を低下＝防御寄りのデバフ
@@ -148,22 +154,30 @@ class P(HTMLParser):
            or re.search(r'威力|ダメージ増加',efflabels): cat.append('cat-offense')
         if re.search(r'防御力|耐性|軽減|無効|盾|バリア|無敵時間',full): cat.append('cat-defense')
         if re.search(r'乗って|グライダー|移動速度|ライド|ジャンプ|滑空|グライド|速度',full): cat.append('cat-mobility')
-        if re.search(r'掘り出す|ドロップ|落とす|釣り|サルベージ|獲得量|拾っ|捕獲|収穫|作物',full): cat.append('cat-gathering')
-        if re.search(r'作業適性|アサイン|効率|作業速度|収穫|作物',full) or wks: cat.append('cat-production')
+        # 収集（牧場ドロップの「落とす/掘り出す」は牧場カテゴリへ移すため除外）
+        if re.search(r'ドロップ|釣り|サルベージ|獲得量|拾っ|捕獲',full): cat.append('cat-gathering')
+        # 牧場（家畜牧場にアサイン/牧場に配置）を生産・拠点から分離
+        if re.search(r'家畜牧場にアサイン|牧場に配置',full) or ('牧場' in full and re.search(r'落とす|掘り出す|産出|作る',full)):
+            cat.append('cat-ranch')
+        # 生産・拠点（作業適性・効率など。牧場アサインは cat-ranch へ）
+        if re.search(r'作業適性|効率|作業速度|収穫|作物',full) or wks: cat.append('cat-production')
         if re.search(r'回復|HP|重量|サポート|スタミナ|満腹|クールタイムが減少',full): cat.append('cat-support')
         if re.search(r'探知|透明|鍵|自動で近くにあるアイテム|位置を|センス|嗅覚|気づかれにくく|拠点へ移動|帰還',full): cat.append('cat-utility')
         cat=list(dict.fromkeys(cat))
-        # 攻撃カテゴリの誤検出補正（本来は攻撃でないもの）＋内訳サブカテゴリ
+        # 採掘・伐採：岩/木/鉱石破壊・採掘/伐採ダメージ・鉱石/木材の重量軽減を集約
         offtypes=[]
-        if 'cat-offense' in cat:
-            if _terrain_only(full):
-                cat.remove('cat-offense')                       # 破壊効率＝採掘/移動
-            elif _expl_def(full) or _enemy_debuff(full):
-                cat.remove('cat-offense')                       # 爆発耐性/敵デバフ＝防御寄り
-                if 'cat-defense' not in cat: cat.append('cat-defense')
-            else:
-                offtypes=sorted(offense_subtypes(full, cond))   # 真の攻撃 → 内訳を付与
-        if not cat: cat.append('cat-mobility') if 'cond-mount' in cond else None
+        if is_mining(full, wks):
+            cat=[c for c in cat if c in ('cat-mobility','cat-gathering','cat-utility','cat-ranch')]
+            cat.append('cat-mining')                            # 攻撃/防御/生産などの雑タグを整理
+        else:
+            # 攻撃カテゴリの誤検出補正 ＋ 内訳サブカテゴリ
+            if 'cat-offense' in cat:
+                if _expl_def(full) or _enemy_debuff(full):
+                    cat.remove('cat-offense')                   # 爆発耐性/敵デバフ＝防御寄り
+                    if 'cat-defense' not in cat: cat.append('cat-defense')
+                else:
+                    offtypes=sorted(offense_subtypes(full, cond))
+        if not cat and 'cond-mount' in cond: cat.append('cat-mobility')
         no=self.cur['no']; num=re.sub(r'^No\.','',no)
         variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
         # 重複可否は効果単位で判定済み。スキル単位は要約（フィルタ/バッジ用）。
@@ -247,6 +261,8 @@ tags=[
  {'id':'cat-defense','group':'category','label':L('防御・耐性','Defense')},
  {'id':'cat-mobility','group':'category','label':L('移動','Mobility')},
  {'id':'cat-gathering','group':'category','label':L('収集','Gathering')},
+ {'id':'cat-mining','group':'category','label':L('採掘・伐採','Mining')},
+ {'id':'cat-ranch','group':'category','label':L('牧場','Ranch')},
  {'id':'cat-production','group':'category','label':L('生産・拠点','Production')},
  {'id':'cat-support','group':'category','label':L('支援・回復','Support')},
  {'id':'cat-utility','group':'category','label':L('探索・便利','Utility')},

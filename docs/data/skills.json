@@ -26,16 +26,14 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-base",
     "cat-defense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①発動すると、プレイヤーに装備され盾になる。 ②家畜牧場にアサインすると、羊毛を落とすことがある。"
@@ -117,12 +115,12 @@
     "cond-base"
    ],
    "categories": [
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "家畜牧場にアサインすると、卵を産むことがある。"
@@ -317,14 +315,12 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "家畜牧場にアサインすると、地面からアイテム(スフィア、金貨、矢、骨)を掘り出すことがある。"
@@ -469,8 +465,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -480,8 +475,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -768,23 +762,14 @@
     "cond-base"
    ],
    "categories": [
-    "cat-offense",
-    "cat-defense",
-    "cat-production",
-    "cat-support"
+    "cat-mining"
    ],
-   "offenseTypes": [
-    "off-player"
-   ],
+   "offenseTypes": [],
    "tags": [
     "work-logging",
     "cond-party",
     "cond-base",
-    "cat-offense",
-    "cat-defense",
-    "cat-production",
-    "cat-support",
-    "off-player"
+    "cat-mining"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが 伐採 するときのダメージが増加し、すべての木材類の重量を軽減する。拠点外の木造建築物にも効果がある(重複不可)"
@@ -1050,7 +1035,7 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-gathering",
+    "cat-ranch",
     "cat-production"
    ],
    "offenseTypes": [],
@@ -1058,7 +1043,7 @@
     "cond-active",
     "cond-base",
     "cat-mobility",
-    "cat-gathering",
+    "cat-ranch",
     "cat-production"
    ],
    "description": {
@@ -1417,8 +1402,7 @@
    "categories": [
     "cat-defense",
     "cat-mobility",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
@@ -1427,8 +1411,7 @@
     "cond-base",
     "cat-defense",
     "cat-mobility",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、『アルパオー』『アオパオー』の防御力と移動速度が上がる。 手持ちにいるメルパカの数が多いほど増加量は上がり、アルパオーのランク(濃縮)が高いと増加量も増える。 (メルパカのランクは関係ない) ③家畜牧場にアサインすると、羊毛を落とすことがある。"
@@ -1810,14 +1793,14 @@
     "cond-base"
    ],
    "categories": [
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "description": {
@@ -1868,8 +1851,7 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
@@ -1877,8 +1859,7 @@
     "cond-party",
     "cond-base",
     "cat-defense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "手持ちにいる間、 炎属性 のパルの防御力が増加する。(重複不可) ②家畜牧場にアサインすると、発火器官を落とすことがある。"
@@ -1924,14 +1905,12 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "家畜牧場にアサインすると、地面から金貨を掘り出すことがある。"
@@ -1962,14 +1941,12 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "家畜牧場にアサインすると、氷結器官を落とすことがある。"
@@ -2002,14 +1979,14 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "description": {
     "ja": "背中に乗って移動できる。ライド中は、岩を壊す効率が上がる。拠点外の石建築にも効果がある。"
@@ -2280,22 +2257,13 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
-    "cat-defense",
-    "cat-production",
-    "cat-support"
+    "cat-mining"
    ],
-   "offenseTypes": [
-    "off-player"
-   ],
+   "offenseTypes": [],
    "tags": [
     "work-mining",
     "cond-party",
-    "cat-offense",
-    "cat-defense",
-    "cat-production",
-    "cat-support",
-    "off-player"
+    "cat-mining"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが 採掘 するときのダメージが増加し、石の重量を軽減する。(重複不可)"
@@ -2358,14 +2326,14 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "work-logging",
     "cond-mount",
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中は2段ジャンプが可能になり、木を壊す効率が上がる。 ツノガミの 伐採"
@@ -2512,16 +2480,14 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "description": {
@@ -2569,16 +2535,14 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "description": {
@@ -2728,14 +2692,12 @@
     "cond-party"
    ],
    "categories": [
-    "cat-defense",
-    "cat-support"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-party",
-    "cat-defense",
-    "cat-support"
+    "cat-mining"
    ],
    "description": {
     "ja": "手持ちにいる間、金属鉱石の重量を軽減する。"
@@ -2783,20 +2745,13 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
-    "cat-defense",
-    "cat-support"
+    "cat-mining"
    ],
-   "offenseTypes": [
-    "off-player"
-   ],
+   "offenseTypes": [],
    "tags": [
     "elem-ground",
     "cond-party",
-    "cat-offense",
-    "cat-defense",
-    "cat-support",
-    "off-player"
+    "cat-mining"
    ],
    "description": {
     "ja": "①手持ちにいる間、硫黄と石炭の重量を軽減する。 ②手持ちにいる間、プレイヤーとパルが 地属性 で弱点を突いたときのダメージが増加する。"
@@ -2963,16 +2918,14 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-defense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "description": {
@@ -3020,16 +2973,14 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-defense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "cat-support"
    ],
    "description": {
@@ -3076,12 +3027,12 @@
     "cond-base"
    ],
    "categories": [
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "家畜牧場にアサインすると、ミルクを出すことがある。"
@@ -3268,7 +3219,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
+    "cat-ranch",
     "cat-production"
    ],
    "offenseTypes": [
@@ -3280,7 +3231,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
+    "cat-ranch",
     "cat-production",
     "off-pal"
    ],
@@ -3332,8 +3283,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -3343,8 +3293,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -3395,8 +3344,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -3406,8 +3354,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -4562,15 +4509,13 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-base",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①発動すると、暗い場所でも見える暗視が有効になる。再度発動すると解除される。 ②家畜牧場にアサインすると、骨を落とすことがある。"
@@ -5147,7 +5092,7 @@
    ],
    "categories": [
     "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
@@ -5155,7 +5100,7 @@
     "cond-party",
     "cond-base",
     "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①手持ちにいる間、 地属性 のパルを倒した際のドロップアイテム獲得量が増える。(重複不可) ②家畜牧場にアサインすると、様々な種を落とすことがある。"
@@ -5203,8 +5148,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -5213,8 +5157,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -5818,16 +5761,14 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
     "cat-mobility",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①背中に乗って水上を移動できる。 ②家畜牧場にアサインすると、革を落とすことがある。"
@@ -7030,13 +6971,13 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②ライド中、グランモスの木と鉱石を壊す効率が上がる。"
@@ -7099,13 +7040,13 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility",
-    "cat-production"
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②ライド中、ブリザモスの木と鉱石を壊す効率が上がる。"
@@ -7955,8 +7896,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -7966,8 +7906,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -9366,8 +9305,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-pal"
@@ -9377,8 +9315,7 @@
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-gathering",
-    "cat-production",
+    "cat-ranch",
     "off-pal"
    ],
    "description": {
@@ -9427,14 +9364,14 @@
    ],
    "categories": [
     "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
     "cat-gathering",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①手持ちにいる間、倒した敵がドロップする金貨の量が増加する。(重複不可) ②家畜牧場にアサインすると、上質なパルオイルか、低確率で金貨を落とす。"
@@ -9481,15 +9418,13 @@
     "cond-base"
    ],
    "categories": [
-    "cat-mobility",
-    "cat-production"
+    "cat-mobility"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
-    "cat-mobility",
-    "cat-production"
+    "cat-mobility"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②拠点にいる間、配合牧場にアサインしたパルがタマゴが産むまでの時間が短くなる。(重複不可)"
@@ -10023,7 +9958,7 @@
    ],
    "categories": [
     "cat-offense",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [
     "off-attack"
@@ -10032,7 +9967,7 @@
     "cond-active",
     "cond-base",
     "cat-offense",
-    "cat-production",
+    "cat-ranch",
     "off-attack"
    ],
    "description": {
@@ -10083,7 +10018,7 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
@@ -10091,7 +10026,7 @@
     "cond-party",
     "cond-base",
     "cat-defense",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①手持ちにいる間、 無属性 のパルの防御力が増加する。(重複不可) ②家畜牧場にアサインすると、上質な布を作ることがある。"
@@ -10194,14 +10129,14 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
     "cat-mobility",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 家畜牧場にアサインすると、キノコか洞窟キノコを作ることがある。"
@@ -10847,14 +10782,12 @@
    ],
    "categories": [
     "cat-mobility",
-    "cat-gathering",
     "cat-production"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-mobility",
-    "cat-gathering",
     "cat-production"
    ],
    "description": {
@@ -11119,17 +11052,15 @@
     "cond-party"
    ],
    "categories": [
-    "cat-defense",
     "cat-mobility",
-    "cat-support"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-defense",
     "cat-mobility",
-    "cat-support"
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②手持ちにいる間、すべての鉱石類の重量を軽減する。(重複不可)"
@@ -11178,17 +11109,15 @@
     "cond-party"
    ],
    "categories": [
-    "cat-defense",
     "cat-mobility",
-    "cat-support"
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-defense",
     "cat-mobility",
-    "cat-support"
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②手持ちにいる間、すべての鉱石類の重量を軽減する。(重複不可)"
@@ -11729,7 +11658,7 @@
    ],
    "categories": [
     "cat-defense",
-    "cat-production"
+    "cat-ranch"
    ],
    "offenseTypes": [],
    "tags": [
@@ -11737,7 +11666,7 @@
     "cond-party",
     "cond-base",
     "cat-defense",
-    "cat-production"
+    "cat-ranch"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーとパルが受ける 無属性 のダメージが軽減する。(重複不可) ②家畜牧場にアサインすると、地面から骨を掘りだすことがある。"
@@ -12668,13 +12597,11 @@
     "cond-base"
    ],
    "categories": [
-    "cat-gathering",
     "cat-production"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-base",
-    "cat-gathering",
     "cat-production"
    ],
    "description": {
@@ -13558,12 +13485,14 @@
     "cond-mount"
    ],
    "categories": [
-    "cat-mobility"
+    "cat-mobility",
+    "cat-mining"
    ],
    "offenseTypes": [],
    "tags": [
     "cond-mount",
-    "cat-mobility"
+    "cat-mobility",
+    "cat-mining"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、鉱石に対して与えるダメージが増える。 ライド中、金属鉱石が多く獲得できる。"
