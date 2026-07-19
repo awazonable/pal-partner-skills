@@ -21,12 +21,24 @@
       "order": 2
     },
     {
+      "id": "offense-type",
+      "label": {
+        "ja": "攻撃の内訳",
+        "en": "Offense type"
+      },
+      "order": 3,
+      "hint": {
+        "ja": "「攻撃」カテゴリの細分",
+        "en": ""
+      }
+    },
+    {
       "id": "element",
       "label": {
         "ja": "関連属性",
         "en": "Element"
       },
-      "order": 3,
+      "order": 4,
       "hint": {
         "ja": "効果に関わる属性（対象属性など）。パル自身の属性ではない",
         "en": ""
@@ -38,7 +50,7 @@
         "ja": "作業適性",
         "en": "Work"
       },
-      "order": 4
+      "order": 5
     },
     {
       "id": "status",
@@ -46,7 +58,7 @@
         "ja": "状態異常",
         "en": "Status"
       },
-      "order": 5
+      "order": 6
     }
   ],
   "tags": [
@@ -136,6 +148,46 @@
       "label": {
         "ja": "探索・便利",
         "en": "Utility"
+      }
+    },
+    {
+      "id": "off-player",
+      "group": "offense-type",
+      "label": {
+        "ja": "プレイヤー攻撃強化",
+        "en": "Player buff"
+      }
+    },
+    {
+      "id": "off-pal",
+      "group": "offense-type",
+      "label": {
+        "ja": "パル攻撃強化",
+        "en": "Pal buff"
+      }
+    },
+    {
+      "id": "off-active",
+      "group": "offense-type",
+      "label": {
+        "ja": "アクティブ攻撃",
+        "en": "Active attack"
+      }
+    },
+    {
+      "id": "off-passive",
+      "group": "offense-type",
+      "label": {
+        "ja": "パッシブ攻撃/追撃",
+        "en": "Passive attack"
+      }
+    },
+    {
+      "id": "off-status",
+      "group": "offense-type",
+      "label": {
+        "ja": "状態異常付与",
+        "en": "Status infliction"
       }
     },
     {

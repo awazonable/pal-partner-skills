@@ -149,6 +149,7 @@ body {
 }
 .chip[data-group="condition"] { color: #fff; background: var(--chip-cond); border-color: transparent; }
 .chip[data-group="category"] { color: #fff; background: var(--chip-eff); border-color: transparent; }
+.chip[data-group="offense-type"] { color: #fff; background: #c05a4a; border-color: transparent; }
 .chip[data-group="work"] { color: #6a7f2e; background: #eef4dc; border-color: transparent; }
 .chip[data-group="status"] { color: #a5561e; background: #fbeadb; border-color: transparent; }
 .chip[data-group="detail"] { color: var(--chip-detail); background: transparent; border-color: var(--border); }

@@ -18,7 +18,10 @@
     - `works[]` … `work-*`（伐採/採集/採掘/…）
     - `status[]` … `st-*`（炎上/帯電/…）
     - `conditions[]` … `cond-base|party|mount|active`（説明文から導出）
-    - `categories[]` … `cat-offense|defense|mobility|gathering|production|support`（導出）
+    - `categories[]` … `cat-offense|defense|mobility|gathering|production|support|utility`（導出）
+    - `offenseTypes[]` … 攻撃(`cat-offense`)の内訳サブカテゴリ（導出）：
+      `off-player`(プレイヤー攻撃強化) / `off-pal`(パル攻撃強化) / `off-active`(アクティブ攻撃) /
+      `off-passive`(パッシブ攻撃・追撃) / `off-status`(状態異常付与)。攻撃以外は空。
     - `tags[]` … 上記の統合（フィルタ用。冗長だが検索を単純化）
   - `description{ja}`
   - `effects[]`: `{ label{ja}, perStar:[5], noStack, noStackReason }`

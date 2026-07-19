@@ -29,6 +29,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-base",
@@ -67,6 +68,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -117,6 +119,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-production"
@@ -152,9 +155,15 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-passive"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active",
+    "off-passive"
    ],
    "description": {
     "ja": "発動するとプレイヤーの頭の上に乗り、攻撃にあわせてサブマシンガンで追撃を行う。"
@@ -204,9 +213,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、カモノスケが敵に向かって、ボディサーフィンをしながら突っ込む。(威力100)"
@@ -254,9 +267,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、モモノスケが敵に向かって、ファイアーサーフィンをしながら突っ込む。(威力115)"
@@ -305,6 +322,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-gathering",
@@ -343,6 +361,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -397,6 +416,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -454,13 +474,17 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-neutral",
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 無属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、羊毛を落とすことがある。"
@@ -509,10 +533,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-player"
+   ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active",
+    "off-player"
    ],
    "description": {
     "ja": "①発動すると、ブシガエルが忠誠心と膨らんだ腹部で力を溜め、プレイヤーが上に乗ると高くジャンプする。 ランクアップ(濃縮)するとジャンプ力が上がる。 ②ブシガエルジャンプ中と降下中は着地するまでの間、プレイヤーの攻撃力が増加する。"
@@ -564,12 +594,18 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-player"
+   ],
    "tags": [
     "elem-dark",
     "cond-active",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active",
+    "off-player"
    ],
    "description": {
     "ja": "①発動すると、ドスガエルが忠誠心と膨らんだ腹部で力を溜め、プレイヤーが上に乗ると高くジャンプする。 ランクアップ(濃縮)するとジャンプ力が上がる。 ②手持ちにいる間、プレイヤーとパルが 闇属性 で弱点と突いたときのダメージが増加する。(重複不可)"
@@ -617,6 +653,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -681,6 +718,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -737,6 +775,9 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "work-logging",
     "cond-party",
@@ -744,7 +785,8 @@
     "cat-offense",
     "cat-defense",
     "cat-production",
-    "cat-support"
+    "cat-support",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが 伐採 するときのダメージが増加し、すべての木材類の重量を軽減する。拠点外の木造建築物にも効果がある(重複不可)"
@@ -806,9 +848,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが使用する近接武器のダメージが増加する。(重複不可)"
@@ -858,6 +904,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-gathering",
     "cond-base",
@@ -896,10 +943,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-electric",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、パチグリが手に装備され、敵などに投げつけると着弾時に 雷属性 の爆発を起こす。"
@@ -947,9 +998,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、コチグリが手に装備され、敵に投げつけると着弾時に氷の爆発を起こす。"
@@ -1000,6 +1055,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-base",
@@ -1053,9 +1109,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、ロケットランチャーが装備され、ペンタマを弾丸として射出する。 着弾して爆発するとペンタマはダメージを受ける。 威力は『ペンタマ』よりも『デンタマ』の方が高い。"
@@ -1119,9 +1179,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、ロケットランチャーが装備され、デンタマを弾丸として射出する。着弾して爆発するとデンタマはダメージを受ける。 威力は『ペンタマ』よりも『デンタマ』の方が高い。"
@@ -1187,6 +1251,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "cond-party",
@@ -1240,10 +1305,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-water",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーとパルが 水属性 で弱点を突いたときのダメージが増加する。"
@@ -1293,10 +1362,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-dark",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-pal"
    ],
    "description": {
     "ja": "手持ちにいる間、 闇属性 のパルの攻撃力が増加する。(重複不可)"
@@ -1349,6 +1422,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -1393,6 +1467,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -1449,6 +1524,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -1503,9 +1579,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて魔弾で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -1553,9 +1633,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、一定時間エテッパが付近の敵にアサルトライフルを撃ちまくる。"
@@ -1607,10 +1691,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-fire",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、一定時間カレッパが付近の敵に 炎属性 のアサルトライフルを撃ちまくる。"
@@ -1660,6 +1748,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-utility"
@@ -1726,6 +1815,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
@@ -1783,6 +1873,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "cond-party",
@@ -1838,6 +1929,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-gathering",
@@ -1875,6 +1967,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-gathering",
@@ -1910,14 +2003,13 @@
     "cond-base"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -1969,9 +2061,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、火炎放射器と化す。"
@@ -2023,10 +2119,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-ice",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）"
@@ -2077,6 +2177,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -2129,6 +2230,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -2185,13 +2287,17 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "work-mining",
     "cond-party",
     "cat-offense",
     "cat-defense",
     "cat-production",
-    "cat-support"
+    "cat-support",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが 採掘 するときのダメージが増加し、石の重量を軽減する。(重複不可)"
@@ -2253,14 +2359,13 @@
     "cond-mount"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-logging",
     "cond-mount",
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -2316,6 +2421,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-logging",
     "cond-mount",
@@ -2356,6 +2462,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -2411,6 +2518,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
@@ -2467,6 +2575,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
@@ -2521,10 +2630,14 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-party",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-pal"
    ],
    "description": {
     "ja": "手持ちにいる間、『ドンモップ』の防御力と攻撃力が上がる。 ドンモップのランク(濃縮ランク)が高いほどドンモップ自身へかかる防御・攻撃力の補正値がさらに上がる。(コモップのランクアップ(濃縮)は関係ない)"
@@ -2560,12 +2673,16 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②このパルの防御力と攻撃力は、手持ちにいる『コモップ』の数が多いほど増加する。"
@@ -2616,6 +2733,7 @@
     "cat-defense",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-defense",
@@ -2671,12 +2789,16 @@
     "cat-defense",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ground",
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "cat-support"
+    "cat-support",
+    "off-player"
    ],
    "description": {
     "ja": "①手持ちにいる間、硫黄と石炭の重量を軽減する。 ②手持ちにいる間、プレイヤーとパルが 地属性 で弱点を突いたときのダメージが増加する。"
@@ -2739,6 +2861,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -2791,6 +2914,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -2845,6 +2969,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-defense",
@@ -2901,6 +3026,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-defense",
@@ -2954,6 +3080,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-production"
@@ -2992,11 +3119,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-water",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って水上を移動できる。 ②ライド中、プレイヤーの攻撃が 水属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -3063,11 +3194,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って水上を移動できる。 ②ライド中、プレイヤーの攻撃が 氷属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -3138,6 +3273,9 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-electric",
     "work-electricity",
@@ -3145,7 +3283,8 @@
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 雷属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、 発電 器官を落とすことがある。"
@@ -3198,13 +3337,17 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-water",
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 水属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、水棲パルの粘液を落とすことがある。"
@@ -3257,13 +3400,17 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-fire",
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 炎属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、発火器官を落とすことがある。"
@@ -3317,13 +3464,17 @@
     "cat-offense",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-neutral",
     "work-handiwork",
     "cond-party",
     "cond-base",
     "cat-offense",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 無属性 のパルの攻撃力が増加する。(重複不可) ②拠点にいる間、他の拠点パルの 手作業 の作業適性レベルが+1される。(重複不可、最大までランクアップしても 手作業 +1)"
@@ -3374,11 +3525,15 @@
     "cat-offense",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-grass",
     "cond-party",
     "cat-offense",
-    "cat-production"
+    "cat-production",
+    "off-player"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーとパルが 草属性 で弱点を突いたときのダメージが増加する(重複不可) ②ヨモギウサが武器製作台や武器ライン工場系などで働くときの作業効率が上がる。"
@@ -3445,6 +3600,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-watering",
     "cond-party",
@@ -3518,6 +3674,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-watering",
     "cond-party",
@@ -3588,6 +3745,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-watering",
     "cond-base",
@@ -3624,6 +3782,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-gathering"
@@ -3676,6 +3835,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-water",
     "cond-party",
@@ -3729,6 +3889,7 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -3781,6 +3942,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-gathering"
@@ -3831,6 +3993,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -3883,6 +4046,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-utility"
@@ -3933,9 +4097,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、爆発する卵を生むランチャーと化す。"
@@ -3989,12 +4157,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-electric",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーとパルが 雷属性 で弱点を突いたときのダメージが増加する。"
@@ -4047,11 +4219,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、プレイヤーの攻撃が 氷属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -4102,10 +4278,16 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-player"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-active",
+    "off-player"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の『アクアショット』で攻撃する。このパルが使う『アクアショット』の威力も強化される。 ②手持ちにいる間、プレイヤーの攻撃力が上がる。(重複不可)"
@@ -4168,10 +4350,16 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-player"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-active",
+    "off-player"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の『スプリットファイアー』で攻撃する。このパルが使う『スプリットファイアー』の威力も強化される。 ②手持ちにいる間、プレイヤーの攻撃力が上がる。(重複不可)"
@@ -4235,11 +4423,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力のジャンピングクローで攻撃する。 このパルが使用する『ジャンピングクロー』の威力も強化される。 ②手持ちにいる間、プレイヤーの近接武器の攻撃速度が増加する。(重複不可)"
@@ -4303,11 +4495,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力のスノークローで攻撃する。 このパルが使用する『スノークロー』の威力も強化される。 ②手持ちにいる間、プレイヤーの近接武器の攻撃速度が増加する。(重複不可)"
@@ -4371,6 +4567,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-base",
@@ -4410,6 +4607,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -4466,6 +4664,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "st-frozen",
     "cond-party",
@@ -4519,10 +4718,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-grass",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-pal"
    ],
    "description": {
     "ja": "手持ちにいる間、 草属性 のパルの攻撃力が増加する。(重複不可)"
@@ -4573,6 +4776,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-ranch",
     "cond-active",
@@ -4612,6 +4816,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-electricity",
     "cond-base",
@@ -4652,6 +4857,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dark",
     "cond-mount",
@@ -4713,6 +4919,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "st-burning",
@@ -4771,11 +4978,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②手持ちにいる間、プレイヤーが敵の弱点部位へ攻撃した際のダメージが増加する。(重複不可・『シロカバネ』との併用は可能)"
@@ -4827,11 +5038,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②手持ちにいる間、プレイヤーが敵の弱点部位へ攻撃した際のダメージが増加する。(重複不可・『カバネドリ』との併用は可)"
@@ -4881,6 +5096,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -4935,6 +5151,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ground",
     "cond-party",
@@ -4991,12 +5208,16 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①家畜牧場にアサインすると、ハチミツを落とすことがある。 ②手持ちにいる間、『クインビーナ』の攻撃力が手持ちにいるビーナイトの数ほど上がる。クインビーナの濃縮ランクが高いほどクインビーナ自身へかかる攻撃力の補正値がさらに上がる。(ビーナイトの濃縮(ランク)は関係ない)"
@@ -5029,9 +5250,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-pal"
    ],
    "description": {
     "ja": "このパルの攻撃力は、手持ちにいる『ビーナイト』の数が多いほど増加する"
@@ -5079,6 +5304,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -5131,6 +5357,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -5185,6 +5412,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -5251,6 +5479,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -5303,6 +5532,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -5355,6 +5585,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-utility"
@@ -5419,6 +5650,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-utility"
@@ -5483,9 +5715,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると野性の力を解放し、一定時間ゴリレイジの攻撃力が増加する。 クールタイム：60秒"
@@ -5533,6 +5769,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-mobility"
@@ -5586,6 +5823,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
@@ -5645,12 +5883,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-muddy",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-status"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーの攻撃に 泥まみれ の状態異常値が付与される。(重複不可) 泥まみれ"
@@ -5714,9 +5956,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが使用する弓のダメージが増加する。(重複不可)"
@@ -5764,6 +6010,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-mobility"
@@ -5814,6 +6061,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-utility"
@@ -5851,10 +6099,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-fire",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、フォレーナが力を分け与えてプレイヤーの攻撃が 炎属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -5904,10 +6156,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-dark",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、フォレーオが力を分け与えてプレイヤーの攻撃が 闇属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -5957,6 +6213,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "cond-party",
@@ -6024,6 +6281,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-kindling",
     "cond-base",
@@ -6063,11 +6321,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-dark",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 闇属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -6120,11 +6382,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-electric",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 雷属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -6176,10 +6442,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-grass",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、モリタロスが力を分け与えてプレイヤーの攻撃が 草属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -6230,11 +6500,15 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-wet",
     "st-frozen",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-status"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが ずぶ濡れ 状態の敵を攻撃すると、一発で 氷まみれ 状態になる。"
@@ -6267,6 +6541,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -6317,6 +6592,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -6372,6 +6648,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-water",
     "cond-mount",
@@ -6444,6 +6721,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dragon",
     "cond-mount",
@@ -6503,6 +6781,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-electric",
     "cond-mount",
@@ -6558,9 +6837,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の居合斬りで攻撃する。 このパルが使う『居合斬り』の威力も強化される。"
@@ -6609,10 +6892,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の居合斬りで攻撃する。 このパルが使う『居合斬り』の威力も強化される。 ②手持ちにいる間、プレイヤーが使用する近接武器のダメージが、非戦闘時のみ上昇する。(重複不可)"
@@ -6678,6 +6965,7 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ice",
     "cond-party",
@@ -6743,13 +7031,12 @@
     "cond-mount"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -6813,13 +7100,12 @@
     "cond-mount"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
-    "cat-offense",
     "cat-mobility",
     "cat-production"
    ],
@@ -6887,10 +7173,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-water",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、ガブルミが力を分け与えてプレイヤーの攻撃が 水属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -6942,12 +7232,16 @@
     "cat-defense",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-fire",
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "cat-support"
+    "cat-support",
+    "off-player"
    ],
    "description": {
     "ja": "①手持ちにいる間、ヒグルミが荷物を肩代わりして、インベントリ内の武器の重量を軽減する ②手持ちにいる間、プレイヤーとパルが 炎属性 で弱点を突いたときのダメージが増加する。(重複不可)"
@@ -7013,6 +7307,7 @@
     "cat-production",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-planting",
     "cond-active",
@@ -7072,6 +7367,7 @@
     "cat-defense",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-grass",
     "st-vined",
@@ -7143,11 +7439,15 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-grass",
     "cond-party",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-pal"
    ],
    "description": {
     "ja": "このパルの攻撃力と防御力は手持ちにいるリーファン以外の 草属性 パルの数だけ増加する。 増加量(リーファン以外の 草属性"
@@ -7195,9 +7495,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力のヘルファイアクローで攻撃する。 このパルが使用する『ヘルファイアクロー』の威力も強化される。"
@@ -7245,9 +7549,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力のナイトメアクローで攻撃する。 このパルが使用する『ヘルファイアクロー』の威力も強化される。"
@@ -7297,10 +7605,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "elem-electric",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて 雷属性 の稲妻で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -7350,10 +7662,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "elem-dark",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて 闇属性 の稲妻で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -7404,11 +7720,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-fire",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "背中に乗って移動できる。 ライド中、プレイヤーの攻撃が 炎属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -7461,11 +7781,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-dark",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "背中に乗って移動できる。 ライド中、プレイヤーの攻撃が 闇属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -7516,10 +7840,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、ミサイルランチャーを連射できる。クールタイム200秒"
@@ -7570,10 +7898,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、ミサイルランチャーを連射できる。クールタイム200秒"
@@ -7628,13 +7960,17 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-ice",
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 氷属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、氷結器官を落とすことがある。"
@@ -7686,12 +8022,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-electric",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 雷属性 に変化し、プレイヤーの攻撃力も上がる。 ③このパルの移動速度は手持ちにいるライバード以外の 雷属性 の数だけ速くなる。 移動速度増加(ライバード以外の 雷属性"
@@ -7759,12 +8099,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 氷属性 に変化し、プレイヤーの攻撃力も上がる。 ③このパルの移動速度は手持ちにいるチルバード以外の 氷属性 の数だけ速くなる。 移動速度増加(チルバード以外の 氷属性"
@@ -7832,6 +8176,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dark",
     "elem-water",
@@ -7891,6 +8236,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "elem-water",
@@ -7949,6 +8295,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-electric",
     "cond-mount",
@@ -8007,6 +8354,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ice",
     "cond-mount",
@@ -8065,6 +8413,7 @@
     "cat-defense",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-electric",
     "cond-party",
@@ -8134,6 +8483,7 @@
     "cat-defense",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-electric",
     "cond-party",
@@ -8202,10 +8552,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-vined",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーとパルが ツタまみれ 状態の敵に与えるダメージが増加する。(重複不可)"
@@ -8255,10 +8609,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-vined",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-status"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に ツタまみれ の状態異常値が付与される。(重複不可) ツタまみれ"
@@ -8308,6 +8666,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -8363,10 +8722,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、グレネードランチャーを連射できる クールタイム210秒"
@@ -8417,10 +8780,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、グレネードランチャーを連射できる。 クールタイム210秒"
@@ -8473,11 +8840,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-dragon",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。なぜか泳ぐスピードも速い。 ②ライド中、プレイヤーの攻撃が 竜属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -8530,11 +8901,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-fire",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、プレイヤーの攻撃が 炎属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -8587,11 +8962,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-fire",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 炎属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -8646,13 +9025,17 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-fire",
     "elem-ground",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②このパルの攻撃力は手持ちにいるマグマンダー以外の 炎属性 または 地属性 のパルの数だけ増加する。 攻撃力増加量(マグマンダーを除く炎or 地属性"
@@ -8706,12 +9089,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーとパルが 氷属性 で弱点を突いたときのダメージが増加する。(重複不可)"
@@ -8761,6 +9148,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -8813,6 +9201,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-production"
@@ -8865,6 +9254,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -8921,6 +9311,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -8980,13 +9371,17 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-ground",
     "cond-party",
     "cond-base",
     "cat-offense",
     "cat-gathering",
-    "cat-production"
+    "cat-production",
+    "off-pal"
    ],
    "description": {
     "ja": "①手持ちにいる間、 地属性 のパルの攻撃力が増加する。(重複不可) ②家畜牧場にアサインすると、上質なパルオイルを落とすことがある。"
@@ -9036,6 +9431,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cond-base",
@@ -9090,6 +9486,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
@@ -9150,6 +9547,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ice",
     "st-frozen",
@@ -9226,6 +9624,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dark",
     "st-darkness",
@@ -9300,6 +9699,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-grass",
     "cond-mount",
@@ -9359,6 +9759,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "cond-mount",
@@ -9414,6 +9815,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-defense"
@@ -9464,6 +9866,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-defense"
@@ -9514,6 +9917,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-mobility"
@@ -9566,10 +9970,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "st-burning",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "手持ちにいる間、 炎上 状態の敵にプレイヤーの攻撃を当てると敵の周囲に炎が発生し、触れている敵に継続的にプレイヤーの攻撃の数％のダメージを与える。(重複不可)"
@@ -9619,11 +10027,15 @@
     "cat-offense",
     "cat-production"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cond-base",
     "cat-offense",
-    "cat-production"
+    "cat-production",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の『ブリザードスパイク』で攻撃する。このパルが使う『ブリザードスパイク』の威力も強化される ②家畜牧場にアサインすると、上質な布を作ることがある。"
@@ -9675,6 +10087,7 @@
     "cat-defense",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "cond-party",
@@ -9729,6 +10142,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -9784,6 +10198,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
@@ -9824,6 +10239,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
@@ -9879,10 +10295,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-ice",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、チルウィッチが力を分け与えてプレイヤーの攻撃が 氷属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -9930,6 +10350,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -9984,12 +10405,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-wet",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って水上を移動できる。 ②手持ちにいる間、プレイヤーとパルが ずぶ濡れ 状態の敵に与えるダメージをアップさせる。(重複不可)"
@@ -10058,13 +10483,17 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-burning",
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、溶岩のダメージを無効化する。 ③手持ちにいる間、プレイヤーとパルが 炎上 状態の敵に与えるダメージをアップさせる。(重複不可)"
@@ -10131,6 +10560,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "cond-mount",
@@ -10188,6 +10618,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-water",
     "cond-mount",
@@ -10242,6 +10673,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -10298,12 +10730,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-dragon",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②手持ちにいる間、 竜属性 のパルの攻撃力が増加する。(重複不可)"
@@ -10356,11 +10792,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-grass",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。②ライド中、プレイヤーの攻撃が 草属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -10412,6 +10852,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-mobility",
@@ -10466,6 +10907,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ground",
     "cond-party",
@@ -10518,6 +10960,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -10571,9 +11014,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、オオタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -10621,9 +11068,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、ヒノタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -10674,6 +11125,7 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -10732,6 +11184,7 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -10787,6 +11240,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -10842,6 +11296,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "cond-mount",
@@ -10898,10 +11353,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-muddy",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーとパルが 泥まみれ 状態の敵に与えるダメージをアップさせる。(重複不可)"
@@ -10951,6 +11410,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dragon",
     "cond-party",
@@ -11004,6 +11464,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dragon",
     "cond-party",
@@ -11055,9 +11516,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、攻撃が弱点部位にヒットすると次の弱点部位ヒットの威力が増加する。(重複不可)"
@@ -11105,6 +11570,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-utility"
@@ -11159,6 +11625,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-transport",
     "cond-mount",
@@ -11205,6 +11672,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ground",
     "st-muddy",
@@ -11265,6 +11733,7 @@
     "cat-defense",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "cond-party",
@@ -11320,10 +11789,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "elem-grass",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーがローリングやステップをすると、カプリリスが旋風を発生させ、触れた敵に 草属性 のダメージを与える。(重複不可)"
@@ -11374,12 +11847,16 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、敵を倒すと一緒に戦っているパルの攻撃力と防御力が増加する。この効果は20秒続き、最大5までスタックする。(重複不可)"
@@ -11433,12 +11910,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-dragon",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーとパルが 竜属性 で弱点を突いたときのダメージが増加する(重複不可)"
@@ -11492,12 +11973,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-grass",
     "cond-mount",
     "cond-active",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②発動すると、ウゴクゾーの右手から 草属性 の強力なレーザーを照射する。(威力20×最大30ヒット)"
@@ -11551,12 +12036,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-dark",
     "cond-mount",
     "cond-active",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②発動すると、ノロウゾーの右手から 闇属性 の強力なレーザーを照射する。(最大30ヒット、実質威力20)"
@@ -11608,10 +12097,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-ground",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、アヌビスが力を分け与えてプレイヤーの攻撃が 地属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒) ②戦闘中、たまに高速ステップで攻撃を回避する。"
@@ -11660,6 +12153,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-mobility",
@@ -11727,10 +12221,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-poison",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーとパルが 毒 状態の敵に与えるダメージが増加する。(重複不可)"
@@ -11780,10 +12278,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-electric",
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "①発動すると、ブッサンダーが力を分け与えてプレイヤーの攻撃が 雷属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -11835,6 +12337,7 @@
     "cat-mobility",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-mining",
     "cond-mount",
@@ -11876,6 +12379,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -11930,10 +12434,16 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-player"
+   ],
    "tags": [
     "cond-active",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-active",
+    "off-player"
    ],
    "description": {
     "ja": "①発動すると、一定時間ニャニミテが付近の敵にショットガンを撃ちまくる。 ②手持ちにいる間、プレイヤーが使用するショットガンのダメージが上昇する。(重複不可)"
@@ -11997,6 +12507,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-utility"
@@ -12047,9 +12558,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "①手持ちにいる間、フルオート武器のマガジン内にある最後の銃弾のダメージが上昇する。(重複不可)"
@@ -12099,11 +12614,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーが使用するエネルギー武器のダメージが上昇する。(重複不可)"
@@ -12154,6 +12673,7 @@
     "cat-gathering",
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-base",
     "cat-gathering",
@@ -12205,6 +12725,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-gathering"
@@ -12257,6 +12778,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-grass",
     "cond-party",
@@ -12309,6 +12831,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cond-party",
@@ -12378,6 +12901,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-cooling",
     "cond-base",
@@ -12414,6 +12938,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-gathering"
@@ -12466,6 +12991,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -12550,6 +13076,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -12632,6 +13159,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-mobility"
@@ -12667,6 +13195,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-gathering"
@@ -12720,11 +13249,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-ground",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、プレイヤーの攻撃が 地属性 に変化し、プレイヤーの攻撃力も上がる。"
@@ -12774,6 +13307,7 @@
    "categories": [
     "cat-utility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-utility"
@@ -12830,6 +13364,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-electric",
     "st-electrified",
@@ -12891,13 +13426,17 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-neutral",
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "cat-support"
+    "cat-support",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②このパルの攻撃力と移動速度は手持ちにいるセレスディア以外の 無属性 の数だけ速くなる。 攻撃力・移動速度増加(セレスディア以外の 無属性 ③手持ちにいる間、非戦闘時にプレイヤーと手持ちのパルのHPを毎秒回復する"
@@ -12964,12 +13503,16 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "cat-support"
+    "cat-support",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、一緒に戦っているパルのHPが徐々に減っていく代わりに、そのパルの攻撃力が増加する"
@@ -13017,12 +13560,11 @@
     "cond-mount"
    ],
    "categories": [
-    "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
-    "cat-offense",
     "cat-mobility"
    ],
    "description": {
@@ -13088,10 +13630,14 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると鋼鉄の覚悟により、一定時間(40秒程度)テラナイトの攻撃力と防御力が増加する。 クールタイム：50秒(ランクは関係なく一律) 増加量はパッシブスキルと同じ枠で加算 ※テクノロジーやサドルの解放不要"
@@ -13140,10 +13686,14 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると鋼鉄の覚悟により、一定時間(40秒程度)マグナイトの攻撃力と防御力が増加する。 クールタイム：50秒(ランクは関係なく一律) 増加量はパッシブスキルと同じ枠で加算 ※テクノロジーやサドルの解放不要"
@@ -13193,6 +13743,7 @@
     "cat-mobility",
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -13261,6 +13812,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-mobility"
@@ -13327,6 +13879,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-mobility"
@@ -13364,10 +13917,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-electrified",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-status"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 帯電 の状態異常値が付与される。 帯電"
@@ -13419,6 +13976,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-water",
     "st-wet",
@@ -13473,6 +14031,7 @@
    "categories": [
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "st-vined",
     "cond-party",
@@ -13524,6 +14083,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-defense"
@@ -13574,9 +14134,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが非戦闘状態のエネミーへ与えるダメージが増加する。(重複不可)"
@@ -13626,10 +14190,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "st-electrified",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "手持ちにいる間、 帯電 状態の敵にプレイヤーの攻撃を与えると敵から電気が放出し、周囲の敵にプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -13677,12 +14245,13 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense"
+    "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "st-poison",
     "cond-party",
-    "cat-offense"
+    "cat-defense"
    ],
    "description": {
     "ja": "手持ちにいる間、 毒 状態の敵の攻撃力を低下させる。(重複不可)"
@@ -13732,6 +14301,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
@@ -13805,13 +14375,17 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-electric",
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "cat-gathering"
+    "cat-gathering",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って水上を移動できる。 ②ライド中、プレイヤーの攻撃が 雷属性 に変化し、プレイヤーの攻撃力も上がる。 ③手持ちにいる間、釣りで釣ったパルの才能値に下限値が設けられ、それ以上の才能値になる。(重複不可)"
@@ -13889,6 +14463,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-support"
@@ -13944,13 +14519,17 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-dragon",
     "elem-dark",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②このパルの攻撃力と移動速度は手持ちにいるレイバーン以外の 竜属性 、または 闇属性 の数だけ増加する。 攻撃力・移動速度増加(レイバーン以外の 竜属性 or 闇属性"
@@ -14005,13 +14584,17 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-dragon",
     "elem-fire",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②このパルの攻撃力と移動速度は手持ちにいるヘルバーン以外の 竜属性 、または 炎属性 の数だけ増加する。 攻撃力・移動速度増加(ヘルバーン以外の 竜属性 or 炎属性"
@@ -14062,6 +14645,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-base",
@@ -14115,6 +14699,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-party",
     "cat-defense"
@@ -14167,10 +14752,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "st-burning",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "手持ちにいる間、 炎上 状態の敵にプレイヤーの攻撃を与えると敵が爆発し、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -14222,12 +14811,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-wet",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-status"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②手持ちにいる間、プレイヤーの攻撃に ずぶ濡れ の状態異常値が付与される。(重複不可) ずぶ濡れ"
@@ -14282,12 +14875,16 @@
     "cat-offense",
     "cat-support"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "elem-fire",
     "st-burning",
     "cond-party",
     "cat-offense",
-    "cat-support"
+    "cat-support",
+    "off-player"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーのHPが50%以下になったときに、ラピエールがプレイヤーの周囲に 炎属性 の爆風を発生させる。( 炎上 累積値：777) ②手持ちにいる間、プレイヤーのHPが50%以下の場合はプレイヤーの攻撃力が上昇する。"
@@ -14353,12 +14950,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "st-darkness",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②手持ちにいる間、プレイヤーとパルが 暗闇 状態の敵に与えるダメージが増加する。(重複不可)"
@@ -14410,10 +15011,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-darkness",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-status"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 暗闇 の状態異常値が付与される。(重複不可)"
@@ -14463,6 +15068,7 @@
    "categories": [
     "cat-production"
    ],
+   "offenseTypes": [],
    "tags": [
     "work-medicine",
     "cond-base",
@@ -14499,9 +15105,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが放った矢が着弾時に爆発して、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -14551,6 +15161,7 @@
    "categories": [
     "cat-defense"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dark",
     "cond-party",
@@ -14602,9 +15213,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-player"
+   ],
    "tags": [
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-player"
    ],
    "description": {
     "ja": "手持ちにいる間、全ての手持ちのパルの種類が異なるとき、プレイヤーの攻撃力が増加する。"
@@ -14654,10 +15269,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-status"
+   ],
    "tags": [
     "st-burning",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-status"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーの攻撃に 炎上 の状態異常値が付与される。(重複不可) 炎上"
@@ -14704,14 +15323,13 @@
     "cond-party"
    ],
    "categories": [
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-party",
-    "cat-offense",
     "cat-defense",
     "cat-mobility"
    ],
@@ -14764,10 +15382,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "背中に乗って移動できる。ライド中、ミニガンを連射できる。 クールタイム：200秒"
@@ -14817,6 +15439,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-support"
@@ -14867,6 +15490,7 @@
    "categories": [
     "cat-support"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-active",
     "cat-support"
@@ -14918,10 +15542,14 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-party",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-pal"
    ],
    "description": {
     "ja": "手持ちにいる間、敵に弾丸を与えると一緒に戦っているパルの攻撃力と防御力が増加する。この効果は5秒続き、最大30までスタックする。(重複不可)"
@@ -14973,6 +15601,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-ice",
     "cond-mount",
@@ -15032,6 +15661,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-fire",
     "cond-mount",
@@ -15089,6 +15719,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-dark",
     "cond-mount",
@@ -15145,6 +15776,7 @@
    "categories": [
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "elem-neutral",
     "elem-dark",
@@ -15202,11 +15834,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、 氷属性 のハンマーを振り下ろして攻撃できる。"
@@ -15260,12 +15896,16 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "elem-dragon",
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②このパルの攻撃力は手持ちにいるシャオロン以外の 竜属性 の数だけ増加する。 攻撃力増加量(シャオロンを除く 竜属性"
@@ -15317,10 +15957,14 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "st-vined",
     "cond-party",
-    "cat-offense"
+    "cat-offense",
+    "off-passive"
    ],
    "description": {
     "ja": "①手持ちにいる間、 ツタまみれ 状態の敵にプレイヤーの攻撃を与えると敵が爆発し、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可) ②プレイヤーとパルの世界樹の起爆胞子を無力化する。"
@@ -15372,12 +16016,18 @@
     "cat-offense",
     "cat-defense"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-status"
+   ],
    "tags": [
     "st-poison",
     "cond-active",
     "cond-party",
     "cat-offense",
-    "cat-defense"
+    "cat-defense",
+    "off-active",
+    "off-status"
    ],
    "description": {
     "ja": "①発動すると、プレイヤーの攻撃に 毒 の状態異常値が付与される。 ②手持ちにいる間、プレイヤーとパルは毒状態を無効にして、世界樹エリアの毒ガスを無効化する。(重複不可)"
@@ -15425,9 +16075,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の『ナイトメアレイ』で攻撃する。 このパルが使用するナイトメアレイの威力も強化される。"
@@ -15475,9 +16129,13 @@
    "categories": [
     "cat-offense"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-active",
-    "cat-offense"
+    "cat-offense",
+    "off-active"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の『ナイトメアレイブルーム』で攻撃する。 このパルが使用するナイトメアレイブルームの威力も強化される。"
@@ -15527,11 +16185,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-pal"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-pal"
    ],
    "description": {
     "ja": "背中に乗って空を飛ぶことができる。 ②手持ちにいる間、武器を持ったパルのパートナースキルのダメージが上昇する。"
@@ -15596,6 +16258,7 @@
     "cat-defense",
     "cat-mobility"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cat-defense",
@@ -15651,6 +16314,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-active",
@@ -15705,6 +16369,7 @@
     "cat-mobility",
     "cat-gathering"
    ],
+   "offenseTypes": [],
    "tags": [
     "cond-mount",
     "cond-active",
@@ -15762,12 +16427,18 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player",
+    "off-status"
+   ],
    "tags": [
     "elem-ice",
     "st-frozen",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player",
+    "off-status"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 氷属性 に変化し、プレイヤーが与えるダメージも増加する。 ③ライド中、プレイヤーの攻撃に 氷まみれ の状態異常値が付与される。 氷まみれ"
@@ -15836,12 +16507,18 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-player",
+    "off-status"
+   ],
    "tags": [
     "elem-dark",
     "st-darkness",
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-player",
+    "off-status"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②ライド中、プレイヤーの攻撃が 闇属性 に変化し、プレイヤーが与えるダメージも増加する。 ③ライド中、プレイヤーの攻撃に 暗闇 の状態異常値が付与される。(重複不可)"
@@ -15907,11 +16584,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-passive"
+   ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-passive"
    ],
    "description": {
     "ja": "①手持ちから出している間、プレイヤーの攻撃にあわせて槍で追撃を行う。②背中に乗って水上を高速で移動できる。 ③水上で「大海の覇者」(キーボード:Ctrl、コントローラー:B)で高く飛び上がることができる。"
@@ -15976,10 +16657,14 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ※ランクアップ(濃縮)しても移動速度は変わらない。 ②ライド中、ミサイルランチャーを連射できる。 クールタイム：60秒"
@@ -16031,11 +16716,15 @@
     "cat-offense",
     "cat-mobility"
    ],
+   "offenseTypes": [
+    "off-active"
+   ],
    "tags": [
     "cond-mount",
     "cond-base",
     "cat-offense",
-    "cat-mobility"
+    "cat-mobility",
+    "off-active"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②拠点にいる間、常に拠点上空を回遊し侵入者に対しては遥か上空から砲撃を行う。拠点に1匹までしか召喚できない。"
@@ -16091,6 +16780,10 @@
     "cat-support",
     "cat-utility"
    ],
+   "offenseTypes": [
+    "off-active",
+    "off-pal"
+   ],
    "tags": [
     "elem-dark",
     "cond-mount",
@@ -16100,7 +16793,9 @@
     "cat-mobility",
     "cat-gathering",
     "cat-support",
-    "cat-utility"
+    "cat-utility",
+    "off-active",
+    "off-pal"
    ],
    "description": {
     "ja": "このパルのパートナースキルは確認されていない。 ﾃﾗ01 クトゥルフのめだま クトゥルフのめだまの突進 個別ページへ → 発動すると、狙いを定めた敵に向かってクトゥルフのめだまが突進で攻撃する。(威力300) ﾃﾗ02 あくまのめだま 悪魔の視界 個別ページへ → 手持ちにいる間、 闇属性 のパルの攻撃力が増加する。(重複不可) ﾃﾗ03 グリーンスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ04 ブルースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ05 かがやくスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ06 パープルスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ07 レインボースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ08 レッドスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ09 まほうのつるぎ エンチャント 個別ページへ → 手持ちにいる間、 闇属性 のパルを倒した際のドロップアイテム獲得量が増える。(重複不可) ﾃﾗ10 どうくつコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ﾃﾗ11 かがやくコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ボス01 ゾーイ＆エレパンダ 黄色い重戦車 個別ページへ → 背中に乗って移動できる。ライド中、ミニガンを連射できる。 スポンサーリンク (adsbygoogle = window.adsbygoogle || []).push({}); 前へ ┗🐎ライドパル比較・ランキング 次へ 💥アクティブスキル(技)一覧 当サイトは『パルワールド（Palworld）』の非公式ファンサイトです。\n    ゲーム内の名称・画像等の権利は © Pocketpair, Inc. および各権利者に帰属します。 Special Thanks | プライバシーポリシー | お問い合わせ | パルラボ公式X © 2026 パルワールド配合・攻略ラボ (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a1d3229e1f082546',t:'MTc4NDM5NDk5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();"

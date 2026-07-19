@@ -93,6 +93,7 @@ function renderCard(skill, tagIndex, star) {
   );
   chips.appendChild(chipsFromTags(conds, tagIndex));
   chips.appendChild(chipsFromTags(skill.categories, tagIndex));
+  chips.appendChild(chipsFromTags(skill.offenseTypes, tagIndex));
   chips.appendChild(chipsFromTags(skill.works, tagIndex));
   chips.appendChild(chipsFromTags(skill.status, tagIndex));
   card.appendChild(chips);

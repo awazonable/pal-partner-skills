@@ -21,6 +21,40 @@ WORK={'伐採':'work-logging','採集':'work-gathering','採掘':'work-mining','
 STAT={'氷まみれ':'st-frozen','炎上':'st-burning','泥まみれ':'st-muddy','ずぶ濡れ':'st-wet',
       'ツタまみれ':'st-vined','暗闇':'st-darkness','毒':'st-poison','帯電':'st-electrified'}
 
+# ---- 攻撃カテゴリの補正・細分 ----
+def _terrain_only(d):
+    # 岩/木/鉱石/建築 を壊す(採掘・移動)だけで戦闘要素が無い＝攻撃ではない
+    return bool((re.search(r'(岩|木|鉱石|金属鉱石|建築物?|石建築)',d) and re.search(r'(壊す|破壊|効率|に(対して)?与えるダメージ)',d))
+                and not re.search(r'敵|エネミー|プレイヤーの攻撃力|武器の?ダメージ|弱点|状態異常|追撃|属性に変化|付与',d))
+def _expl_def(d):  # 爆発する攻撃を受けた際の軽減＝防御
+    return bool(re.search(r'爆発する攻撃を受けた',d))
+def _enemy_debuff(d):  # 敵の攻撃力を低下＝防御寄りのデバフ
+    return bool(re.search(r'敵の攻撃力を(低下|下げ)',d))
+
+def offense_subtypes(d, cond):
+    """攻撃スキルを内訳サブカテゴリに分類（複数可）。"""
+    r=set()
+    if re.search(r'攻撃(に|が).{0,10}(付与|状態異常|状態値)',d) or re.search(r'一発で.{0,6}(まみれ|状態)になる',d) \
+       or re.search(r'攻撃が.{0,4}(炎上|帯電|氷まみれ|ずぶ濡れ|泥まみれ|ツタまみれ|暗闇|毒)',d):
+        r.add('off-status')
+    pal_atk = re.search(r'(このパル|戦っているパル|のパル|』[^。]{0,4})の(防御力[とや]?)?攻撃力',d) \
+              or ('パルの攻撃力' in d) or re.search(r'』の.{0,4}攻撃力',d)
+    if (pal_atk and re.search(r'(増加|上がる|上昇|アップ|多いほど|数だけ|数ほど|スタック|補正)',d)) \
+       or re.search(r'パートナースキルのダメージ.{0,6}(上昇|増加)',d):
+        r.add('off-pal')
+    if re.search(r'(近接武器|遠距離武器|武器|プレイヤー).{0,15}(ダメージ|攻撃力).{0,6}(増加|上がる|上昇|アップ)',d) \
+       or re.search(r'弱点',d) or re.search(r'プレイヤーの攻撃が.{0,4}属性に変化',d) or re.search(r'銃弾のダメージ',d) \
+       or re.search(r'(状態の敵|非戦闘.{0,4}(敵|エネミー)).{0,14}与えるダメージ.{0,6}(増加|アップ)',d):
+        r.add('off-player')
+    if ('cond-active' in cond) or re.search(r'ライド中.{0,30}(連射|発射|照射|砲撃|レーザー|ハンマー|ミサイル|ミニガン|グレネード|振り下ろして攻撃|攻撃できる)',d) \
+       or re.search(r'上空から砲撃',d):
+        r.add('off-active')
+    if re.search(r'追撃',d) or re.search(r'あわせて',d) \
+       or (re.search(r'状態の敵に',d) and re.search(r'(ダメージを与える|敵が爆発|敵の周囲に炎|周囲の敵)',d)) \
+       or re.search(r'(ローリングやステップ|ローリング).{0,20}(旋風|ダメージ)',d) or re.search(r'矢が着弾.{0,10}爆発',d):
+        r.add('off-passive')
+    return r
+
 class P(HTMLParser):
     def __init__(self):
         super().__init__(); self.blocks=[]; self.cur=None; self.aclass=None; self.toks=[]
@@ -116,6 +150,17 @@ class P(HTMLParser):
         if re.search(r'回復|HP|重量|サポート|スタミナ|満腹|クールタイムが減少',full): cat.append('cat-support')
         if re.search(r'探知|透明|鍵|自動で近くにあるアイテム|位置を|センス|嗅覚|気づかれにくく|拠点へ移動|帰還',full): cat.append('cat-utility')
         cat=list(dict.fromkeys(cat))
+        # 攻撃カテゴリの誤検出補正（本来は攻撃でないもの）＋内訳サブカテゴリ
+        offtypes=[]
+        if 'cat-offense' in cat:
+            if _terrain_only(full):
+                cat.remove('cat-offense')                       # 破壊効率＝採掘/移動
+            elif _expl_def(full) or _enemy_debuff(full):
+                cat.remove('cat-offense')                       # 爆発耐性/敵デバフ＝防御寄り
+                if 'cat-defense' not in cat: cat.append('cat-defense')
+            else:
+                offtypes=sorted(offense_subtypes(full, cond))   # 真の攻撃 → 内訳を付与
+        if not cat: cat.append('cat-mobility') if 'cond-mount' in cond else None
         no=self.cur['no']; num=re.sub(r'^No\.','',no)
         variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
         # 重複可否は効果単位で判定済み。スキル単位は要約（フィルタ/バッジ用）。
@@ -130,10 +175,11 @@ class P(HTMLParser):
         # 全効果が「重複不可」で、その理由がすべて騎乗のみ（源に「重複不可」表記なし）か
         ride_only = (not mixed) and has_nostack and ('重複不可' not in full) \
                     and all(e['noStackReason']=='ride' for e in effects if e['noStack'])
-        tags=els+wks+sts+cond+cat
+        tags=els+wks+sts+cond+cat+offtypes
         rec={'id':'no-'+num.lower(),'no':no,'variant':variant,
              'pal':{'ja':pal},'skillName':{'ja':skill},
              'element':els,'works':wks,'status':sts,'conditions':cond,'categories':cat,
+             'offenseTypes':offtypes,
              'tags':list(dict.fromkeys(tags)),
              'description':{'ja':full},'effects':effects,
              'stackable': not has_nostack,'noStack':has_nostack,
@@ -156,7 +202,7 @@ OVERRIDES={
             'conditions':['cond-party'],'categories':['cat-utility']},
   # ユキツネ「だっこフロスト」：ソースは説明文が空。基種キツネビ「だっこファイヤー」の氷版として補完。
   'no-029b':{'description':{'ja':'発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）'},
-             'conditions':['cond-active'],'categories':['cat-offense'],'element':['elem-ice']},
+             'conditions':['cond-active'],'categories':['cat-offense'],'offenseTypes':['off-active'],'element':['elem-ice']},
 }
 # No.025 ラヴィ：ソース誤記「★0.4%」= ★4：0.4%
 VALUE_FIX={'no-025':{'回復量':{4:'0.4%'}}}
@@ -172,16 +218,17 @@ for s in skills:
             if fix:
                 for idx,val in fix.items(): e['perStar'][idx]=val
     # tags 統合を再計算（オーバーライド反映）
-    s['tags']=list(dict.fromkeys(s['element']+s['works']+s['status']+s['conditions']+s['categories']))
+    s['tags']=list(dict.fromkeys(s['element']+s['works']+s['status']+s['conditions']+s['categories']+s.get('offenseTypes',[])))
 
 # ---- tags.json ----
 def L(ja,en): return {'ja':ja,'en':en}
 groups=[
  {'id':'condition','label':L('発動場面','Condition'),'order':1,'hint':L('いつ・どこで効果が出るか','')},
  {'id':'category','label':L('効果カテゴリ','Effect'),'order':2},
- {'id':'element','label':L('関連属性','Element'),'order':3,'hint':L('効果に関わる属性（対象属性など）。パル自身の属性ではない','')},
- {'id':'work','label':L('作業適性','Work'),'order':4},
- {'id':'status','label':L('状態異常','Status'),'order':5},
+ {'id':'offense-type','label':L('攻撃の内訳','Offense type'),'order':3,'hint':L('「攻撃」カテゴリの細分','')},
+ {'id':'element','label':L('関連属性','Element'),'order':4,'hint':L('効果に関わる属性（対象属性など）。パル自身の属性ではない','')},
+ {'id':'work','label':L('作業適性','Work'),'order':5},
+ {'id':'status','label':L('状態異常','Status'),'order':6},
 ]
 tags=[
  {'id':'cond-base','group':'condition','label':L('拠点配置','Base')},
@@ -195,6 +242,11 @@ tags=[
  {'id':'cat-production','group':'category','label':L('生産・拠点','Production')},
  {'id':'cat-support','group':'category','label':L('支援・回復','Support')},
  {'id':'cat-utility','group':'category','label':L('探索・便利','Utility')},
+ {'id':'off-player','group':'offense-type','label':L('プレイヤー攻撃強化','Player buff')},
+ {'id':'off-pal','group':'offense-type','label':L('パル攻撃強化','Pal buff')},
+ {'id':'off-active','group':'offense-type','label':L('アクティブ攻撃','Active attack')},
+ {'id':'off-passive','group':'offense-type','label':L('パッシブ攻撃/追撃','Passive attack')},
+ {'id':'off-status','group':'offense-type','label':L('状態異常付与','Status infliction')},
 ]
 ELEMLABEL={'elem-neutral':('無','#9aa0a6'),'elem-dark':('闇','#8659c4'),'elem-electric':('雷','#e8c53a'),
  'elem-fire':('炎','#e8613c'),'elem-water':('水','#3aa6e8'),'elem-ground':('地','#b08050'),
