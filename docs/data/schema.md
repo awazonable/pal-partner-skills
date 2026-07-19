@@ -20,8 +20,11 @@
     - `conditions[]` … `cond-base|party|mount|active`（説明文から導出）
     - `categories[]` … `cat-offense|defense|mobility|gathering|production|support|utility`（導出）
     - `offenseTypes[]` … 攻撃(`cat-offense`)の内訳サブカテゴリ（導出）：
-      `off-player`(プレイヤー攻撃強化) / `off-pal`(パル攻撃強化) / `off-active`(アクティブ攻撃) /
-      `off-passive`(パッシブ攻撃・追撃) / `off-status`(状態異常付与)。攻撃以外は空。
+      `off-player`(プレイヤー攻撃強化) / `off-pal`(パル攻撃強化) / `off-attack`(パルが直接攻撃) /
+      `off-status`(状態異常付与)。攻撃以外は空。
+      能動/受動は分けない（発動場面 `cond-active`/`cond-party` で表現でき冗長なため統合）。
+      tags.json 上では `cat-offense` が親（`children`）、`off-*` が子（`parent:"cat-offense"`）で
+      いずれも `group:"category"`。UI は攻撃を親、子を階層チェックボックスで表示する。
     - `tags[]` … 上記の統合（フィルタ用。冗長だが検索を単純化）
   - `description{ja}`
   - `effects[]`: `{ label{ja}, perStar:[5], noStack, noStackReason }`

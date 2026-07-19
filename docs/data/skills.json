@@ -156,14 +156,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active",
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "発動するとプレイヤーの頭の上に乗り、攻撃にあわせてサブマシンガンで追撃を行う。"
@@ -214,12 +212,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、カモノスケが敵に向かって、ボディサーフィンをしながら突っ込む。(威力100)"
@@ -268,12 +266,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、モモノスケが敵に向かって、ファイアーサーフィンをしながら突っ込む。(威力115)"
@@ -534,14 +532,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
     "cat-mobility",
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "description": {
@@ -595,7 +593,7 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "tags": [
@@ -604,7 +602,7 @@
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "description": {
@@ -944,13 +942,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-electric",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、パチグリが手に装備され、敵などに投げつけると着弾時に 雷属性 の爆発を起こす。"
@@ -999,12 +997,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、コチグリが手に装備され、敵に投げつけると着弾時に氷の爆発を起こす。"
@@ -1110,12 +1108,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、ロケットランチャーが装備され、ペンタマを弾丸として射出する。 着弾して爆発するとペンタマはダメージを受ける。 威力は『ペンタマ』よりも『デンタマ』の方が高い。"
@@ -1180,12 +1178,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、ロケットランチャーが装備され、デンタマを弾丸として射出する。着弾して爆発するとデンタマはダメージを受ける。 威力は『ペンタマ』よりも『デンタマ』の方が高い。"
@@ -1580,12 +1578,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて魔弾で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -1634,12 +1632,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、一定時間エテッパが付近の敵にアサルトライフルを撃ちまくる。"
@@ -1692,13 +1690,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-fire",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、一定時間カレッパが付近の敵に 炎属性 のアサルトライフルを撃ちまくる。"
@@ -2062,12 +2060,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、火炎放射器と化す。"
@@ -2120,13 +2118,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-ice",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）"
@@ -4098,12 +4096,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、プレイヤーに装備され、爆発する卵を生むランチャーと化す。"
@@ -4279,14 +4277,14 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "description": {
@@ -4351,14 +4349,14 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "description": {
@@ -4424,14 +4422,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力のジャンピングクローで攻撃する。 このパルが使用する『ジャンピングクロー』の威力も強化される。 ②手持ちにいる間、プレイヤーの近接武器の攻撃速度が増加する。(重複不可)"
@@ -4496,14 +4494,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力のスノークローで攻撃する。 このパルが使用する『スノークロー』の威力も強化される。 ②手持ちにいる間、プレイヤーの近接武器の攻撃速度が増加する。(重複不可)"
@@ -5716,12 +5714,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると野性の力を解放し、一定時間ゴリレイジの攻撃力が増加する。 クールタイム：60秒"
@@ -6100,13 +6098,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-fire",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、フォレーナが力を分け与えてプレイヤーの攻撃が 炎属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -6157,13 +6155,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-dark",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、フォレーオが力を分け与えてプレイヤーの攻撃が 闇属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -6443,13 +6441,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-grass",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、モリタロスが力を分け与えてプレイヤーの攻撃が 草属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -6838,12 +6836,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の居合斬りで攻撃する。 このパルが使う『居合斬り』の威力も強化される。"
@@ -6893,13 +6891,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の居合斬りで攻撃する。 このパルが使う『居合斬り』の威力も強化される。 ②手持ちにいる間、プレイヤーが使用する近接武器のダメージが、非戦闘時のみ上昇する。(重複不可)"
@@ -7174,13 +7172,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-water",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、ガブルミが力を分け与えてプレイヤーの攻撃が 水属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -7496,12 +7494,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力のヘルファイアクローで攻撃する。 このパルが使用する『ヘルファイアクロー』の威力も強化される。"
@@ -7550,12 +7548,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力のナイトメアクローで攻撃する。 このパルが使用する『ヘルファイアクロー』の威力も強化される。"
@@ -7606,13 +7604,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "elem-electric",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて 雷属性 の稲妻で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -7663,13 +7661,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "elem-dark",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②プレイヤーの攻撃にあわせて 闇属性 の稲妻で追撃を行う。この追撃でとどめを刺すことはできない。"
@@ -7841,13 +7839,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、ミサイルランチャーを連射できる。クールタイム200秒"
@@ -7899,13 +7897,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、ミサイルランチャーを連射できる。クールタイム200秒"
@@ -8723,13 +8721,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、グレネードランチャーを連射できる クールタイム210秒"
@@ -8781,13 +8779,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、グレネードランチャーを連射できる。 クールタイム210秒"
@@ -9971,13 +9969,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "st-burning",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "手持ちにいる間、 炎上 状態の敵にプレイヤーの攻撃を当てると敵の周囲に炎が発生し、触れている敵に継続的にプレイヤーの攻撃の数％のダメージを与える。(重複不可)"
@@ -10028,14 +10026,14 @@
     "cat-production"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cond-base",
     "cat-offense",
     "cat-production",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、狙いを定めた敵に向かって高威力の『ブリザードスパイク』で攻撃する。このパルが使う『ブリザードスパイク』の威力も強化される ②家畜牧場にアサインすると、上質な布を作ることがある。"
@@ -10296,13 +10294,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-ice",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、チルウィッチが力を分け与えてプレイヤーの攻撃が 氷属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -11015,12 +11013,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、オオタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -11069,12 +11067,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、ヒノタチウオがプレイヤーの刀となる。10秒以内に戻さないとオオタチウオが瀕死になる。居合切りを発動しても瀕死になる。(クールタイム：10秒)"
@@ -11790,13 +11788,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "elem-grass",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーがローリングやステップをすると、カプリリスが旋風を発生させ、触れた敵に 草属性 のダメージを与える。(重複不可)"
@@ -11974,7 +11972,7 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-grass",
@@ -11982,7 +11980,7 @@
     "cond-active",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②発動すると、ウゴクゾーの右手から 草属性 の強力なレーザーを照射する。(威力20×最大30ヒット)"
@@ -12037,7 +12035,7 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-dark",
@@ -12045,7 +12043,7 @@
     "cond-active",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。②発動すると、ノロウゾーの右手から 闇属性 の強力なレーザーを照射する。(最大30ヒット、実質威力20)"
@@ -12098,13 +12096,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-ground",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、アヌビスが力を分け与えてプレイヤーの攻撃が 地属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒) ②戦闘中、たまに高速ステップで攻撃を回避する。"
@@ -12279,13 +12277,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-electric",
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①発動すると、ブッサンダーが力を分け与えてプレイヤーの攻撃が 雷属性 に変化し、さらに攻撃力が増加する。 (発動：約30秒、クールタイム：50秒)"
@@ -12435,14 +12433,14 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "tags": [
     "cond-active",
     "cond-party",
     "cat-offense",
-    "off-active",
+    "off-attack",
     "off-player"
    ],
    "description": {
@@ -13631,13 +13629,13 @@
     "cat-defense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
     "cat-defense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると鋼鉄の覚悟により、一定時間(40秒程度)テラナイトの攻撃力と防御力が増加する。 クールタイム：50秒(ランクは関係なく一律) 増加量はパッシブスキルと同じ枠で加算 ※テクノロジーやサドルの解放不要"
@@ -13687,13 +13685,13 @@
     "cat-defense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
     "cat-defense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると鋼鉄の覚悟により、一定時間(40秒程度)マグナイトの攻撃力と防御力が増加する。 クールタイム：50秒(ランクは関係なく一律) 増加量はパッシブスキルと同じ枠で加算 ※テクノロジーやサドルの解放不要"
@@ -14191,13 +14189,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "st-electrified",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "手持ちにいる間、 帯電 状態の敵にプレイヤーの攻撃を与えると敵から電気が放出し、周囲の敵にプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -14753,13 +14751,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "st-burning",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "手持ちにいる間、 炎上 状態の敵にプレイヤーの攻撃を与えると敵が爆発し、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -15106,12 +15104,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "手持ちにいる間、プレイヤーが放った矢が着弾時に爆発して、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可)"
@@ -15383,13 +15381,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "背中に乗って移動できる。ライド中、ミニガンを連射できる。 クールタイム：200秒"
@@ -15835,14 +15833,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "elem-ice",
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って移動できる。 ②ライド中、 氷属性 のハンマーを振り下ろして攻撃できる。"
@@ -15958,13 +15956,13 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "st-vined",
     "cond-party",
     "cat-offense",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "①手持ちにいる間、 ツタまみれ 状態の敵にプレイヤーの攻撃を与えると敵が爆発し、追加でプレイヤーの攻撃の一定割合のダメージを与える。(重複不可) ②プレイヤーとパルの世界樹の起爆胞子を無力化する。"
@@ -16017,7 +16015,7 @@
     "cat-defense"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-status"
    ],
    "tags": [
@@ -16026,7 +16024,7 @@
     "cond-party",
     "cat-offense",
     "cat-defense",
-    "off-active",
+    "off-attack",
     "off-status"
    ],
    "description": {
@@ -16076,12 +16074,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の『ナイトメアレイ』で攻撃する。 このパルが使用するナイトメアレイの威力も強化される。"
@@ -16130,12 +16128,12 @@
     "cat-offense"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-active",
     "cat-offense",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "発動すると、狙いを定めた敵に向かって高威力の『ナイトメアレイブルーム』で攻撃する。 このパルが使用するナイトメアレイブルームの威力も強化される。"
@@ -16585,14 +16583,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-passive"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cond-party",
     "cat-offense",
     "cat-mobility",
-    "off-passive"
+    "off-attack"
    ],
    "description": {
     "ja": "①手持ちから出している間、プレイヤーの攻撃にあわせて槍で追撃を行う。②背中に乗って水上を高速で移動できる。 ③水上で「大海の覇者」(キーボード:Ctrl、コントローラー:B)で高く飛び上がることができる。"
@@ -16658,13 +16656,13 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ※ランクアップ(濃縮)しても移動速度は変わらない。 ②ライド中、ミサイルランチャーを連射できる。 クールタイム：60秒"
@@ -16717,14 +16715,14 @@
     "cat-mobility"
    ],
    "offenseTypes": [
-    "off-active"
+    "off-attack"
    ],
    "tags": [
     "cond-mount",
     "cond-base",
     "cat-offense",
     "cat-mobility",
-    "off-active"
+    "off-attack"
    ],
    "description": {
     "ja": "①背中に乗って空を飛ぶことができる。 ②拠点にいる間、常に拠点上空を回遊し侵入者に対しては遥か上空から砲撃を行う。拠点に1匹までしか召喚できない。"
@@ -16781,7 +16779,7 @@
     "cat-utility"
    ],
    "offenseTypes": [
-    "off-active",
+    "off-attack",
     "off-pal"
    ],
    "tags": [
@@ -16794,7 +16792,7 @@
     "cat-gathering",
     "cat-support",
     "cat-utility",
-    "off-active",
+    "off-attack",
     "off-pal"
    ],
    "description": {

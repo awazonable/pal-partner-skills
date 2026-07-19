@@ -32,7 +32,9 @@ def _enemy_debuff(d):  # 敵の攻撃力を低下＝防御寄りのデバフ
     return bool(re.search(r'敵の攻撃力を(低下|下げ)',d))
 
 def offense_subtypes(d, cond):
-    """攻撃スキルを内訳サブカテゴリに分類（複数可）。"""
+    """攻撃スキルを内訳サブカテゴリに分類（複数可）。
+    能動/受動はここでは分けない（発動場面 cond-active/party で表現できて冗長なため）。
+    パルが直接ダメージを与える系は off-attack に統合。"""
     r=set()
     if re.search(r'攻撃(に|が).{0,10}(付与|状態異常|状態値)',d) or re.search(r'一発で.{0,6}(まみれ|状態)になる',d) \
        or re.search(r'攻撃が.{0,4}(炎上|帯電|氷まみれ|ずぶ濡れ|泥まみれ|ツタまみれ|暗闇|毒)',d):
@@ -46,13 +48,14 @@ def offense_subtypes(d, cond):
        or re.search(r'弱点',d) or re.search(r'プレイヤーの攻撃が.{0,4}属性に変化',d) or re.search(r'銃弾のダメージ',d) \
        or re.search(r'(状態の敵|非戦闘.{0,4}(敵|エネミー)).{0,14}与えるダメージ.{0,6}(増加|アップ)',d):
         r.add('off-player')
-    if ('cond-active' in cond) or re.search(r'ライド中.{0,30}(連射|発射|照射|砲撃|レーザー|ハンマー|ミサイル|ミニガン|グレネード|振り下ろして攻撃|攻撃できる)',d) \
-       or re.search(r'上空から砲撃',d):
-        r.add('off-active')
-    if re.search(r'追撃',d) or re.search(r'あわせて',d) \
+    # パルが直接攻撃（旧 off-active + off-passive を統合）
+    if ('cond-active' in cond) \
+       or re.search(r'ライド中.{0,30}(連射|発射|照射|砲撃|レーザー|ハンマー|ミサイル|ミニガン|グレネード|振り下ろして攻撃|攻撃できる)',d) \
+       or re.search(r'上空から砲撃',d) \
+       or re.search(r'追撃',d) or re.search(r'あわせて',d) \
        or (re.search(r'状態の敵に',d) and re.search(r'(ダメージを与える|敵が爆発|敵の周囲に炎|周囲の敵)',d)) \
        or re.search(r'(ローリングやステップ|ローリング).{0,20}(旋風|ダメージ)',d) or re.search(r'矢が着弾.{0,10}爆発',d):
-        r.add('off-passive')
+        r.add('off-attack')
     return r
 
 class P(HTMLParser):
@@ -202,7 +205,7 @@ OVERRIDES={
             'conditions':['cond-party'],'categories':['cat-utility']},
   # ユキツネ「だっこフロスト」：ソースは説明文が空。基種キツネビ「だっこファイヤー」の氷版として補完。
   'no-029b':{'description':{'ja':'発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）'},
-             'conditions':['cond-active'],'categories':['cat-offense'],'offenseTypes':['off-active'],'element':['elem-ice']},
+             'conditions':['cond-active'],'categories':['cat-offense'],'offenseTypes':['off-attack'],'element':['elem-ice']},
 }
 # No.025 ラヴィ：ソース誤記「★0.4%」= ★4：0.4%
 VALUE_FIX={'no-025':{'回復量':{4:'0.4%'}}}
@@ -225,28 +228,28 @@ def L(ja,en): return {'ja':ja,'en':en}
 groups=[
  {'id':'condition','label':L('発動場面','Condition'),'order':1,'hint':L('いつ・どこで効果が出るか','')},
  {'id':'category','label':L('効果カテゴリ','Effect'),'order':2},
- {'id':'offense-type','label':L('攻撃の内訳','Offense type'),'order':3,'hint':L('「攻撃」カテゴリの細分','')},
- {'id':'element','label':L('関連属性','Element'),'order':4,'hint':L('効果に関わる属性（対象属性など）。パル自身の属性ではない','')},
- {'id':'work','label':L('作業適性','Work'),'order':5},
- {'id':'status','label':L('状態異常','Status'),'order':6},
+ {'id':'element','label':L('関連属性','Element'),'order':3,'hint':L('効果に関わる属性（対象属性など）。パル自身の属性ではない','')},
+ {'id':'work','label':L('作業適性','Work'),'order':4},
+ {'id':'status','label':L('状態異常','Status'),'order':5},
 ]
+# cat-offense は「攻撃」の親ヘッダ。子(off-*)を持ち、フィルタ上は子の集合として扱う。
 tags=[
  {'id':'cond-base','group':'condition','label':L('拠点配置','Base')},
  {'id':'cond-party','group':'condition','label':L('手持ち(パッシブ)','Party')},
  {'id':'cond-mount','group':'condition','label':L('騎乗/ライド','Mount')},
  {'id':'cond-active','group':'condition','label':L('アクティブ発動','Active')},
- {'id':'cat-offense','group':'category','label':L('攻撃','Offense')},
+ {'id':'cat-offense','group':'category','label':L('攻撃','Offense'),
+  'children':['off-player','off-pal','off-attack','off-status']},
+ {'id':'off-player','group':'category','parent':'cat-offense','label':L('プレイヤー攻撃強化','Player buff')},
+ {'id':'off-pal','group':'category','parent':'cat-offense','label':L('パル攻撃強化','Pal buff')},
+ {'id':'off-attack','group':'category','parent':'cat-offense','label':L('パルが直接攻撃','Pal attack')},
+ {'id':'off-status','group':'category','parent':'cat-offense','label':L('状態異常付与','Status infliction')},
  {'id':'cat-defense','group':'category','label':L('防御・耐性','Defense')},
  {'id':'cat-mobility','group':'category','label':L('移動','Mobility')},
  {'id':'cat-gathering','group':'category','label':L('収集','Gathering')},
  {'id':'cat-production','group':'category','label':L('生産・拠点','Production')},
  {'id':'cat-support','group':'category','label':L('支援・回復','Support')},
  {'id':'cat-utility','group':'category','label':L('探索・便利','Utility')},
- {'id':'off-player','group':'offense-type','label':L('プレイヤー攻撃強化','Player buff')},
- {'id':'off-pal','group':'offense-type','label':L('パル攻撃強化','Pal buff')},
- {'id':'off-active','group':'offense-type','label':L('アクティブ攻撃','Active attack')},
- {'id':'off-passive','group':'offense-type','label':L('パッシブ攻撃/追撃','Passive attack')},
- {'id':'off-status','group':'offense-type','label':L('状態異常付与','Status infliction')},
 ]
 ELEMLABEL={'elem-neutral':('無','#9aa0a6'),'elem-dark':('闇','#8659c4'),'elem-electric':('雷','#e8c53a'),
  'elem-fire':('炎','#e8613c'),'elem-water':('水','#3aa6e8'),'elem-ground':('地','#b08050'),
