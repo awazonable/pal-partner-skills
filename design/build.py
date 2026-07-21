@@ -66,7 +66,7 @@ def offense_subtypes(d, cond):
 
 class P(HTMLParser):
     def __init__(self):
-        super().__init__(); self.blocks=[]; self.cur=None; self.aclass=None; self.toks=[]
+        super().__init__(); self.blocks=[]; self.cur=None; self.aclass=None; self.toks=[]; self.done=False
     def handle_starttag(self,tag,attrs):
         if tag=='a':
             cl=dict(attrs).get('class','')
@@ -75,9 +75,14 @@ class P(HTMLParser):
     def handle_endtag(self,tag):
         if tag=='a': self.aclass=None
     def handle_data(self,d):
+        if self.done: return
         t=d.strip()
         if not t: return
-        if re.match(r'^No\.\d+[AB]?$',t):
+        # フッター広告で取り込み終了（上部にも同じ広告があるが、そこは cur=None なので無視）
+        if t=='スポンサーリンク' and self.cur is not None:
+            self._flush(); self.done=True; return
+        # ブロック先頭ID：No.xxx / ﾃﾗxx（テラ系） / ボスxx
+        if re.match(r'^(No\.\d+|ﾃﾗ\d+|ボス\d+)[AB]?$',t):
             self._flush(); self.cur={'no':t}; self.toks=[]; return
         if self.cur is None: return
         if self.aclass=='el' and t in ELEM: self.toks+=[('el',ELEM[t]),('t',t)]
@@ -178,8 +183,12 @@ class P(HTMLParser):
                 else:
                     offtypes=sorted(offense_subtypes(full, cond))
         if not cat and 'cond-mount' in cond: cat.append('cat-mobility')
-        no=self.cur['no']; num=re.sub(r'^No\.','',no)
-        variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
+        m=re.match(r'^(No\.|ﾃﾗ|ボス)(\d+)([AB]?)$', self.cur['no'])
+        prefix,digits,suf=m.groups()
+        variant=suf or None
+        idpfx={'No.':'no','ﾃﾗ':'tera','ボス':'boss'}[prefix]
+        sid=idpfx+'-'+digits+(suf.lower() if suf else '')
+        no={'No.':'No.'+digits+suf,'ﾃﾗ':'テラ'+digits+suf,'ボス':'ボス'+digits+suf}[prefix]
         # 重複可否は効果単位で判定済み。スキル単位は要約（フィルタ/バッジ用）。
         # 騎乗効果に数値行が無い（"乗って移動できる"のみ）場合も騎乗＝重複不可を反映。
         ride_present='cond-mount' in cond
@@ -193,7 +202,7 @@ class P(HTMLParser):
         ride_only = (not mixed) and has_nostack and ('重複不可' not in full) \
                     and all(e['noStackReason']=='ride' for e in effects if e['noStack'])
         tags=els+wks+sts+cond+cat+offtypes
-        rec={'id':'no-'+num.lower(),'no':no,'variant':variant,
+        rec={'id':sid,'no':no,'variant':variant,
              'pal':{'ja':pal},'skillName':{'ja':skill},
              'element':els,'works':wks,'status':sts,'conditions':cond,'categories':cat,
              'offenseTypes':offtypes,

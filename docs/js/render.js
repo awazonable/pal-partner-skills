@@ -142,10 +142,11 @@ function renderCard(skill, tagIndex, star) {
 }
 
 function noKey(s) {
-  const m = /^No\.(\d+)([AB]?)$/.exec(s.no || '');
-  const num = m ? parseInt(m[1], 10) : 9999;
-  const suf = m ? { '': 0, A: 1, B: 2 }[m[2]] : 9;
-  return num * 10 + suf;
+  const m = /^(No\.|テラ|ボス)(\d+)([AB]?)$/.exec(s.no || '');
+  if (!m) return 9999999;
+  const base = { 'No.': 0, 'テラ': 100000, 'ボス': 200000 }[m[1]];
+  const suf = { '': 0, A: 1, B: 2 }[m[3]] || 0;
+  return base + parseInt(m[2], 10) * 10 + suf;
 }
 
 export function sortSkills(skills, mode, tagIndex) {

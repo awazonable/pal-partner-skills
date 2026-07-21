@@ -2,7 +2,7 @@
  "meta": {
   "gameVersion": "1.0",
   "generatedAt": "2026-07-18",
-  "totalSkills": 288,
+  "totalSkills": 300,
   "source": "パルワールド配合・攻略ラボ（ユーザー提供のHTMLを構造化）",
   "note": "★0〜★4 は濃縮ランク=パートナースキルの5段階レベル。値はソース準拠（一部ソース側の表記ゆれ/★0省略あり→ — 表示）。騎乗(cond-mount)は同時に複数ライドできないため重複不可扱い（rideExclusive）。ただし同名パルの数でスタックする効果（例:メルパカ）は重複可のまま。αパル個体差分は本ソースに明示が無いため未収録。"
  },
@@ -16690,42 +16690,54 @@
    "skillName": {
     "ja": "未発見"
    },
-   "element": [
-    "elem-dark"
-   ],
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [],
+   "categories": [],
+   "offenseTypes": [],
+   "tags": [],
+   "description": {
+    "ja": "このパルのパートナースキルは確認されていない。"
+   },
+   "effects": [],
+   "stackable": true,
+   "noStack": false,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-01",
+   "no": "テラ01",
+   "variant": null,
+   "pal": {
+    "ja": "クトゥルフのめだま"
+   },
+   "skillName": {
+    "ja": "クトゥルフのめだまの突進"
+   },
+   "element": [],
    "works": [],
    "status": [],
    "conditions": [
-    "cond-mount",
-    "cond-active",
-    "cond-party"
+    "cond-active"
    ],
    "categories": [
-    "cat-offense",
-    "cat-mobility",
-    "cat-gathering",
-    "cat-support",
-    "cat-utility"
+    "cat-offense"
    ],
    "offenseTypes": [
-    "off-attack",
-    "off-pal"
+    "off-attack"
    ],
    "tags": [
-    "elem-dark",
-    "cond-mount",
     "cond-active",
-    "cond-party",
     "cat-offense",
-    "cat-mobility",
-    "cat-gathering",
-    "cat-support",
-    "cat-utility",
-    "off-attack",
-    "off-pal"
+    "off-attack"
    ],
    "description": {
-    "ja": "このパルのパートナースキルは確認されていない。 ﾃﾗ01 クトゥルフのめだま クトゥルフのめだまの突進 個別ページへ → 発動すると、狙いを定めた敵に向かってクトゥルフのめだまが突進で攻撃する。(威力300) ﾃﾗ02 あくまのめだま 悪魔の視界 個別ページへ → 手持ちにいる間、 闇属性 のパルの攻撃力が増加する。(重複不可) ﾃﾗ03 グリーンスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ04 ブルースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ05 かがやくスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ06 パープルスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ07 レインボースライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ08 レッドスライム スライムボディ 個別ページへ → 背中に乗って移動できる。ライド中、高くジャンプできる。 ﾃﾗ09 まほうのつるぎ エンチャント 個別ページへ → 手持ちにいる間、 闇属性 のパルを倒した際のドロップアイテム獲得量が増える。(重複不可) ﾃﾗ10 どうくつコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ﾃﾗ11 かがやくコウモリ コウモリサポート 個別ページへ → ①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。 ボス01 ゾーイ＆エレパンダ 黄色い重戦車 個別ページへ → 背中に乗って移動できる。ライド中、ミニガンを連射できる。 スポンサーリンク (adsbygoogle = window.adsbygoogle || []).push({}); 前へ ┗🐎ライドパル比較・ランキング 次へ 💥アクティブスキル(技)一覧 当サイトは『パルワールド（Palworld）』の非公式ファンサイトです。\n    ゲーム内の名称・画像等の権利は © Pocketpair, Inc. および各権利者に帰属します。 Special Thanks | プライバシーポリシー | お問い合わせ | パルラボ公式X © 2026 パルワールド配合・攻略ラボ (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a1d3229e1f082546',t:'MTc4NDM5NDk5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();"
+    "ja": "発動すると、狙いを定めた敵に向かってクトゥルフのめだまが突進で攻撃する。(威力300)"
    },
    "effects": [
     {
@@ -16741,7 +16753,50 @@
      ],
      "noStack": false,
      "noStackReason": null
-    },
+    }
+   ],
+   "stackable": true,
+   "noStack": false,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-02",
+   "no": "テラ02",
+   "variant": null,
+   "pal": {
+    "ja": "あくまのめだま"
+   },
+   "skillName": {
+    "ja": "悪魔の視界"
+   },
+   "element": [
+    "elem-dark"
+   ],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-party"
+   ],
+   "categories": [
+    "cat-offense"
+   ],
+   "offenseTypes": [
+    "off-pal"
+   ],
+   "tags": [
+    "elem-dark",
+    "cond-party",
+    "cat-offense",
+    "off-pal"
+   ],
+   "description": {
+    "ja": "手持ちにいる間、 闇属性 のパルの攻撃力が増加する。(重複不可)"
+   },
+   "effects": [
     {
      "label": {
       "ja": "攻撃力増加量"
@@ -16755,7 +16810,263 @@
      ],
      "noStack": true,
      "noStackReason": "source"
-    },
+    }
+   ],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-03",
+   "no": "テラ03",
+   "variant": null,
+   "pal": {
+    "ja": "グリーンスライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-04",
+   "no": "テラ04",
+   "variant": null,
+   "pal": {
+    "ja": "ブルースライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-05",
+   "no": "テラ05",
+   "variant": null,
+   "pal": {
+    "ja": "かがやくスライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-06",
+   "no": "テラ06",
+   "variant": null,
+   "pal": {
+    "ja": "パープルスライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-07",
+   "no": "テラ07",
+   "variant": null,
+   "pal": {
+    "ja": "レインボースライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-08",
+   "no": "テラ08",
+   "variant": null,
+   "pal": {
+    "ja": "レッドスライム"
+   },
+   "skillName": {
+    "ja": "スライムボディ"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-mobility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-mount",
+    "cat-mobility"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、高くジャンプできる。"
+   },
+   "effects": [],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": true,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-09",
+   "no": "テラ09",
+   "variant": null,
+   "pal": {
+    "ja": "まほうのつるぎ"
+   },
+   "skillName": {
+    "ja": "エンチャント"
+   },
+   "element": [
+    "elem-dark"
+   ],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-party"
+   ],
+   "categories": [
+    "cat-gathering"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "elem-dark",
+    "cond-party",
+    "cat-gathering"
+   ],
+   "description": {
+    "ja": "手持ちにいる間、 闇属性 のパルを倒した際のドロップアイテム獲得量が増える。(重複不可)"
+   },
+   "effects": [
     {
      "label": {
       "ja": "増加量"
@@ -16769,7 +17080,44 @@
      ],
      "noStack": true,
      "noStackReason": "source"
-    },
+    }
+   ],
+   "stackable": false,
+   "noStack": true,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-10",
+   "no": "テラ10",
+   "variant": null,
+   "pal": {
+    "ja": "どうくつコウモリ"
+   },
+   "skillName": {
+    "ja": "コウモリサポート"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-party"
+   ],
+   "categories": [
+    "cat-utility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-party",
+    "cat-utility"
+   ],
+   "description": {
+    "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。"
+   },
+   "effects": [
     {
      "label": {
       "ja": "アイテム回収範囲増加"
@@ -16783,7 +17131,44 @@
      ],
      "noStack": false,
      "noStackReason": null
-    },
+    }
+   ],
+   "stackable": true,
+   "noStack": false,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "tera-11",
+   "no": "テラ11",
+   "variant": null,
+   "pal": {
+    "ja": "かがやくコウモリ"
+   },
+   "skillName": {
+    "ja": "コウモリサポート"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-party"
+   ],
+   "categories": [
+    "cat-utility"
+   ],
+   "offenseTypes": [],
+   "tags": [
+    "cond-party",
+    "cat-utility"
+   ],
+   "description": {
+    "ja": "①手持ちにいる間、プレイヤーの近くに出現する。 ②自動で近くにあるアイテムを拾いに行く。"
+   },
+   "effects": [
     {
      "label": {
       "ja": "アイテム回収範囲増加"
@@ -16797,7 +17182,49 @@
      ],
      "noStack": false,
      "noStackReason": null
-    },
+    }
+   ],
+   "stackable": true,
+   "noStack": false,
+   "mixedStack": false,
+   "rideExclusive": false,
+   "palGear": null,
+   "verified": true,
+   "source": "palworld-lab"
+  },
+  {
+   "id": "boss-01",
+   "no": "ボス01",
+   "variant": null,
+   "pal": {
+    "ja": "ゾーイ＆エレパンダ"
+   },
+   "skillName": {
+    "ja": "黄色い重戦車"
+   },
+   "element": [],
+   "works": [],
+   "status": [],
+   "conditions": [
+    "cond-mount"
+   ],
+   "categories": [
+    "cat-offense",
+    "cat-mobility"
+   ],
+   "offenseTypes": [
+    "off-attack"
+   ],
+   "tags": [
+    "cond-mount",
+    "cat-offense",
+    "cat-mobility",
+    "off-attack"
+   ],
+   "description": {
+    "ja": "背中に乗って移動できる。ライド中、ミニガンを連射できる。"
+   },
+   "effects": [
     {
      "label": {
       "ja": "ダメージ増加"
@@ -16815,8 +17242,8 @@
    ],
    "stackable": false,
    "noStack": true,
-   "mixedStack": true,
-   "rideExclusive": false,
+   "mixedStack": false,
+   "rideExclusive": true,
    "palGear": null,
    "verified": true,
    "source": "palworld-lab"
