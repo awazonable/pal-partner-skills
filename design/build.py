@@ -21,9 +21,52 @@ WORK={'伐採':'work-logging','採集':'work-gathering','採掘':'work-mining','
 STAT={'氷まみれ':'st-frozen','炎上':'st-burning','泥まみれ':'st-muddy','ずぶ濡れ':'st-wet',
       'ツタまみれ':'st-vined','暗闇':'st-darkness','毒':'st-poison','帯電':'st-electrified'}
 
+# ---- 攻撃カテゴリの補正・細分 ----
+def is_mining(d, wks=()):
+    # 採掘・伐採（岩/木/鉱石を壊す・採掘/伐採ダメージ・鉱石/木材の重量軽減）。
+    # 「溶岩」の"岩"誤マッチを除去し、作業適性バフ(拠点)は対象外。
+    d2 = d.replace('溶岩', '')
+    if '作業適性' in d:
+        return False
+    action = ('work-mining' in wks or 'work-logging' in wks)      # 採掘/伐採リンク（前後に空白が入る）
+    target = action or re.search(r'(岩|鉱石|金属鉱石|木材|木造|石建築|石|木)を?', d2)
+    ctx = re.search(r'(壊す|砕く|破壊|効率|与えるダメージ|重量)', d2)
+    return bool(target and ctx)
+def _expl_def(d):  # 爆発する攻撃を受けた際の軽減＝防御
+    return bool(re.search(r'爆発する攻撃を受けた',d))
+def _enemy_debuff(d):  # 敵の攻撃力を低下＝防御寄りのデバフ
+    return bool(re.search(r'敵の攻撃力を(低下|下げ)',d))
+
+def offense_subtypes(d, cond):
+    """攻撃スキルを内訳サブカテゴリに分類（複数可）。
+    能動/受動はここでは分けない（発動場面 cond-active/party で表現できて冗長なため）。
+    パルが直接ダメージを与える系は off-attack に統合。"""
+    r=set()
+    if re.search(r'攻撃(に|が).{0,10}(付与|状態異常|状態値)',d) or re.search(r'一発で.{0,6}(まみれ|状態)になる',d) \
+       or re.search(r'攻撃が.{0,4}(炎上|帯電|氷まみれ|ずぶ濡れ|泥まみれ|ツタまみれ|暗闇|毒)',d):
+        r.add('off-status')
+    pal_atk = re.search(r'(このパル|戦っているパル|のパル|』[^。]{0,4})の(防御力[とや]?)?攻撃力',d) \
+              or ('パルの攻撃力' in d) or re.search(r'』の.{0,4}攻撃力',d)
+    if (pal_atk and re.search(r'(増加|上がる|上昇|アップ|多いほど|数だけ|数ほど|スタック|補正)',d)) \
+       or re.search(r'パートナースキルのダメージ.{0,6}(上昇|増加)',d):
+        r.add('off-pal')
+    if re.search(r'(近接武器|遠距離武器|武器|プレイヤー).{0,15}(ダメージ|攻撃力).{0,6}(増加|上がる|上昇|アップ)',d) \
+       or re.search(r'弱点',d) or re.search(r'プレイヤーの攻撃が.{0,4}属性に変化',d) or re.search(r'銃弾のダメージ',d) \
+       or re.search(r'(状態の敵|非戦闘.{0,4}(敵|エネミー)).{0,14}与えるダメージ.{0,6}(増加|アップ)',d):
+        r.add('off-player')
+    # パルが直接攻撃（旧 off-active + off-passive を統合）
+    if ('cond-active' in cond) \
+       or re.search(r'ライド中.{0,30}(連射|発射|照射|砲撃|レーザー|ハンマー|ミサイル|ミニガン|グレネード|振り下ろして攻撃|攻撃できる)',d) \
+       or re.search(r'上空から砲撃',d) \
+       or re.search(r'追撃',d) or re.search(r'あわせて',d) \
+       or (re.search(r'状態の敵に',d) and re.search(r'(ダメージを与える|敵が爆発|敵の周囲に炎|周囲の敵)',d)) \
+       or re.search(r'(ローリングやステップ|ローリング).{0,20}(旋風|ダメージ)',d) or re.search(r'矢が着弾.{0,10}爆発',d):
+        r.add('off-attack')
+    return r
+
 class P(HTMLParser):
     def __init__(self):
-        super().__init__(); self.blocks=[]; self.cur=None; self.aclass=None; self.toks=[]
+        super().__init__(); self.blocks=[]; self.cur=None; self.aclass=None; self.toks=[]; self.done=False
     def handle_starttag(self,tag,attrs):
         if tag=='a':
             cl=dict(attrs).get('class','')
@@ -32,9 +75,14 @@ class P(HTMLParser):
     def handle_endtag(self,tag):
         if tag=='a': self.aclass=None
     def handle_data(self,d):
+        if self.done: return
         t=d.strip()
         if not t: return
-        if re.match(r'^No\.\d+[AB]?$',t):
+        # フッター広告で取り込み終了（上部にも同じ広告があるが、そこは cur=None なので無視）
+        if t=='スポンサーリンク' and self.cur is not None:
+            self._flush(); self.done=True; return
+        # ブロック先頭ID：No.xxx / ﾃﾗxx（テラ系） / ボスxx
+        if re.match(r'^(No\.\d+|ﾃﾗ\d+|ボス\d+)[AB]?$',t):
             self._flush(); self.cur={'no':t}; self.toks=[]; return
         if self.cur is None: return
         if self.aclass=='el' and t in ELEM: self.toks+=[('el',ELEM[t]),('t',t)]
@@ -111,13 +159,36 @@ class P(HTMLParser):
            or re.search(r'威力|ダメージ増加',efflabels): cat.append('cat-offense')
         if re.search(r'防御力|耐性|軽減|無効|盾|バリア|無敵時間',full): cat.append('cat-defense')
         if re.search(r'乗って|グライダー|移動速度|ライド|ジャンプ|滑空|グライド|速度',full): cat.append('cat-mobility')
-        if re.search(r'掘り出す|ドロップ|落とす|釣り|サルベージ|獲得量|拾っ|捕獲|収穫|作物',full): cat.append('cat-gathering')
-        if re.search(r'作業適性|アサイン|効率|作業速度|収穫|作物',full) or wks: cat.append('cat-production')
+        # 収集（牧場ドロップの「落とす/掘り出す」は牧場カテゴリへ移すため除外）
+        if re.search(r'ドロップ|釣り|サルベージ|獲得量|拾っ|捕獲',full): cat.append('cat-gathering')
+        # 牧場（家畜牧場にアサイン/牧場に配置）を生産・拠点から分離
+        if re.search(r'家畜牧場にアサイン|牧場に配置',full) or ('牧場' in full and re.search(r'落とす|掘り出す|産出|作る',full)):
+            cat.append('cat-ranch')
+        # 生産・拠点（作業適性・効率など。牧場アサインは cat-ranch へ）
+        if re.search(r'作業適性|効率|作業速度|収穫|作物',full) or wks: cat.append('cat-production')
         if re.search(r'回復|HP|重量|サポート|スタミナ|満腹|クールタイムが減少',full): cat.append('cat-support')
         if re.search(r'探知|透明|鍵|自動で近くにあるアイテム|位置を|センス|嗅覚|気づかれにくく|拠点へ移動|帰還',full): cat.append('cat-utility')
         cat=list(dict.fromkeys(cat))
-        no=self.cur['no']; num=re.sub(r'^No\.','',no)
-        variant='B' if num.endswith('B') else ('A' if num.endswith('A') else None)
+        # 採掘・伐採：岩/木/鉱石破壊・採掘/伐採ダメージ・鉱石/木材の重量軽減を集約
+        offtypes=[]
+        if is_mining(full, wks):
+            cat=[c for c in cat if c in ('cat-mobility','cat-gathering','cat-utility','cat-ranch')]
+            cat.append('cat-mining')                            # 攻撃/防御/生産などの雑タグを整理
+        else:
+            # 攻撃カテゴリの誤検出補正 ＋ 内訳サブカテゴリ
+            if 'cat-offense' in cat:
+                if _expl_def(full) or _enemy_debuff(full):
+                    cat.remove('cat-offense')                   # 爆発耐性/敵デバフ＝防御寄り
+                    if 'cat-defense' not in cat: cat.append('cat-defense')
+                else:
+                    offtypes=sorted(offense_subtypes(full, cond))
+        if not cat and 'cond-mount' in cond: cat.append('cat-mobility')
+        m=re.match(r'^(No\.|ﾃﾗ|ボス)(\d+)([AB]?)$', self.cur['no'])
+        prefix,digits,suf=m.groups()
+        variant=suf or None
+        idpfx={'No.':'no','ﾃﾗ':'tera','ボス':'boss'}[prefix]
+        sid=idpfx+'-'+digits+(suf.lower() if suf else '')
+        no={'No.':'No.'+digits+suf,'ﾃﾗ':'テラ'+digits+suf,'ボス':'ボス'+digits+suf}[prefix]
         # 重複可否は効果単位で判定済み。スキル単位は要約（フィルタ/バッジ用）。
         # 騎乗効果に数値行が無い（"乗って移動できる"のみ）場合も騎乗＝重複不可を反映。
         ride_present='cond-mount' in cond
@@ -130,10 +201,11 @@ class P(HTMLParser):
         # 全効果が「重複不可」で、その理由がすべて騎乗のみ（源に「重複不可」表記なし）か
         ride_only = (not mixed) and has_nostack and ('重複不可' not in full) \
                     and all(e['noStackReason']=='ride' for e in effects if e['noStack'])
-        tags=els+wks+sts+cond+cat
-        rec={'id':'no-'+num.lower(),'no':no,'variant':variant,
+        tags=els+wks+sts+cond+cat+offtypes
+        rec={'id':sid,'no':no,'variant':variant,
              'pal':{'ja':pal},'skillName':{'ja':skill},
              'element':els,'works':wks,'status':sts,'conditions':cond,'categories':cat,
+             'offenseTypes':offtypes,
              'tags':list(dict.fromkeys(tags)),
              'description':{'ja':full},'effects':effects,
              'stackable': not has_nostack,'noStack':has_nostack,
@@ -156,7 +228,7 @@ OVERRIDES={
             'conditions':['cond-party'],'categories':['cat-utility']},
   # ユキツネ「だっこフロスト」：ソースは説明文が空。基種キツネビ「だっこファイヤー」の氷版として補完。
   'no-029b':{'description':{'ja':'発動すると、プレイヤーに装備され、冷気（氷）放射器と化す。（キツネビ「だっこファイヤー」の氷属性版）'},
-             'conditions':['cond-active'],'categories':['cat-offense'],'element':['elem-ice']},
+             'conditions':['cond-active'],'categories':['cat-offense'],'offenseTypes':['off-attack'],'element':['elem-ice']},
 }
 # No.025 ラヴィ：ソース誤記「★0.4%」= ★4：0.4%
 VALUE_FIX={'no-025':{'回復量':{4:'0.4%'}}}
@@ -172,7 +244,7 @@ for s in skills:
             if fix:
                 for idx,val in fix.items(): e['perStar'][idx]=val
     # tags 統合を再計算（オーバーライド反映）
-    s['tags']=list(dict.fromkeys(s['element']+s['works']+s['status']+s['conditions']+s['categories']))
+    s['tags']=list(dict.fromkeys(s['element']+s['works']+s['status']+s['conditions']+s['categories']+s.get('offenseTypes',[])))
 
 # ---- tags.json ----
 def L(ja,en): return {'ja':ja,'en':en}
@@ -183,15 +255,23 @@ groups=[
  {'id':'work','label':L('作業適性','Work'),'order':4},
  {'id':'status','label':L('状態異常','Status'),'order':5},
 ]
+# cat-offense は「攻撃」の親ヘッダ。子(off-*)を持ち、フィルタ上は子の集合として扱う。
 tags=[
  {'id':'cond-base','group':'condition','label':L('拠点配置','Base')},
  {'id':'cond-party','group':'condition','label':L('手持ち(パッシブ)','Party')},
  {'id':'cond-mount','group':'condition','label':L('騎乗/ライド','Mount')},
  {'id':'cond-active','group':'condition','label':L('アクティブ発動','Active')},
- {'id':'cat-offense','group':'category','label':L('攻撃','Offense')},
+ {'id':'cat-offense','group':'category','label':L('攻撃','Offense'),
+  'children':['off-player','off-pal','off-attack','off-status']},
+ {'id':'off-player','group':'category','parent':'cat-offense','label':L('プレイヤー攻撃強化','Player buff')},
+ {'id':'off-pal','group':'category','parent':'cat-offense','label':L('パル攻撃強化','Pal buff')},
+ {'id':'off-attack','group':'category','parent':'cat-offense','label':L('パルが直接攻撃','Pal attack')},
+ {'id':'off-status','group':'category','parent':'cat-offense','label':L('状態異常付与','Status infliction')},
  {'id':'cat-defense','group':'category','label':L('防御・耐性','Defense')},
  {'id':'cat-mobility','group':'category','label':L('移動','Mobility')},
  {'id':'cat-gathering','group':'category','label':L('収集','Gathering')},
+ {'id':'cat-mining','group':'category','label':L('採掘・伐採','Mining')},
+ {'id':'cat-ranch','group':'category','label':L('牧場','Ranch')},
  {'id':'cat-production','group':'category','label':L('生産・拠点','Production')},
  {'id':'cat-support','group':'category','label':L('支援・回復','Support')},
  {'id':'cat-utility','group':'category','label':L('探索・便利','Utility')},

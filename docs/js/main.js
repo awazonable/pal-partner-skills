@@ -1,11 +1,10 @@
 // 起動・状態管理・イベント配線
 import {
-  buildTagIndex, renderFilterGroups, collectSelectedTags,
-  skillMatches, computeCounts,
+  buildTagIndex, renderFilterGroups, collectSelected, skillMatches,
+  computeCounts, buildLeavesByGroup, syncParents, NONE_PREFIX,
 } from './filters.js';
-import {
-  renderCards, renderActiveFilters, updateCounts, sortSkills,
-} from './render.js';
+import { renderCards, renderActiveFilters, updateCounts, sortSkills } from './render.js';
+import { t } from './i18n.js';
 
 const els = {
   filterGroups: document.getElementById('filterGroups'),
@@ -27,8 +26,7 @@ const els = {
   flagPalGear: document.getElementById('flagPalGear'),
 };
 
-// star: 0..4（=★0〜★4 濃縮ランク）
-const state = { tags: null, skills: [], tagIndex: null, star: 0 };
+const state = { tags: null, skills: [], tagIndex: null, leaves: null, star: 0 };
 
 function readFlags() {
   return {
@@ -38,45 +36,60 @@ function readFlags() {
   };
 }
 
-// ---- URL hash 同期（共有可能な絞り込み）----
+// 「(なし)」等も含めたタグ表示名
+function tagLabel(id) {
+  if (id.startsWith(NONE_PREFIX)) {
+    const g = state.tags.groups.find((x) => x.id === id.slice(NONE_PREFIX.length));
+    return `${g ? t(g.label) : ''}（なし）`;
+  }
+  const tag = state.tagIndex.get(id);
+  return tag ? t(tag.label) : id;
+}
+
+// ---- URL hash 同期 ----
+function optionRows() { return els.filterGroups.querySelectorAll('.filter-option'); }
+
 function writeHash() {
-  const sel = collectSelectedTags(els.filterGroups);
-  const tagIds = Object.values(sel).flat();
-  const params = new URLSearchParams();
-  if (tagIds.length) params.set('t', tagIds.join(','));
-  if (els.search.value.trim()) params.set('q', els.search.value.trim());
-  if (state.star !== 0) params.set('star', state.star);
-  if (els.sortSelect.value !== 'no') params.set('sort', els.sortSelect.value);
-  const active = Object.entries(readFlags()).filter(([, v]) => v).map(([k]) => k);
-  if (active.length) params.set('f', active.join(','));
-  const hash = params.toString();
-  history.replaceState(null, '', hash ? `#${hash}` : location.pathname + location.search);
+  const inc = [], exc = [];
+  optionRows().forEach((r) => {
+    if (r.dataset.state === 'inc') inc.push(r.dataset.tagId);
+    else if (r.dataset.state === 'exc') exc.push(r.dataset.tagId);
+  });
+  const p = new URLSearchParams();
+  if (inc.length) p.set('t', inc.join(','));
+  if (exc.length) p.set('x', exc.join(','));
+  if (els.search.value.trim()) p.set('q', els.search.value.trim());
+  if (state.star !== 0) p.set('star', state.star);
+  if (els.sortSelect.value !== 'no') p.set('sort', els.sortSelect.value);
+  const fl = Object.entries(readFlags()).filter(([, v]) => v).map(([k]) => k);
+  if (fl.length) p.set('f', fl.join(','));
+  const h = p.toString();
+  history.replaceState(null, '', h ? `#${h}` : location.pathname + location.search);
 }
 
 function restoreFromHash() {
-  const params = new URLSearchParams(location.hash.slice(1));
-  const tagIds = new Set((params.get('t') || '').split(',').filter(Boolean));
-  els.filterGroups.querySelectorAll('input[type=checkbox]').forEach((cb) => {
-    cb.checked = tagIds.has(cb.value);
+  const p = new URLSearchParams(location.hash.slice(1));
+  const inc = new Set((p.get('t') || '').split(',').filter(Boolean));
+  const exc = new Set((p.get('x') || '').split(',').filter(Boolean));
+  optionRows().forEach((r) => {
+    r.dataset.state = inc.has(r.dataset.tagId) ? 'inc' : exc.has(r.dataset.tagId) ? 'exc' : '';
   });
-  els.search.value = params.get('q') || '';
-  const st = parseInt(params.get('star'), 10);
+  els.search.value = p.get('q') || '';
+  const st = parseInt(p.get('star'), 10);
   state.star = st >= 0 && st <= 4 ? st : 0;
-  els.sortSelect.value = params.get('sort') || 'no';
-  const flags = new Set((params.get('f') || '').split(',').filter(Boolean));
-  els.flagNoStack.checked = flags.has('noStack');
-  els.flagVariant.checked = flags.has('variant');
-  els.flagPalGear.checked = flags.has('palGear');
+  els.sortSelect.value = p.get('sort') || 'no';
+  const fl = new Set((p.get('f') || '').split(',').filter(Boolean));
+  els.flagNoStack.checked = fl.has('noStack');
+  els.flagVariant.checked = fl.has('variant');
+  els.flagPalGear.checked = fl.has('palGear');
 }
 
-// ---- 強化ランク（★0〜★4）セレクタ ----
+// ---- 強化ランク（★0〜★4） ----
 function buildLevelButtons() {
   els.levelButtons.innerHTML = '';
   for (let s = 0; s <= 4; s++) {
     const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'level-btn';
-    b.textContent = '★' + s;
+    b.type = 'button'; b.className = 'level-btn'; b.textContent = '★' + s;
     b.setAttribute('role', 'radio');
     b.addEventListener('click', () => { state.star = s; syncLevelButtons(); apply(); });
     els.levelButtons.appendChild(b);
@@ -92,11 +105,11 @@ function syncLevelButtons() {
 
 // ---- 描画 ----
 function apply() {
-  const sel = collectSelectedTags(els.filterGroups);
+  const sel = collectSelected(els.filterGroups);
   const text = els.search.value.trim();
   const flags = readFlags();
 
-  const filtered = state.skills.filter((s) => skillMatches(s, sel, text, flags));
+  const filtered = state.skills.filter((s) => skillMatches(s, sel, text, flags, state.tags, state.leaves));
   const sorted = sortSkills(filtered, els.sortSelect.value, state.tagIndex);
 
   renderCards(els.cards, sorted, state.tagIndex, state.star);
@@ -104,10 +117,17 @@ function apply() {
   els.totalCount.textContent = state.skills.length;
   els.emptyState.hidden = sorted.length !== 0;
 
-  updateCounts(els.filterGroups, computeCounts(state.skills, state.tags, sel, text, flags));
-  renderActiveFilters(els.activeFilters, sel, state.tagIndex, (id) => {
-    const cb = els.filterGroups.querySelector(`input[value="${CSS.escape(id)}"]`);
-    if (cb) { cb.checked = false; apply(); }
+  updateCounts(els.filterGroups, computeCounts(state.skills, state.tags, sel, text, flags, state.leaves));
+  syncParents(els.filterGroups);
+
+  const entries = [];
+  for (const [, crit] of Object.entries(sel)) {
+    crit.inc.forEach((id) => entries.push({ id, mode: 'inc', label: tagLabel(id) }));
+    crit.exc.forEach((id) => entries.push({ id, mode: 'exc', label: tagLabel(id) }));
+  }
+  renderActiveFilters(els.activeFilters, entries, (id) => {
+    const r = els.filterGroups.querySelector(`.filter-option[data-tag-id="${CSS.escape(id)}"]`);
+    if (r) { r.dataset.state = ''; apply(); }
   });
   syncLevelButtons();
   writeHash();
@@ -137,12 +157,12 @@ async function init() {
   buildLevelButtons();
   try {
     const [tags, skillsDoc] = await Promise.all([
-      loadJSON('./data/tags.json'),
-      loadJSON('./data/skills.json'),
+      loadJSON('./data/tags.json'), loadJSON('./data/skills.json'),
     ]);
     state.tags = tags;
     state.skills = skillsDoc.skills || [];
     state.tagIndex = buildTagIndex(tags);
+    state.leaves = buildLeavesByGroup(tags);
     const total = skillsDoc.meta?.totalSkills ?? state.skills.length;
     if (els.totalInGame) els.totalInGame.textContent = total;
   } catch (err) {
@@ -156,10 +176,9 @@ async function init() {
 
   els.search.addEventListener('input', apply);
   els.sortSelect.addEventListener('change', apply);
-  [els.flagNoStack, els.flagVariant, els.flagPalGear]
-    .forEach((cb) => cb.addEventListener('change', apply));
+  [els.flagNoStack, els.flagVariant, els.flagPalGear].forEach((cb) => cb.addEventListener('change', apply));
   els.clearFilters.addEventListener('click', () => {
-    els.filterGroups.querySelectorAll('input[type=checkbox]').forEach((cb) => (cb.checked = false));
+    optionRows().forEach((r) => (r.dataset.state = ''));
     els.search.value = '';
     [els.flagNoStack, els.flagVariant, els.flagPalGear].forEach((cb) => (cb.checked = false));
     apply();

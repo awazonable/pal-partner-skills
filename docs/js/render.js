@@ -56,7 +56,9 @@ function chipsFromTags(ids, tagIndex, group) {
   const frag = document.createDocumentFragment();
   for (const id of ids || []) {
     const tag = tagIndex.get(id);
-    if (tag) frag.appendChild(chip(t(tag.label), group || tag.group, tag.color));
+    if (!tag) continue;
+    const g = tag.parent ? 'offense-sub' : (group || tag.group);
+    frag.appendChild(chip(t(tag.label), g, tag.color));
   }
   return frag;
 }
@@ -93,6 +95,7 @@ function renderCard(skill, tagIndex, star) {
   );
   chips.appendChild(chipsFromTags(conds, tagIndex));
   chips.appendChild(chipsFromTags(skill.categories, tagIndex));
+  chips.appendChild(chipsFromTags(skill.offenseTypes, tagIndex));
   chips.appendChild(chipsFromTags(skill.works, tagIndex));
   chips.appendChild(chipsFromTags(skill.status, tagIndex));
   card.appendChild(chips);
@@ -139,10 +142,11 @@ function renderCard(skill, tagIndex, star) {
 }
 
 function noKey(s) {
-  const m = /^No\.(\d+)([AB]?)$/.exec(s.no || '');
-  const num = m ? parseInt(m[1], 10) : 9999;
-  const suf = m ? { '': 0, A: 1, B: 2 }[m[2]] : 9;
-  return num * 10 + suf;
+  const m = /^(No\.|テラ|ボス)(\d+)([AB]?)$/.exec(s.no || '');
+  if (!m) return 9999999;
+  const base = { 'No.': 0, 'テラ': 100000, 'ボス': 200000 }[m[1]];
+  const suf = { '': 0, A: 1, B: 2 }[m[3]] || 0;
+  return base + parseInt(m[2], 10) * 10 + suf;
 }
 
 export function sortSkills(skills, mode, tagIndex) {
@@ -174,19 +178,16 @@ export function renderCards(container, skills, tagIndex, star) {
   container.appendChild(frag);
 }
 
-export function renderActiveFilters(container, sel, tagIndex, onRemove) {
+export function renderActiveFilters(container, entries, onRemove) {
   container.innerHTML = '';
-  const ids = Object.values(sel).flat();
-  if (!ids.length) { container.hidden = true; return; }
+  if (!entries.length) { container.hidden = true; return; }
   container.hidden = false;
-  for (const id of ids) {
-    const tag = tagIndex.get(id);
-    if (!tag) continue;
+  for (const e of entries) {
     const el = document.createElement('button');
     el.type = 'button';
-    el.className = 'active-filter';
-    el.textContent = `${t(tag.label)} ✕`;
-    el.addEventListener('click', () => onRemove(id));
+    el.className = 'active-filter' + (e.mode === 'exc' ? ' is-exclude' : '');
+    el.textContent = `${e.mode === 'exc' ? '除外: ' : ''}${e.label} ✕`;
+    el.addEventListener('click', () => onRemove(e.id));
     container.appendChild(el);
   }
 }

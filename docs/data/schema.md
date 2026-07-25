@@ -18,7 +18,16 @@
     - `works[]` … `work-*`（伐採/採集/採掘/…）
     - `status[]` … `st-*`（炎上/帯電/…）
     - `conditions[]` … `cond-base|party|mount|active`（説明文から導出）
-    - `categories[]` … `cat-offense|defense|mobility|gathering|production|support`（導出）
+    - `categories[]` … `cat-offense|defense|mobility|gathering|mining|ranch|production|support|utility`（導出）
+      - `cat-mining`(採掘・伐採)：岩/木/鉱石の破壊・採掘/伐採ダメージ・鉱石/木材の重量軽減。
+        該当時は攻撃/生産等の雑タグを整理して mining に集約（作業適性バフは対象外＝生産・拠点のまま）。
+      - `cat-ranch`(牧場)：「家畜牧場にアサイン/牧場に配置」。生産・拠点から分離。
+    - `offenseTypes[]` … 攻撃(`cat-offense`)の内訳サブカテゴリ（導出）：
+      `off-player`(プレイヤー攻撃強化) / `off-pal`(パル攻撃強化) / `off-attack`(パルが直接攻撃) /
+      `off-status`(状態異常付与)。攻撃以外は空。
+      能動/受動は分けない（発動場面 `cond-active`/`cond-party` で表現でき冗長なため統合）。
+      tags.json 上では `cat-offense` が親（`children`）、`off-*` が子（`parent:"cat-offense"`）で
+      いずれも `group:"category"`。UI は攻撃を親、子を階層チェックボックスで表示する。
     - `tags[]` … 上記の統合（フィルタ用。冗長だが検索を単純化）
   - `description{ja}`
   - `effects[]`: `{ label{ja}, perStar:[5], noStack, noStackReason }`

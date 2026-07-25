@@ -88,6 +88,48 @@
       "label": {
         "ja": "攻撃",
         "en": "Offense"
+      },
+      "children": [
+        "off-player",
+        "off-pal",
+        "off-attack",
+        "off-status"
+      ]
+    },
+    {
+      "id": "off-player",
+      "group": "category",
+      "parent": "cat-offense",
+      "label": {
+        "ja": "プレイヤー攻撃強化",
+        "en": "Player buff"
+      }
+    },
+    {
+      "id": "off-pal",
+      "group": "category",
+      "parent": "cat-offense",
+      "label": {
+        "ja": "パル攻撃強化",
+        "en": "Pal buff"
+      }
+    },
+    {
+      "id": "off-attack",
+      "group": "category",
+      "parent": "cat-offense",
+      "label": {
+        "ja": "パルが直接攻撃",
+        "en": "Pal attack"
+      }
+    },
+    {
+      "id": "off-status",
+      "group": "category",
+      "parent": "cat-offense",
+      "label": {
+        "ja": "状態異常付与",
+        "en": "Status infliction"
       }
     },
     {
@@ -112,6 +154,22 @@
       "label": {
         "ja": "収集",
         "en": "Gathering"
+      }
+    },
+    {
+      "id": "cat-mining",
+      "group": "category",
+      "label": {
+        "ja": "採掘・伐採",
+        "en": "Mining"
+      }
+    },
+    {
+      "id": "cat-ranch",
+      "group": "category",
+      "label": {
+        "ja": "牧場",
+        "en": "Ranch"
       }
     },
     {
